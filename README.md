@@ -8,7 +8,7 @@
 
 ### Plan par semaine
 
-- A: Hacker google.com avec Chrome Dev Tools (DOM et events)
+- [A](A.md): Hacker google.com avec Chrome Dev Tools (DOM et events)
 - B: Validation d’un champs de formulaire texte (conditions et alerts)
 - C: Population et validation dynamique de formulaire (variables)
 - D: Arrays et selections multiples dans formulaires (objets)
