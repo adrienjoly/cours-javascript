@@ -77,3 +77,7 @@ Comme pour le 1er exercice, aucune instruction Javascript complète ne sera four
 1. Ceci étant fait, modifiez le comportement du clic sur cet élément, en y affectant une fonction empêchant la page de destination de s'ouvrir.
 1. Toujours pour l'évènement de clic sur ce même élément, affecter une nouvelle fonction qui affiche une alerte modale, mais n'empêche pas la page de destination de s'ouvrir. A noter que ce comportement remplacera le comportement défini à l'étape précédente.
 1. Si le comportement a été correctement défini et associé à l'élément `a` correspondant au 2ème résultat de recherche, un clic sur celui-ci devrait provoquer l'affichage de l'alerte modale, puis donner accès à la page prévue après validation.
+
+#### Exercice Bonus #1: appliquer le même principe à tous les résultats de la page, en utilisant jQuery
+
+#### Exercice Bonus #2: appliquer le même principe à tous les résultats de la page, sans utiliser jQuery
