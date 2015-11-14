@@ -19,8 +19,13 @@ Dans cette première étape:
 - nous allons ouvrir une page web contenant un formulaire, et la télécharger;
 - nous allons étudier et ajouter des composants à ce formulaire depuis un éditeur.
 
-1. Ouvrir ce lien dans un nouvel onglet de Google Chrome: [formulaire](http://adrienjoly.com/cours-javascript/B/formulaire) => une page blanche avec un champ texte doit s'afficher
-1. Télécharger le code source intégral de cette page en utilisant le menu "Fichier / Enregistrer sous..." (raccourci: <kbd>Cmd</kbd>+<kbd>S</kbd>), puis "Site web entier" dans la liste déroullante. Enregistrer les fichiers sur le bureau. => Un fichier `index.html` ainsi qu'un réportoire ont du être téléchargés sur le bureau. Le répertoire contient `index.js`.
+1. Ouvrir ce lien dans un nouvel onglet de Google Chrome: [formulaire](http://adrienjoly.com/cours-javascript/B/formulaire)
+  - [ ] une page blanche avec un champ texte doit s'afficher
+1. Télécharger le code source intégral de cette page en:
+  - [ ] utilisant le menu "Fichier / Enregistrer sous..." (raccourci: <kbd>Cmd</kbd>+<kbd>S</kbd>),
+  - [ ] puis en choisissant "Site web entier" dans la liste déroullante.
+  - [ ] Enregistrer les fichiers sur le bureau.
+  - [ ] → Un fichier `index.html` ainsi qu'un réportoire ont du être téléchargés sur le bureau. Le répertoire contient `index.js`.
 1. Ouvrir le fichier `index.html` depuis le bureau, en effectuant un glisser-déposer vers la barre d'onglets de Google Chrome. => Vérifier que la barre d'adresse indique bien un fichier local, commençant par `file://`, et que la page affichée est identique à celle de l'étape 1.
 1. Depuis cette page, activer la console Javascript (pour rappel, raccourci: <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd>) pour vérifier qu'elle ne contient aucune erreur.
 1. Ouvrir le fichier `index.html` du bureau, dans un éditeur de texte. => Le code source de la page est consistué d'un formulaire (élément `form`), d'un champ de saisie d'email (élément `input`, avec son libéllé `label` associé), et d'un `script` externe chargé depuis le fichier `index.js`.
