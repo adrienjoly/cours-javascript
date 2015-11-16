@@ -103,14 +103,30 @@ Voici les étapes qui vous permettront de développer et faire fonctionner ce fo
   - [ ] Ouvrez `index.js` dans votre éditeur de texte.
   - [ ] Effacez tout le code défini dans le corps de la fonction (entre les accollades `{}`).
   - [ ] Rechargez le formulaire dans Chrome → Il ne devrait plus y avoir d'erreur dans la console.
-  - [ ] Dans le corps de la fonction `onsubmit`, faites en sorte que la valeur entrée par l'utilisateur dans le champ "Euros" soit affichée dans une alerte modale, lorsque celui-ci valide sa saisie. (<kbd>Enter</kbd>) Pour rappel: vous aurez probablement besoin d'utiliser l'instuction `alert` et la fonction 'getElementById()'.
+  - [ ] Dans le corps de la fonction `onsubmit`, faites en sorte que la valeur entrée par l'utilisateur dans le champ "Euros" soit affichée dans une alerte modale, lorsque celui-ci valide sa saisie avec <kbd>Entrée</kbd>.
+  - [ ] Pour rappel: vous aurez probablement besoin d'utiliser l'instuction `alert` et la fonction 'getElementById()'.
   - [ ] Rechargez le formulaire dans Chrome et testez le bon fonctionnement de ce comportement. Si besoin, corrigez votre code avant de passer à l'étape suivante.
 
-1. Ajoutez les autres composants
+1. Afficher le résultat de la conversion dans le formulaire:
+  - [ ] Ajoutez le second champ de saisie (Dollars) et son `label`.
+  - [ ] Modifiez le code Javascript de manière à ce que la valeur entrée par l'utilisateur dans le champ "Euros" soit copiée dans le champ "Dollars" que vous venez de créer, au lieu d'afficher une alerte modale.
+  - [ ] Indice: il va falloir utiliser l'opérateur d'affectation.
+  - [ ] Indice: pensez à empêcher la soumission effective du formulaire. (rappel: `event.preventDefault()`)
+  - [ ] Rechargez et testez dans le navigateur, puis corrigez si besoin, jusqu'à y parvenir.
+  - [ ] Cherchez sur Internet combien vaut actuellement 1 Euro, en Dollars Américains.
+  - [ ] Modifiez le code Javascript de manière à ce que la valeur affectée dans le champ "Dollars" applique ce taux de conversion depuis la valeur saisie en Euros.
+  - [ ] Indice: utilisez l'opérateur de multiplication "*".
+  - [ ] Indice: en Javascript, les nombre décimaux s'écrivent avec un point, et non une virgule.
+  - [ ] Rechargez et testez le formulaire dans le navigateur, puis corrigez si besoin.
 
-  - [ ] De même, ajoutez le second champ de saisie (Dollars) et son `label`.
-  - [ ] Enfin, ajoutez un troisième champ `input`, dont l'attribut `type` aura cette fois la valeur `hidden`.
-  - [ ] 
+1. Afin de faciliter la modification ultérieure de paramètres utilisés par un programme, il ne faut jamais inclure directement la valeur d'un paramètre dans le code. Nous allons donc *sortir* le taux de conversion de notre code Javascript, pour l'intégrer dans notre formulaire HTML:
+  - [ ] Dans `formulaire.html`, ajoutez un champ de type `hidden`.
+  - [ ] Donnez-lui `taux` comme valeur d'identifiant (attribut `id`, pour rappel).
+  - [ ] Dans `index.js`, remplacez le taux par du code permettant de récupérer la valeur du champ `taux`.
+  - [ ] → La valeur du taux de conversion ne doit plus apparaitre dans `index.js`.
+  - [ ] Rechargez et testez le formulaire dans le navigateur, puis corrigez si besoin.
+
+1. Félicitations ! Vous avez réussi à développer une application Javascript utile et fonctionelle, basée sur un formulaire HTML ! :-)
 
 ### Composants de formulaire
 
