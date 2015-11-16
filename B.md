@@ -11,13 +11,13 @@
 
 - Google Chrome, pour utiliser "DevTools"
 
-### Instructions à suivre
+### Analyse et modification d'un formulaire existant
 
-#### Analyse et modification d'un formulaire existant
-
-Dans cette première étape:
+Dans cette première session:
 - nous allons ouvrir une page web contenant un formulaire, et la télécharger;
 - nous allons étudier et ajouter des composants à ce formulaire depuis un éditeur.
+
+#### Découverte
 
 1. Ouvrir ce lien dans un nouvel onglet de Google Chrome: [formulaire](http://adrienjoly.com/cours-javascript/B/formulaire)
   - [ ] → une page blanche avec un champ texte doit s'afficher
@@ -62,7 +62,7 @@ Dans cette première étape:
   - [ ] → L'opérateur `=` est un opérateur d'affectation. Il a affecté la valeur 'hollande@elysee.fr' (définie à droite de l'opérateur) au champ 'email-input' (défini à gauche de l'opérateur).
   - [ ] → Soyez vigilants, pensez à toujours utiliser la double-égalité dans vos conditions! (ou triple-égalité, on expliquera ça plus tard)
 
+#### Exercice
+
+
 - - - - TODO: changer action du formulaire => pointer vers un web service installé dans l'intranet => moyen de vérifier qui a effectué l'exercice?
-
-#### Exercice: Analyse et modification d'un formulaire existant
-
