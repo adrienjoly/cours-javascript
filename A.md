@@ -81,3 +81,7 @@ Comme pour le 1er exercice, aucune instruction Javascript complète ne sera four
 #### Exercice Bonus #1: appliquer le même principe à tous les résultats de la page, en utilisant jQuery
 
 #### Exercice Bonus #2: appliquer le même principe à tous les résultats de la page, sans utiliser jQuery
+
+#### Exercice Bonus #3: créer et héberger un bookmarklet à partir de l'exercice bonus #2
+
+Ceux qui auront réussi les exercices bonus sont invités à me contacter pour que je vérifie leur solution, et la corrige si besoin.
