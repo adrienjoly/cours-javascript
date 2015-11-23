@@ -48,7 +48,7 @@ Cette fois, aucune instruction Javascript complète ne sera fournie, seulement u
 1. En observant la définition de cet élément, déterminer le nom de l'attribut qui contient l'URL de la page web associée à ce résultat. Vérifiez-en la valeur en saisissant `$('h3 a')[0].getAttribute('ATTR')` (remplacez `ATTR` par le nom de l'attribut en question).
 1. Modifiez la valeur de cet attribut, pour qu'il contienne `javascript:alert('bravo!');`. Pour cela, utilisez la fonction `$('h3 a')[0].setAttribute('ATTR', 'VALEUR')` (remplacez `ATTR` par le nom de l'attribut en question, et `VALEUR` par la nouvelle valeur que vous voulez lui attribuer).
 1. Cliquez sur le lien. Si vous n'obtenez pas une alerte modale, vous avez du vous tromper dans une des étapes. Essayez autrement.
-1. Si après plusieurs essais, vous n'y parvenez toujours pas, sachez que le nom de l'attribut à modifier est `href`.
+1. Si après plusieurs essais, vous n'y parvenez toujours pas, sachez que le nom des attributs à modifier sont `href` et `data-href`. (car Google ouvre parfois l'URL spécifiée dans l'attribut `data-href` au lieu de celle de `href`)
 
 #### Modifier la destination des résultats
 
