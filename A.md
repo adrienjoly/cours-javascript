@@ -18,7 +18,7 @@ Dans cette première étape:
 - nous allons utiliser la console Javascript pour séléctionner les éléments de notre choix;
 - puis nous allons modifier un de ces éléments, toujours en saisissant des instructions Javascript.
 
-1. Ouvrir Google Chrome
+1. Ouvrir Google Chrome en mode navigation privée (afin d'éviter tout conflit avec les extensions du navigateur)
 1. Aller sur [google.com](http://google.com)
 1. Soumettre une requête (ex: Lundi) => la page de résultats s'ouvre
 1. Clic-droit sur le lien du 1er résultat, puis choisir "Inspecter" => l'élément correspondant est mis en surbrillance dans le DOM de la page. Quel est le type de cet élément ?
