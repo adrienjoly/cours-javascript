@@ -80,6 +80,12 @@ Comme pour le 1er exercice, aucune instruction Javascript complète ne sera four
 1. Toujours pour l'évènement de clic sur ce même élément, affecter une nouvelle fonction qui affiche une alerte modale, mais n'empêche pas la page de destination de s'ouvrir. A noter que ce comportement remplacera le comportement défini à l'étape précédente.
 1. Si le comportement a été correctement défini et associé à l'élément `a` correspondant au 2ème résultat de recherche, un clic sur celui-ci devrait provoquer l'affichage de l'alerte modale, puis donner accès à la page prévue après validation.
 
+#### Exercice: changer le titre du lien avant de changer de page
+
+Cette fois-ci, faire en sorte que le titre du 3ème résultat de recherche soit modifié quand l'utilisateur clique dessus, sans pour autant empêcher le navigateur d'ouvrir l'URL de ce lien.
+
+Pourquoi faut-il utiliser la méthode `onclick` plutôt que coller du code javascript dans les attributs `href` et `data-href` ?
+
 #### Exercice Bonus #1: appliquer le même principe à tous les résultats de la page, en utilisant jQuery
 
 #### Exercice Bonus #2: appliquer le même principe à tous les résultats de la page, sans utiliser jQuery
