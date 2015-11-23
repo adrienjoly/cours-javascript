@@ -50,6 +50,8 @@ Cette fois, aucune instruction Javascript complète ne sera fournie, seulement u
 1. Cliquez sur le lien. Si vous n'obtenez pas une alerte modale, vous avez du vous tromper dans une des étapes. Essayez autrement.
 1. Si après plusieurs essais, vous n'y parvenez toujours pas, sachez que le nom des attributs à modifier sont `href` et `data-href`. (car Google ouvre parfois l'URL spécifiée dans l'attribut `data-href` au lieu de celle de `href`)
 
+Pro-tip: Pour éviter de sortir par accident de la page en cours, cliquez sur le lien en maintenant la touche <kbd>Cmd</kbd> (sur Mac) ou <kbd>Ctrl</kbd> (sur PC). Cela aura pour effet d'ouvrir la page dans un nouvel onglet, et donc de maintenir la session de la console sur la page d'origine.
+
 #### Modifier la destination des résultats
 
 Dans l'étape précédente, nous avons vu comment séléctionner un élément du DOM, en utilisant la fonction `$()`, un selecteur d'éléments imbriqués, et un opérateur `[]` permettant de récupérer un des éléments retournés (le premier, numéroté `0` en Javascript). Puis nous avons utilisé la propriété `innerText` de notre élément, pour en changer le titre, tel qu'affiché sur la page de résultats Google.
