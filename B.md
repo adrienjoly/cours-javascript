@@ -9,11 +9,11 @@
 
 ### Logiciels nécéssaires
 
-- Google Chrome, pour utiliser "DevTools"
+- Google Chrome DevTools
 
-### Analyse et modification d'un formulaire existant
+### Section 1: Analyse et modification d'un formulaire existant
 
-Dans cette première session:
+Dans cette première section:
 - nous allons ouvrir une page web contenant un formulaire, et la télécharger;
 - nous allons étudier et ajouter des composants à ce formulaire depuis un éditeur.
 
@@ -71,7 +71,7 @@ Dans cette première session:
   - [ ] → L'opérateur `=` est un opérateur d'affectation. Il a affecté la valeur 'hollande@elysee.fr' (définie à droite de l'opérateur) au champ 'email-input' (défini à gauche de l'opérateur).
   - [ ] → Soyez vigilants, pensez à toujours utiliser la double-égalité dans vos conditions! (ou triple-égalité, on expliquera ça plus tard)
 
-#### Exercice: Conversion de devises
+#### Exercice 1: Conversion de devises
 
 Pour tester votre compréhension de l'interaction avec les formulaires en javascript, et de la différence entre affectation de valeur et condition d'égalité, vous allez développer un formulaire de conversion de devises.
 
@@ -119,7 +119,8 @@ Voici les étapes qui vous permettront de développer et faire fonctionner ce fo
   - [ ] Indice: en Javascript, les nombre décimaux s'écrivent avec un point, et non une virgule.
   - [ ] Rechargez et testez le formulaire dans le navigateur, puis corrigez si besoin.
 
-1. Afin de faciliter la modification ultérieure de paramètres utilisés par un programme, il ne faut jamais inclure directement la valeur d'un paramètre dans le code. Nous allons donc *sortir* le taux de conversion de notre code Javascript, pour l'intégrer dans notre formulaire HTML:
+1. Rendre le taux plus facilement paramétrable:
+  - [ ] Afin de faciliter la modification ultérieure de paramètres utilisés par un programme, il ne faut jamais inclure directement la valeur d'un paramètre dans le code. C'est pourquoi nous allons *sortir* le taux de conversion de notre code Javascript, pour l'intégrer dans notre formulaire HTML.
   - [ ] Dans `formulaire.html`, ajoutez un champ de type `hidden`.
   - [ ] Donnez-lui `taux` comme valeur d'identifiant (attribut `id`, pour rappel).
   - [ ] Dans `index.js`, remplacez le taux par du code permettant de récupérer la valeur du champ `taux`.
@@ -128,15 +129,32 @@ Voici les étapes qui vous permettront de développer et faire fonctionner ce fo
 
 1. Félicitations ! Vous avez réussi à développer une application Javascript utile et fonctionelle, basée sur un formulaire HTML ! :-)
 
-### Composants de formulaire
+### Section 2: Composants de formulaire
 
-Dans cette deuxième session:
-- nous allons étudier d'autres types de composants de formulaire.
+Dans la section précédente, nous avons utilisé un premier type de composant: le champ de saisie textuelle (`type='text'`), puis nous avons créé un programme javascript simple permettant d'effectuer des conversion entre deux composants textuels.
+
+Dans cette deuxième section:
+- nous allons prendre connaissance d'autres types de composants de formulaire (cf [liste graphique](http://www.startyourdev.com/html/tag-html-balise-input#table-type))
+- nous allons utiliser certains de ces composants pour réaliser une application simple de saisie de constat amiable.
 
 #### Découverte
 
-#### Exercice
+1. 
+
+#### Exercice 2:
 
 
 
 - - - - TODO: changer action du formulaire => pointer vers un web service installé dans l'intranet => moyen de vérifier qui a effectué l'exercice?
+
+
+### Bonus
+
+
+#### Exercice Bonus #1: 
+
+#### Exercice Bonus #2: 
+
+#### Exercice Bonus #3: 
+
+Ceux qui auront réussi les exercices bonus sont invités à me contacter pour que je vérifie leur solution, et la corrige si besoin.
