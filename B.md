@@ -129,7 +129,7 @@ Voici les étapes qui vous permettront de développer et faire fonctionner ce fo
 
 1. Félicitations ! Vous avez réussi à développer une application Javascript utile et fonctionelle, basée sur un formulaire HTML ! :-)
 
-### Section 2: Composants de formulaire
+### Section 2: Composants de formulaire et saisie de constat amiable
 
 Dans la section précédente, nous avons utilisé un premier type de composant: le champ de saisie textuelle (`type='text'`), puis nous avons créé un programme javascript simple permettant d'effectuer des conversion entre deux composants textuels.
 
@@ -139,22 +139,106 @@ Dans cette deuxième section:
 
 #### Découverte
 
-1. 
+1. Regardons ensemble les différents [types de composants](http://www.startyourdev.com/html/tag-html-balise-input#table-type) proposés en HTML.
+
+1. Créer un répertoire de travail basé sur le formulaire de la section 1:
+  - [ ] Dupliquez le répertoire `JS-B-0` créé dans la section 1 ci-dessus.
+  - [ ] Appelez sa copie `JS-B-2`.
+
+1. Ouvrir et tester `/Bureau/JS-B-2/formulaire.html`:
+  - [ ] dans votre éditeur de texte;
+  - [ ] ...et dans votre navigateur Chrome.
+  - [ ] Vérifier que le formulaire vous demande bien de vérifier votre saisie quand vous entrez "hollande@elysee.fr" dans le champ est que vous validez.
+
+1. Ajouter un bouton de soumission de formulaire.
+  - [ ] Actuellement, le seul moyen de soumettre notre formulaire -- et donc, exécuter notre fonction Javascript de validation -- est de saisir une adresse email dans le champ puis presser la touche <kbd>Entrée</kbd>.
+  - [ ] Dans `formulaire.html`, ajouter le code HTML permettant d'afficher un bouton en dessous du champ de saisie de l'adresse email.
+  - [ ] Comme indiqué dans la liste des composants fournie plus haut, le code à ajouter est donc `<input type="button" value="Clic !" />`. (peu importe la valeur de l'attribut `value`)
+  - [ ] → Enregistez, rechargez, puis vérifiez que le bouton s'affiche bien. Par contre, vous constaterez que rien ne se passe quand on clique sur ce bouton.
+  - [ ] Le composant de type `button` n'a pas de comportement prédéfini. Nous allons utiliser le type `submit` pour indiquer au navigateur que ce bouton doit désormais soumettre le formulaire.
+  - [ ] → Enregistez, rechargez, puis vérifiez que le formulaire est bien soumis lorsque vous cliquez sur le bouton.
+
+1. Ajouter une case à cocher, identifiée `majeur`.
+  - [ ] Déterminer quelle valeur donner à l'attribut `type` de l'élément `<input>` correspondant.
+  - [ ] Insérer le code HTML permettant d'ajouter la case à cocher dans `formulaire.html`, sans afficher de texte (libéllé) pour l'instant.
+  - [ ] Enregistez, rechargez la page dans Chrome pour vérifier que la case à cocher s'affiche bien.
+  - [ ] Toujours dans le même fichier, donner la valeur `majeur` à l'attribut `id` dans le code de l'élément HTML de cette case à cocher.
+
+1. Tester la case à cocher.
+  - [ ] Pour tester que notre case à cochée est accessible depuis du code Javascript, nous allons saisir ceci dans la console: `document.getElementById('majeur')`
+  - [ ] → L'élément correspondant doit être retourné par la console. Sinon, vérifiez que vous avez bien pensé à ajouter `id='majeur'` dans le code HTML, à avoir enregistré vos modifications, puis à rafraichir la page dans Chrome.
+  - [ ] Pour tester que l'état de notre case à cochée peut être lu depuis du code Javascript, cochez-la, puis tapez ceci dans la console: `document.getElementById('majeur').checked`
+  - [ ] → Cette commande devrait renvoyer `true` lorsque la case est cochée.
+
+1. Ajouter un libéllé (`<label>`) à la case à cocher.
+  - [ ] Ajouter le code HTML correspondant dans `formulaire.html`.
+  - [ ] Faire en sorte que ce libéllé affiche "Permis B valide".
+  - [ ] → Tester dans le navigateur et s'assurer que la case associée se coche bien lorsqu'on clique sur le libéllé.
+  - [ ] Indice: s'inspirer du code HTML fourni dans la référence des [types de composants](http://www.startyourdev.com/html/tag-html-balise-input#table-type).
+
+1. Condition: le conducteur doit être majeur.
+  - [ ] Afin que le conducteur qui remplit le constat amiable puisse être couvert par son assurance, il faut qu'il soit majeur.
+  - [ ] Nous allons automatiser cette vérification dans notre programme Javascript à l'aide d'une condition `if`.
+  - [ ] Dans le fichier `index.js` associé à `formulaire.html`, insérer la ligne suivante juste avant la condition de validation de `email-input`: `if(document.getElementById('majeur').checked == false) { event.preventDefault(); return alert('le conducteur ne sera pas couvert') }`.
+  - [ ] → Enregistez, rechargez, puis vérifiez que vous obtenez bien une alerte modale lorsque vous validez sans avoir coché la case.
+
+Notre formulaire de saisie de constat amiable contient maintenant trois types de composants différents: un champ email, une case à cocher, et un bouton de soumission de formulaire.
 
 #### Exercice 2:
 
+Pour commencer cette deuxième section, nous avons ajouté deux types de composants à notre formulaire.
 
+Dans cet exercice, vous allez en ajouter encore deux autres:
+- un champ de saisie de date,
+- et deux boutons "radio".
 
-- - - - TODO: changer action du formulaire => pointer vers un web service installé dans l'intranet => moyen de vérifier qui a effectué l'exercice?
+Chaque composant sera associé à du code de validation en Javascript.
 
+Le but du formulaire est d'obtenir rapidement un premier diagnostic d'un accident automobile, sur la base des informations de constat amiables saisies. Le code Javascript associé à ce formulaire permet à la fois:
+- que chaque champ a été rempli de manière valide par l'utilisateur,
+- et de déterminer si le déclarant sera remboursé ou pas, en fonction des éléments saisis, et d'une liste de règles simples.
 
-### Bonus
+Règles: pour que le déclarant soit remboursé par l'assurance, il doit valider tous les critères suivants:
+- avoir fourni une adresse email valide; (*déjà implémenté*)
+- avoir fourni une adresse email autre que "hollande@elysee.fr"; (*déjà implémenté*)
+- être majeur; (*déjà implémenté*)
+- avoir déclaré que son véhicule se trouvait devant celui avec lequel la collision a eu lieu; (*à implémenter*)
+- et avoir déclaré que l'accident a eu lieu à la date d'aujourd'hui, ou à une date antérieure. (*à implémenter*)
 
+Après soumission du formulaire, la page doit afficher une alerte modale disant "Vous allez être couvert", "Vous n'allez pas être couvert car ..." (en remplaçant les points de suspension par la cause de non-converture, en vertu des règles listées ci-dessus), ou un affichant un message aidant l'utilisateur à rendre sa saisie valide (ex: "Merci de cocher au moins une option").
 
-#### Exercice Bonus #1: 
+Cette fois-ci, vous serez moins guidés que dans les exercices précédents. Appuyez-vous un maximum sur la référence des types de composants fournie plus haut, et posez-moi vos questions si vous êtes bloqué(e), ou si vous ne comprenez pas.
 
-#### Exercice Bonus #2: 
+Marche à suivre pour réaliser l'exercice:
 
-#### Exercice Bonus #3: 
+0. Faire une sauvegarde du répertoire `JS-B-2`, à garder de côté au cas où, car vous allez continuer de travailler sur ce même répertoire.
+1. Ajouter une liste à choix unique parmi deux options: "Je circulais devant l'autre véhicule" et "Je circulais derrière l'autre véhicule".
+  - [ ] Insérez deux "radio buttons" dans le code HTML du formulaire.
+  - [ ] Faites en sorte que l'utilisateur ne puisse choisir qu'une seule option parmi les deux.
+  - [ ] Affichez un message d'erreur si l'utilisateur n'a pas choisi d'option avant de soumettre le formulaire.
+2. Ajouter le champ de saisie de date de l'accident.
+  - [ ] Insérez un élément `<input>` de `type` `date`.
+  - [ ] Affichez un message d'erreur dans le cas où la date saisie serait postérieure à celle d'aujourd'hui.
+  - [ ] Avant de demander comment effectuer cette condition, cherchez des réponses en tapant "javascript validate html date in past" sur Google. Sachez que le site stackoverflow.com classe les meilleures solutions par qualité décroissante.
+3. Faire en sorte que le message "Vous allez être couvert" soit affiché si et seulement si la saisie est valide et les règles/critères fournies ci-dessus ont été validées.
+4. Tester tous les cas possibles pour assurer que le formulaire donne toujours un diagnostic correct, en vertu des règles/critères fournies ci-dessus.
 
-Ceux qui auront réussi les exercices bonus sont invités à me contacter pour que je vérifie leur solution, et la corrige si besoin.
+#### Exercice 3
+
+Améliorer la lisibilité du formulaire en ajoutant:
+- un titre "Diagnostic de constat amiable" en haut de page;
+- des sauts de ligne ('<br>') et/ou paragraphes ('<p>') entre les composants;
+- un sous-titre pour chaque champ à remplir.
+
+#### Exercice 4
+
+Dans la plupart des applications en ligne, les données saisies par l'utilisateur dans un formulaire sont envoyées sur le serveur web de l'application afin d'être traitées. Exemple: login, création de compte, réponse sur un forum, etc...
+
+Pour l'instant nous n'avons pas spécifié de serveur, donc le navigateur se contente de rafrichir la page en inclurant les données sous forme de paramêtres, directement dans l'URL de la page.
+
+En l'absence de serveur vers lequel soumettre notre formulaire, nous pouvons utiliser celui de [httpbin](https://httpbin.org/). Cet outil en ligne permet de visualiser quelles sont les données envoyées lors qu'on soumet un formulaire HTML. C'est donc très pratique pour tester les formulaires, mais aussi pour mieux comprendre comment ils fonctionnent.
+
+Observer et compléter les informations envoyées lorsqu'on soumet notre formulaire. Pour cela:
+- Ajouter l'attribut `action="https://httpbin.org/get"` dans le code HTML de l'élement `<form>`.
+- Enregistrer, rafraichir la page, saisir et soumettre le formulaire.
+- Faire en sorte que la valeur de tous les champs du formulaires soient inclus sur cette page.
