@@ -25,8 +25,8 @@ Dans cette première section:
 1. Télécharger le code source intégral de cette page:
   - [ ] ouvrir le menu "Fichier / Enregistrer sous..." (raccourci: <kbd>Cmd</kbd>+<kbd>S</kbd>),
   - [ ] choisir "Site web entier" dans la liste déroullante,
-  - [ ] Enregistrer les fichiers sur le bureau.
-  - [ ] → Un fichier `formulaire.html` ainsi qu'un réportoire ont du être téléchargés sur le bureau. Le répertoire contient `index.js`.
+  - [ ] Enregistrer les fichiers sur le bureau, dans un répertoire appelé `JS-B-0` (que vous allez créer à cette occasion).
+  - [ ] → Un fichier `formulaire.html` ainsi qu'un réportoire ont du être téléchargés dans le répertoire `JS-B-0`, sur le bureau. Le fichier `index.js` est contenu dans un sous-repertoire.
 
 1. Ouvrir le fichier `formulaire.html` depuis le bureau
   - [ ] en effectuant un glisser-déposer vers la barre d'onglets de Google Chrome.
@@ -39,7 +39,7 @@ Dans cette première section:
   - [ ] → Le code source de la page est consistué d'un formulaire (élément `form`), d'un champ de saisie d'email (élément `input`, avec son libéllé `label` associé), et d'un `script` externe chargé depuis le fichier `index.js`.
 
 1. Ouvrir et étudier le fichier `index.js` (contenu dans le répertoire téléchargé sur le bureau), en utilisant un éditeur de texte.
-  - [ ] Le code Javascript chargé par notre page définit une fonction (`function()`) associée à l'évènement `submit` du formulaire défini dans la page. En effet, `document.getElementById()` retourne une référence vers un élément du DOM à partir de son identifiant.
+  - [ ] Le code Javascript chargé par notre page définit une fonction (`function()`) associée à l'évènement `submit` du formulaire défini dans la page. En effet, `document.getElementById()` retourne une référence vers un élément du DOM à partir de son identifiant, à la manière de la fonction `$` de jQuery que nous avons utilisée lors du TP précédent.
   - [ ] Cherchez et remarquez dans le code source de `formulaire.html` comment a été attribué cet identifiant.
   - [ ] Devinez le comportement que produit la fonction définie dans `index.js`.
   - [ ] Devinez quelle(s) action(s) de l'utilisateur permet de déclancher ce comportement.
@@ -69,7 +69,7 @@ Dans cette première section:
   - [ ] Rechargez la page, soumettez une adresse email autre que 'hollande@elysee.fr', et observez ce qui se passe.
   - [ ] Devinez pourquoi la valeur du champ a changé.
   - [ ] → L'opérateur `=` est un opérateur d'affectation. Il a affecté la valeur 'hollande@elysee.fr' (définie à droite de l'opérateur) au champ 'email-input' (défini à gauche de l'opérateur).
-  - [ ] → Soyez vigilants, pensez à toujours utiliser la double-égalité dans vos conditions! (ou triple-égalité, on expliquera ça plus tard)
+  - [ ] → Soyez vigilants, pensez à toujours utiliser la double-égalité dans vos conditions ! (ou triple-égalité, on expliquera ça plus tard)
 
 #### Exercice 1: Conversion de devises
 
@@ -87,7 +87,7 @@ Voici les étapes qui vous permettront de développer et faire fonctionner ce fo
 1. Sur le bureau de votre poste de travail, créez un répertoire appelé "JS-B-1".
 
 1. Dans ce répertoire, copiez les fichiers `formulaire.html` et `index.js`.
-  - [ ] → Nous allons désormais travailler avec les copies de ces fichiers, dans le répertoire "JS-B-1". (laissez tel-quels les fichiers que nous avons manipulé dans la section précédente, afin de pouvoir les consulter au besoin)
+  - [ ] → Nous allons désormais travailler avec les copies de ces fichiers, dans le répertoire `JS-B-1`. (laissez tel-quels les fichiers que nous avons manipulé dans la section précédente, afin de pouvoir les consulter au besoin)
 
 1. Pour commencer, nous allons remplacer le champ de saisie d'email par celui permettant de saisir une valeur en Euros:
   - [ ] Ouvrez `formulaire.html` dans votre éditeur de texte.
