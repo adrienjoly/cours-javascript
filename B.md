@@ -227,7 +227,7 @@ Marche à suivre pour réaliser l'exercice:
 
 Améliorer la lisibilité du formulaire en ajoutant:
 - un titre "Diagnostic de constat amiable" en haut de page;
-- des sauts de ligne ('<br>') et/ou paragraphes ('<p>') entre les composants;
+- des sauts de ligne ('\<br\>') et/ou paragraphes ('\<p\>') entre les composants;
 - un sous-titre pour chaque champ à remplir.
 
 #### Exercice 4
