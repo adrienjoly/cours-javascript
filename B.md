@@ -98,7 +98,7 @@ Voici les étapes qui vous permettront de développer et faire fonctionner ce fo
   - Ouvrez `formulaire.html` dans Google Chrome. Ignorez les erreurs affichées dans la console, à ce stade.
   - Vérifiez que votre champs et son libellé s'affichent bien.
 
-1. Avant d'implémenter le reste du formulaire, nous allons tester l'accessibilité de notre champ depuis le code Javascript rattaché à notre formulaire:
+1. Tester l'accessibilité de notre champ depuis le code Javascript rattaché à notre formulaire:
   - Toujours dans `formulaire.html`, changez l'URL du script `index.js` afin que notre formulaire puisse trouver charger ce fichier sans provoquer d'erreur dans la console de Chrome.
   - Ouvrez `index.js` dans votre éditeur de texte.
   - Effacez tout le code défini dans le corps de la fonction (entre les accolades `{}`).
@@ -109,6 +109,7 @@ Voici les étapes qui vous permettront de développer et faire fonctionner ce fo
 
 1. Afficher le résultat de la conversion dans le formulaire:
   - Ajoutez le second champ de saisie (Dollars) et son `label`.
+  - Ajoutez un bouton de soumission (`<input type="submit">`)
   - Modifiez le code Javascript de manière à ce que la valeur entrée par l'utilisateur dans le champ "Euros" soit copiée dans le champ "Dollars" que vous venez de créer, au lieu d'afficher une alerte modale.
   - Indice: il va falloir utiliser l'opérateur d'affectation.
   - Indice: pensez à empêcher la soumission effective du formulaire. (rappel: `event.preventDefault()`)
