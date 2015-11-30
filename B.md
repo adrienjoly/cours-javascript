@@ -4,10 +4,10 @@
 
 - Modification du code source d'une page web hors du navigateur
 - Découverte des formulaires et composants de saisie
-- Utilisation des sélécteurs natifs de Javascript
+- Utilisation des sélecteurs natifs de Javascript
 - Utilisation des expressions conditionnelles avec `if`
 
-### Logiciels nécéssaires
+### Logiciels nécessaires
 
 - Google Chrome DevTools
 
@@ -24,9 +24,9 @@ Dans cette première section:
 
 1. Télécharger le code source intégral de cette page:
   - ouvrir le menu "Fichier / Enregistrer sous..." (raccourci: <kbd>Cmd</kbd>+<kbd>S</kbd>),
-  - choisir "Site web entier" dans la liste déroullante,
+  - choisir "Site web entier" dans la liste déroulante,
   - Enregistrer les fichiers sur le bureau, dans un répertoire appelé `JS-B-0` (que vous allez créer à cette occasion).
-  - → Un fichier `formulaire.html` ainsi qu'un réportoire ont du être téléchargés dans le répertoire `JS-B-0`, sur le bureau. Le fichier `index.js` est contenu dans un sous-repertoire.
+  - → Un fichier `formulaire.html` ainsi qu'un répertoire ont du être téléchargés dans le répertoire `JS-B-0`, sur le bureau. Le fichier `index.js` est contenu dans un sous-repertoire.
 
 1. Ouvrir le fichier `formulaire.html` depuis le bureau
   - en effectuant un glisser-déposer vers la barre d'onglets de Google Chrome.
@@ -36,13 +36,13 @@ Dans cette première section:
   - Pour cela, activer la console Javascript depuis la page `formulaire.html` locale (pour rappel, raccourci: <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd>).
 
 1. Ouvrir et étudier le fichier `formulaire.html` du bureau, en utilisant un éditeur de texte.
-  - → Le code source de la page est consistué d'un formulaire (élément `form`), d'un champ de saisie d'email (élément `input`, avec son libéllé `label` associé), et d'un `script` externe chargé depuis le fichier `index.js`.
+  - → Le code source de la page est constitué d'un formulaire (élément `form`), d'un champ de saisie d'email (élément `input`, avec son libellé `label` associé), et d'un `script` externe chargé depuis le fichier `index.js`.
 
 1. Ouvrir et étudier le fichier `index.js` (contenu dans le répertoire téléchargé sur le bureau), en utilisant un éditeur de texte.
   - Le code Javascript chargé par notre page définit une fonction (`function()`) associée à l'évènement `submit` du formulaire défini dans la page. En effet, `document.getElementById()` retourne une référence vers un élément du DOM à partir de son identifiant, à la manière de la fonction `$` de jQuery que nous avons utilisée lors du TP précédent.
   - Cherchez et remarquez dans le code source de `formulaire.html` comment a été attribué cet identifiant.
   - Devinez le comportement que produit la fonction définie dans `index.js`.
-  - Devinez quelle(s) action(s) de l'utilisateur permet de déclancher ce comportement.
+  - Devinez quelle(s) action(s) de l'utilisateur permet de déclencher ce comportement.
   - → Testez cette/ces action(s), pour vérifier le comportement produit.
 
 1. Tester et observer le fonctionnement du formulaire:
@@ -60,11 +60,11 @@ Dans cette première section:
 
 1. Comme vous l'aurez compris:
   - Les commandes contenue dans les accolades '{}' suivant la condition `if(condition)` ne s'exécutent que lorsque la `condition` est remplie.
-  - La commande `return` empêche les commandes suivantes de s'exécuter. En effet, celle-ci interromp l'exécution de la fonction.
+  - La commande `return` empêche les commandes suivantes de s'exécuter. En effet, celle-ci interrompt l'exécution de la fonction.
 
 1. Egalité VS affectation:
   - Regardons de plus prêt la définition de notre condition. En particulier, notez l'utilisation de l'opérateur `==` (double-égalité).
-  - Remplacez cet opérateur par `=` (affectation), puis enregistez vos modifications.
+  - Remplacez cet opérateur par `=` (affectation), puis enregistrez vos modifications.
   - Essayez de deviner quel sera l'effet de cette modification.
   - Rechargez la page, soumettez une adresse email autre que 'hollande@elysee.fr', et observez ce qui se passe.
   - Devinez pourquoi la valeur du champ a changé.
@@ -94,17 +94,17 @@ Voici les étapes qui vous permettront de développer et faire fonctionner ce fo
   - Supprimez l'attribut `name` du champs de saisie `adresse-email` (il ne sera pas utile pour l'instant).
   - Donnez la valeur `text` à l'attribut `type`.
   - Renommez la valeur de l'identifiant `email-input` en `euros-input`.
-  - Pensez aussi à mettre à jour le texte du libéllé `label` associé.
+  - Pensez aussi à mettre à jour le texte du libellé `label` associé.
   - Ouvrez `formulaire.html` dans Google Chrome. Ignorez les erreurs affichées dans la console, à ce stade.
-  - Vérifiez que votre champs et son libéllé s'affichent bien.
+  - Vérifiez que votre champs et son libellé s'affichent bien.
 
 1. Avant d'implémenter le reste du formulaire, nous allons tester l'accessibilité de notre champ depuis le code Javascript rattaché à notre formulaire:
   - Toujours dans `formulaire.html`, changez l'URL du script `index.js` afin que notre formulaire puisse trouver charger ce fichier sans provoquer d'erreur dans la console de Chrome.
   - Ouvrez `index.js` dans votre éditeur de texte.
-  - Effacez tout le code défini dans le corps de la fonction (entre les accollades `{}`).
+  - Effacez tout le code défini dans le corps de la fonction (entre les accolades `{}`).
   - Rechargez le formulaire dans Chrome → Il ne devrait plus y avoir d'erreur dans la console.
   - Dans le corps de la fonction `onsubmit`, faites en sorte que la valeur entrée par l'utilisateur dans le champ "Euros" soit affichée dans une alerte modale, lorsque celui-ci valide sa saisie avec <kbd>Entrée</kbd>.
-  - Pour rappel: vous aurez probablement besoin d'utiliser l'instuction `alert` et la fonction 'getElementById()'.
+  - Pour rappel: vous aurez probablement besoin d'utiliser l'instruction `alert` et la fonction 'getElementById()'.
   - Rechargez le formulaire dans Chrome et testez le bon fonctionnement de ce comportement. Si besoin, corrigez votre code avant de passer à l'étape suivante.
 
 1. Afficher le résultat de la conversion dans le formulaire:
@@ -127,7 +127,7 @@ Voici les étapes qui vous permettront de développer et faire fonctionner ce fo
   - → La valeur du taux de conversion ne doit plus apparaitre dans `index.js`.
   - Rechargez et testez le formulaire dans le navigateur, puis corrigez si besoin.
 
-1. Félicitations ! Vous avez réussi à développer une application Javascript utile et fonctionelle, basée sur un formulaire HTML ! :-)
+1. Félicitations ! Vous avez réussi à développer une application Javascript utile et fonctionnelle, basée sur un formulaire HTML ! :-)
 
 ### Section 2: Composants de formulaire et saisie de constat amiable
 
@@ -154,14 +154,14 @@ Dans cette deuxième section:
   - Actuellement, le seul moyen de soumettre notre formulaire -- et donc, exécuter notre fonction Javascript de validation -- est de saisir une adresse email dans le champ puis presser la touche <kbd>Entrée</kbd>.
   - Dans `formulaire.html`, ajouter le code HTML permettant d'afficher un bouton en dessous du champ de saisie de l'adresse email.
   - Comme indiqué dans la liste des composants fournie plus haut, le code à ajouter est donc `<input type="button" value="Clic !" />`. (peu importe la valeur de l'attribut `value`)
-  - → Enregistez, rechargez, puis vérifiez que le bouton s'affiche bien. Par contre, vous constaterez que rien ne se passe quand on clique sur ce bouton.
+  - → Enregistrez, rechargez, puis vérifiez que le bouton s'affiche bien. Par contre, vous constaterez que rien ne se passe quand on clique sur ce bouton.
   - Le composant de type `button` n'a pas de comportement prédéfini. Nous allons utiliser le type `submit` pour indiquer au navigateur que ce bouton doit désormais soumettre le formulaire.
-  - → Enregistez, rechargez, puis vérifiez que le formulaire est bien soumis lorsque vous cliquez sur le bouton.
+  - → Enregistrez, rechargez, puis vérifiez que le formulaire est bien soumis lorsque vous cliquez sur le bouton.
 
 1. Ajouter une case à cocher, identifiée `majeur`.
   - Déterminer quelle valeur donner à l'attribut `type` de l'élément `<input>` correspondant.
-  - Insérer le code HTML permettant d'ajouter la case à cocher dans `formulaire.html`, sans afficher de texte (libéllé) pour l'instant.
-  - Enregistez, rechargez la page dans Chrome pour vérifier que la case à cocher s'affiche bien.
+  - Insérer le code HTML permettant d'ajouter la case à cocher dans `formulaire.html`, sans afficher de texte (libellé) pour l'instant.
+  - Enregistrez, rechargez la page dans Chrome pour vérifier que la case à cocher s'affiche bien.
   - Toujours dans le même fichier, donner la valeur `majeur` à l'attribut `id` dans le code de l'élément HTML de cette case à cocher.
 
 1. Tester la case à cocher.
@@ -170,17 +170,17 @@ Dans cette deuxième section:
   - Pour tester que l'état de notre case à cochée peut être lu depuis du code Javascript, cochez-la, puis tapez ceci dans la console: `document.getElementById('majeur').checked`
   - → Cette commande devrait renvoyer `true` lorsque la case est cochée.
 
-1. Ajouter un libéllé (`<label>`) à la case à cocher.
+1. Ajouter un libellé (`<label>`) à la case à cocher.
   - Ajouter le code HTML correspondant dans `formulaire.html`.
-  - Faire en sorte que ce libéllé affiche "Permis B valide".
-  - → Tester dans le navigateur et s'assurer que la case associée se coche bien lorsqu'on clique sur le libéllé.
+  - Faire en sorte que ce libellé affiche "Permis B valide".
+  - → Tester dans le navigateur et s'assurer que la case associée se coche bien lorsqu'on clique sur le libellé.
   - Indice: s'inspirer du code HTML fourni dans la référence des [types de composants](http://www.startyourdev.com/html/tag-html-balise-input#table-type).
 
 1. Condition: le conducteur doit être majeur.
   - Afin que le conducteur qui remplit le constat amiable puisse être couvert par son assurance, il faut qu'il soit majeur.
   - Nous allons automatiser cette vérification dans notre programme Javascript à l'aide d'une condition `if`.
   - Dans le fichier `index.js` associé à `formulaire.html`, insérer la ligne suivante juste avant la condition de validation de `email-input`: `if(document.getElementById('majeur').checked == false) { event.preventDefault(); return alert('le conducteur ne sera pas couvert') }`.
-  - → Enregistez, rechargez, puis vérifiez que vous obtenez bien une alerte modale lorsque vous validez sans avoir coché la case.
+  - → Enregistrez, rechargez, puis vérifiez que vous obtenez bien une alerte modale lorsque vous validez sans avoir coché la case.
 
 Notre formulaire de saisie de constat amiable contient maintenant trois types de composants différents: un champ email, une case à cocher, et un bouton de soumission de formulaire.
 
@@ -234,11 +234,11 @@ Améliorer la lisibilité du formulaire en ajoutant:
 
 Dans la plupart des applications en ligne, les données saisies par l'utilisateur dans un formulaire sont envoyées sur le serveur web de l'application afin d'être traitées. Exemple: login, création de compte, réponse sur un forum, etc...
 
-Pour l'instant nous n'avons pas spécifié de serveur, donc le navigateur se contente de rafrichir la page en inclurant les données sous forme de paramêtres, directement dans l'URL de la page.
+Pour l'instant nous n'avons pas spécifié de serveur, donc le navigateur se contente de rafraichir la page en incluant les données sous forme de paramètres, directement dans l'URL de la page.
 
 En l'absence de serveur vers lequel soumettre notre formulaire, nous pouvons utiliser celui de [httpbin](https://httpbin.org/). Cet outil en ligne permet de visualiser quelles sont les données envoyées lors qu'on soumet un formulaire HTML. C'est donc très pratique pour tester les formulaires, mais aussi pour mieux comprendre comment ils fonctionnent.
 
 Observer et compléter les informations envoyées lorsqu'on soumet notre formulaire. Pour cela:
-- Ajouter l'attribut `action="https://httpbin.org/get"` dans le code HTML de l'élement `<form>`.
+- Ajouter l'attribut `action="https://httpbin.org/get"` dans le code HTML de l'élément `<form>`.
 - Enregistrer, rafraichir la page, saisir et soumettre le formulaire.
 - Faire en sorte que la valeur de tous les champs du formulaires soient inclus sur cette page.
