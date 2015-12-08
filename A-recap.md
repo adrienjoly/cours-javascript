@@ -4,7 +4,7 @@
 
 - Javascript est un langage de programmation. C'est le seul qui soit exécutable en standard sur la plupart des navigateurs web.
 - Javascript n'a rien à voir avec le langage Java.
-- Comme en maths, et dans tous les autres langages de programmation: quand on mentionne le nom du variable, elle peut être remplacée par sa valeur. Exemple:
+- Comme en maths, et dans tous les autres langages de programmation: quand on mentionne le nom d'une variable, elle peut être remplacée par sa valeur. Exemple:
 
 ```
 2 + 4; // => résultat: 6
@@ -80,7 +80,7 @@ Forme d'un élément:
     <type attribut_1="valeur_attribut_1"> contenu </type>
 
 
-### Éléments HTML incontourables
+### Éléments HTML incontournables
 
     <h1>Titre de niveau 1</h1>
     <h2>Titre de niveau 2</h2>
@@ -128,9 +128,9 @@ Forme d'un élément:
 ### Formulaire HTML
 
     <form id="formulaire">
-      <label for="adresse-email">Votre email:</label>
+      <label for="email-input">Votre email:</label>
       <input type="email" id="email-input" value="hollande@elysee.fr">
-      <label for="majeur">Permis B valide:</label>
+      <label for="majeur">Permis B valide</label>
       <input type="checkbox" id="majeur">
       <input type="submit">
     </form>
