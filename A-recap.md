@@ -6,11 +6,13 @@
 - Javascript n'a rien à voir avec le langage Java.
 - Comme en maths, et dans tous les autres langages de programmation: quand on mentionne le nom du variable, elle peut être remplacée par sa valeur. Exemple:
 
-    2 + 4; // => résultat: 6
-    var a = 2;
-    a + 4; // => résultat: 6 (car équivaut à 2 + 4, en replaçant a par 2)
-    a = 1; // on change la valeur de la variable a
-    a + 4; // => résultat: 5 (car a vaut 1, à l'instant t)
+```
+2 + 4; // => résultat: 6
+var a = 2;
+a + 4; // => résultat: 6 (car équivaut à 2 + 4, en replaçant a par 2)
+a = 1; // on change la valeur de la variable a
+a + 4; // => résultat: 5 (car a vaut 1, à l'instant t)
+```
 
 - En Javascript, une valeur peut être de différents types:
   - Chaine de caractères (string), ex: `'Bonjour !'` ou `"Bonjour!"`
@@ -22,29 +24,37 @@
 - En Javascript, on groupe plusieurs instructions entre accolades `{}`
 - En Javascript, l'opérateur `=` sert à **affecter** une valeur à une variable, ex:
 
-    var ma_variable = nouvelle_valeur; // => ma_variable est modifiée
+```
+var ma_variable = nouvelle_valeur; // => ma_variable est modifiée
+```
 
 - En Javascript, l'opérateur `==` sert à **comparer** deux valeurs, au même titre que les opérateurs `<` et `>`, ex:
 
-    1 == 2; // => false
-    1 == 1; // => true
-    1 < 1;  // => false
-    1 < 2;  // => true
+```
+1 == 2; // => false
+1 == 1; // => true
+1 < 1;  // => false
+1 < 2;  // => true
+```
 
 - En Javascript, l'opérateur `!=` (*différent de*) est l'inverse de `==`, ex:
 
-    1 != 2; // => true
-    1 != 1; // => false
+```
+1 != 2; // => true
+1 != 1; // => false
+```
 
 - En Javascript, il est possible d'inclure des commentaires dans le code:
 
-    // Cette ligne contient seulement un commentaire
-    var a = 1; // la valeur 1 est attribuée à la variable a
-    /*
-    a = 2; // cette instruction ne s'éxécutera pas
-    a = 3; // celle-ci non plus
-    */
-    a = 4; // a vaut désormais 4
+```
+// Cette ligne contient seulement un commentaire
+var a = 1; // la valeur 1 est attribuée à la variable a
+/*
+a = 2; // cette instruction ne s'éxécutera pas
+a = 3; // celle-ci non plus
+*/
+a = 4; // a vaut désormais 4
+```
 
 ### Javascript et le DOM
 
