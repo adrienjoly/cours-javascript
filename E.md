@@ -1,4 +1,4 @@
-# TP E: Formulaires dynamiques / fonctions
+# TP E: Fonctions et formulaires dynamiques
 
 ### Introduction
 
@@ -6,7 +6,7 @@ Comme en mathématiques, une fonction Javascript est une opération transformant
 
 Définir une fonction sert à regrouper des instructions Javascript, afin qu'elles puissent être exécutées à différentes occasions, sans avoir à répéter le code correspondant.
 
-Dans le contexte d'un navigateur web, les fonctions sont utilisées par le développeur pour définir le comportement que doit suivre le navigateur lorsque l'utilisateur effectue certaines actions (ex: clic sur un bouton).
+Dans le contexte d'un navigateur web, les fonctions sont utilisées par le développeur pour définir le comportement que doit suivre le navigateur lorsque l'utilisateur effectue certaines actions (ex: saisie dans un champ, clic sur un bouton, soumission d'un formulaire). Les fonctions sont donc essentielles aux formulaires dynamiques, dont le fonctionnement dépend de la saisie de l'utilisateur.
 
 ### Définition et appel de fonction
 
@@ -130,3 +130,81 @@ function afficherAlerteModale (evt) {
 };
 document.getElementById('mon-bouton').onclick = afficherAlerteModale;
 ```
+
+### Bugs et tests unitaires: comment tester une fonction
+
+Appeler une fonction ajoute de l'incertitude et parfois de l'imprévisibilité au comportement du code, car cela revient à déléguer une fonctionnalité à une autre partie du code (la définition de la fonction appelée).
+
+Afin de se rassurer sur le bon fonctionnement d'une fonction et éviter les "bugs", il est important de tester les fonctions qu'on utilise.
+
+Un "bug" est un comportement imprévu causant des anomalies et/ou l'interruption de l'exécution du programme. Il est généralement causé par une erreur d'implémentation ou une réalisation trop naïve (c.a.d. ne couvrant pas certains cas qui peuvent se produire).
+
+Exemple d'implémentation naïve pouvant causer un bug:
+
+```
+function multiplierParDix (nombre) {
+  return nombre + "0"; // on ajoute un zéro à la fin du nombre
+}
+multiplierParDix(2) == 20; // => ok
+multiplierParDix(3) == 30; // => ok
+multiplierParDix(0.5) == 0.50; // => BUG! on aurait du obtenir 5 dans ce cas
+```
+
+Dans l'exemple ci-dessus, nous avons saisi trois tests unitaires pour notre fonction `multiplierParDix`, et l'un deux nous a permis de détecter un bug dans notre fonction.
+
+À retenir: Un test unitaire consiste à vérifier qu'une fonction se comporte comme prévu dans un cas donné, en comparant le résultat retourné au résultat qui aurait du être retourné, pour chaque cas testé.
+
+Afin de réduire le nombre de bugs potentiels d'une fonction, et donc de se rassurer sur son bon fonctionnement, il faut écrire et exécuter plusieurs tests unitaires, et penser intelligemment aux "cas limites", les cas qui pourraient le plus probablement causer un bug.
+
+## Mise en pratique 1
+
+Dans cette partie de mise en pratique, nous allons développer ensemble plusieurs fonctions, et les tester.
+
+Sachant que le code que nous allons utiliser est du pur Javascript sans aucune dépendance au DOM, nous pouvons saisir et tester nos fonctions dans n'importe quel interpréteur Javascript. Par exemple:
+la console Javascript de notre navigateur web (cf TP A);
+un fichier .js rattaché à un fichier .html ouvert dans notre navigateur web (cf TP B);
+sur un site comme codepen, jsfiddle ou jsbin;
+ou à l'aide de l'interpréteur `node` à appeler depuis le terminal de votre système d'exploitation.
+
+Développer:
+une fonction `diviserParDeux` qui retourne la moitié de la valeur passée en paramètre. Tests:
+`diviserParDeux(2) == 1`
+`diviserParDeux(4) == 2`
+`var n = Math.radom(); diviserParDeux(n) == n / 2`
+une fonction `somme` qui retourne la somme des deux paramètres qui lui seront passés. Tests:
+`somme(1, 1) == 2`
+`somme(1, 2) == 3`
+`somme(2, 1) == 3`
+`var n = Math.radom(); somme(n, 1) == n + 1`
+une fonction `signe` qui retourne la chaine de caractères `positif`, `négatif` ou `nul`, selon le signe de la valeur passée en paramètre. Tests:
+`signe(-1) == 'negatif'`
+`signe(0) == 'nul'`
+`signe(Math.radom()) == 'positif'`
+une fonction `factorielle` qui retourne le produit des entiers entre 1 et l'entier passé en paramètre. Exemple: `factorielle(3)` retourne le résultat de `1 * 2 * 3`, soit `6`. Tests:
+`factorielle(0) == 0`
+`factorielle(1) == 1`
+`factorielle(3) == 6`
+`factorielle(4) == 24`
+
+Remarque: la fonction Math.random() renvoie un nombre décimal aléatoirement choisi entre 0 et 1. L'utilisation de cette fonction dans les tests permet d'assurer que votre fonction ne gère pas certains cas "en dur" dans le code. (c.a.d. avec un `return` par condition `if`, vérifiant plusieurs valeurs prédéfinies des paramètres)
+
+## Exercice 1 - formulaire simple
+
+Dans cet exercice, nous allons rattacher les fonctions écrites ci-dessus à des évènements de formulaire web. Nous allons donc utiliser le DOM.
+
+Voici le code du formulaire:
+
+```
+<input id="nombre">
+<button id="mon-bouton">Diviser par deux</button>
+```
+
+Écrire le code Javascript permettant d'afficher dans une alerte modale le résultat de la division par 2 du nombre saisi par l'utilisateur dans le champ (dont l'`id` est `nombre`), à chaque fois que l'utilisateur cliquera sur le bouton (dont l'`id` est `mon-bouton`). Votre code ne doit pas effectuer directement de division, par contre vous pouvez utiliser la fonction `diviserParDeux` définie plus haut.
+
+2) Modifier votre code de manière à ce qu'une alerte modale affiche "veuillez saisir un nombre", dans le cas où le champ serait vide au moment où l'utilisateur clique sur le bouton.
+
+
+
+## Exercice 2 - formulaire dynamique
+
+Validation et modification de formulaire en fonction d'une saisie

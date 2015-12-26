@@ -12,7 +12,7 @@
 - [B](B.md): Validation d’un champs de formulaire texte (conditions et alerts)
 - C: Variables: katas "[Onboarding](https://www.codingame.com/games/puzzles/43)" et "[Power of Thor](https://www.codingame.com/games/puzzles/4)" sur Codingame + [Fiche Récap](A-recap.md)
 - D: Arrays et selections multiples dans formulaires (objets)
-- E: Formulaire dynamiques (functions)
+- [E](E.md): Formulaire dynamiques (functions)
 - F: Population d’une page à l’aide d’un appel Ajax sur une API
 - (evaluation)
 - G: Sauvegarde de données via Post Ajax
