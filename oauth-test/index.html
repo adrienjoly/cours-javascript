@@ -1,55 +1,24 @@
 <html>
   <head>
-    <script src='hello.min.js'></script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="247219641427-bf9s9o98911sp4t7l62nfl8gj458r7h9.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
-    <button id="login">Se connecter</button>
-    <div id="profile_google"></div>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     <script>
-      // before use:
-      // - create a project on google developer console: https://console.developers.google.com => 'eemi-own-exam'
-      // - and create a oauth client id for Google+ API
-      // cf http://adodson.com/hello.js
-      hello.init({
-        google: '247219641427-bf9s9o98911sp4t7l62nfl8gj458r7h9.apps.googleusercontent.com' // client id
-      }, {
-        redirect_uri: 'http://adrienjoly.com/cours-javascript/oauth-test'
-      });
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log("Name: " + profile.getName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
 
-
-      hello.on('auth.login', function(auth) {
-        // Call user information, for the given network
-        hello(auth.network).api('/me').then(function(r) {
-          // Inject it into the container
-          var label = document.getElementById('profile_' + auth.network);
-          if (!label) {
-            label = document.createElement('div');
-            label.id = 'profile_' + auth.network;
-            document.getElementById('profile').appendChild(label);
-          }
-          label.innerHTML = '<img src="' + r.thumbnail + '" /> Hey ' + r.name;
-        });
-      });
-
-      document.getElementById('login').onclick = function() {
-        /*
-        hello('google').login().then(function() {
-          alert('You are signed in to Google');
-        }, function(e) {
-          alert('Signin error: ' + e.error.message);
-        });
-        hello('google').api('me').then(function(json) {
-          alert('Your name is ' + json.name);
-        }, function(e) {
-          alert('Whoops! ' + e.error.message);
-        });
-        */
-        hello('google').login().then(function(json) {
-          alert('Your name is ' + json.name);
-        }, function(e) {
-          alert('Whoops! ' + e.error.message);
-        });
-      }
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
     </script>
   </body>
 </html>
