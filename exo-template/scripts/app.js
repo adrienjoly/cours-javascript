@@ -78,4 +78,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     app.$.paperDrawerPanel.closeDrawer();
   };
 
+  // initialize myAnswers using iron-localstorage
+  document.querySelector('#app').initDefaults = function(ev) {
+    console.log("initializeTemplate");
+    // tip: use localStorage.clear(); to reset the local storage data
+    this.myAnswers = {
+      qcm1: "large",
+      code: "function(){\n\n}"
+    }
+  };
+
 })(document);

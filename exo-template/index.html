@@ -61,7 +61,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <body unresolved class="fullbleed layout vertical">
   <span id="browser-sync-binding"></span>
+
   <template is="dom-bind" id="app">
+
+    <iron-localstorage
+      name="my-answers"
+      value="{{myAnswers}}"
+      on-iron-localstorage-load-empty="initDefaults"
+    ></iron-localstorage>
 
     <paper-drawer-panel id="paperDrawerPanel">
       <!-- Drawer Scroll Header Panel -->
@@ -118,11 +125,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <section data-route="exercise">
               <paper-material elevation="1">
                 <h2>Exercice {{params.number}} - QCM</h2>
-                <paper-radio-group selected="small">
+                <paper-radio-group allow-empty-selection selected="{{myAnswers.qcm1::paper-radio-group-changed}}">
                   <paper-radio-button name="small">Small</paper-radio-button>
                   <paper-radio-button name="medium">Medium</paper-radio-button>
                   <paper-radio-button name="large">Large</paper-radio-button>
                 </paper-radio-group>
+                <h2>Exercice {{params.number}} - Code</h2>
+                <input class="paper-font-body2" value="{{myAnswers.code::input}}">
                 <h2>Component:</h2>
                 <p class="paper-font-subhead">You now have:</p>
                 <my-list></my-list>
