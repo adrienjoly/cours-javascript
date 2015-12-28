@@ -12,7 +12,9 @@
       // cf http://adodson.com/hello.js
       hello.init({
         google: '247219641427-bf9s9o98911sp4t7l62nfl8gj458r7h9.apps.googleusercontent.com' // client id
-      } /*, {redirect_uri: 'file:///Users/adrienjoly/Dev/bitbucket/own-exam/quickstart.html'}*/);
+      }, {
+        redirect_uri: 'http://adrienjoly.com/cours-javascript/oauth-test'
+      });
 
 
       hello.on('auth.login', function(auth) {
