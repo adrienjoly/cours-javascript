@@ -117,7 +117,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <section data-route="exercise">
               <paper-material elevation="1">
-                <h2>Exercice {{params.number}}</h2>
+                <h2>Exercice {{params.number}} - QCM</h2>
+                <paper-radio-group selected="small">
+                  <paper-radio-button name="small">Small</paper-radio-button>
+                  <paper-radio-button name="medium">Medium</paper-radio-button>
+                  <paper-radio-button name="large">Large</paper-radio-button>
+                </paper-radio-group>
+                <h2>Component:</h2>
                 <p class="paper-font-subhead">You now have:</p>
                 <my-list></my-list>
                 <p class="paper-font-body2">Looking for more Web App layouts? Check out our <a href="https://github.com/PolymerElements/app-layout-templates">layouts</a> collection. You can also <a href="http://polymerelements.github.io/app-layout-templates/">preview</a> them live.</p>
