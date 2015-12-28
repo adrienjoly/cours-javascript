@@ -23,13 +23,13 @@
 - L: Erreurs de débutants 2 / 2: chargement du DOM et dépendances
 - M: Utiliser Chrome Dev Tools pour déboguer une application
 - N: Introduction à jQuery
-- O: Manipulation de données et rendu de templates avec Underscore.js 
+- O: Manipulation de données et rendu de templates avec Underscore.js
 - P: One-page app avec Backbone et Facebook Connect, 1 / 2
-- Q: One-page app avec Backbone et Facebook Connect, 2 / 2 
+- Q: One-page app avec Backbone et Facebook Connect, 2 / 2
 - R: Utiliser Chrome Dev Tools pour tester l’adaptivité et les perfs
 - S: Composants et tests d’intégration
 - T: Minification et mise en production sur Github Pages
-- U: Introduction à AngularJS 
+- U: Introduction à AngularJS
 - (evaluation)
 
 ### Logiciels nécéssaires
