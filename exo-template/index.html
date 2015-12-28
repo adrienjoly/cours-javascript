@@ -118,7 +118,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <section data-route="home">
               <paper-material elevation="1">
-                <my-greeting value="{{myAnswers.greetings::change}}"></my-greeting>
+                <h2>Test</h2>
+                <p>Utilisez le menu pour naviguer entre les exercices.</p>
               </paper-material>
             </section>
 
@@ -130,8 +131,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <my-qcm value="{{myAnswers.qcm1}}"></my-qcm>
 
                 <h2>Exercice {{params.number}} - Code</h2>
-                <input class="paper-font-body2" value="{{myAnswers.code::input}}">
-                
+                <my-code value="{{myAnswers.code}}"></my-code>
+
               </paper-material>
             </section>
 

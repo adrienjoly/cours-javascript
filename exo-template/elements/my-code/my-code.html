@@ -1,0 +1,33 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="my-code">
+  <template>
+    <style include="shared-styles"></style>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <input class="paper-font-body2" value="{{value::input}}">
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'my-code',
+
+        properties: {
+          value: {
+            type: String,
+            notify: true
+          }
+        }
+      });
+
+
+    })();
+  </script>
+
+</dom-module>
