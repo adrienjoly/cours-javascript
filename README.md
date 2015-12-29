@@ -8,7 +8,7 @@
 
 ### Plan par semaine
 
-- [A](A.md): Hacker google.com avec Chrome Dev Tools (DOM et events)
+- [A](A.md): Hacker google.com avec Chrome Dev Tools (DOM et events) + [QCM](A-QCM.md)
 - [B](B.md): Validation d’un champs de formulaire texte (conditions et alerts)
 - C: Variables: katas "[Onboarding](https://www.codingame.com/games/puzzles/43)" et "[Power of Thor](https://www.codingame.com/games/puzzles/4)" sur Codingame + [Fiche Récap](A-recap.md)
 - [D](D-recap.md): Arrays et selections multiples dans formulaires (objets) + [QCM](D-QCM.md)
