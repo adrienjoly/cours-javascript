@@ -13,7 +13,7 @@ Dans le contexte d'un navigateur web, les fonctions sont utilisées par le déve
 On définit une fonction de la manière suivante:
 
 ```
-function nom_de_la_fonction (parametre_1, parametre_2, parametre_3 …) {
+function nom_de_la_fonction (parametre_1, parametre_2, parametre_3 ...) {
   // instructions javascript
   return resultat;
 }
@@ -32,7 +32,7 @@ Pour exécuter une fonction, il faut "l'appeler" en citant son nom, et en lui fo
 Par exemple:
 
 ```
-var resultat = multiplierParDeux(3); // => le parametre nombre vaut 3 => la variable resultat vaut 6
+var resultat = multiplierParDeux(3); // => le paramètre nombre vaut 3 => la variable resultat vaut 6
 ```
 
 Comme pour une variable, l'appel à une fonction peut être remplacé dans le code par la valeur qu'elle renvoie. Contrairement aux variables, cette valeur dépendra de la valeur des paramètres passés à la fonction.
@@ -61,9 +61,9 @@ var resultat = 16;
 
 Dans un navigateur web, le code Javascript peut interagir avec la structure de la page web dans laquelle il s'exécute: le DOM.
 
-Les fonctions peuvent donc être définies pour être appelées en réponse à une action de l'utilisateur (un "évènement") sur un ou plusieurs éléments de cette page web.
+Les fonctions peuvent donc être définies pour être appelées en réponse à une action de l'utilisateur (un "événement") sur un ou plusieurs éléments de cette page web.
 
-Par exemple, imaginons une page web contenant un bouton dont l'id est `mon-bouton`. Le code javascript suivant affichera une alerte modale à chaque fois que l'utilisateur cliquera sur ce bouton:
+Par exemple, imaginons une page web contenant un bouton dont l'`id` est `mon-bouton`. Le code Javascript suivant affichera une alerte modale à chaque fois que l'utilisateur cliquera sur ce bouton:
 
 ```
 document.getElementById('mon-bouton').onclick = function(evt) {
@@ -72,10 +72,10 @@ document.getElementById('mon-bouton').onclick = function(evt) {
 ```
 
 À noter que dans cet exemple:
-- `getElementById` est une fonction, car on lui passe un paramètre entre parenthèses (l'id du bouton, en l'occurence). L'appel à cette fonction retourne un élément du DOM.
+- `getElementById` est une fonction, car on lui passe un paramètre entre parenthèses (l'`id` du bouton, en l’occurrence). L'appel à cette fonction retourne un élément du DOM.
 La fonction que nous définissons à droite de l'affectation `=` n'a pas de nom. C'est ce qu'on appelle une fonction anonyme. Elle sera appelée par le navigateur, à chaque fois que l'utilisateur cliquera sur le bouton auquel elle a été rattachée.
 La fonction que nous définissons ne contient pas de `return`. Par conséquent, sa valeur de retour est `null`. Ceci n'a pas d'importance dans notre cas, car cette fonction sert seulement à définir un comportement définie par une liste d'instructions Javascript, et non à retourner une valeur.
-La valeur du paramètre `evt` sera fournie par le navigateur lors de son appel. La valeur de ce paramètre contient notamment le type d'évènement qui a déclenché l'appel de cette fonction (en l'occurrence: `click`), et une référence de l'élément sur lequel cet évènement à eu lieu (en l'occurrence: le bouton).
+La valeur du paramètre `evt` sera fournie par le navigateur lors de son appel. La valeur de ce paramètre contient notamment le type d’événement qui a déclenché l'appel de cette fonction (en l'occurrence: `click`), et une référence de l'élément sur lequel cet événement à eu lieu (en l'occurrence: le bouton).
 La valeur du paramètre `evt` contient aussi une fonction `preventDefault()` qui permet d'empêcher le navigateur d'exécuter le comportement par défaut pour cette action.
 
 ### Valeur et affectation d'une fonction
@@ -84,7 +84,7 @@ Nous avons vu que l'appel d'une fonction consiste à mentionner son nom, suivi d
 
 Pour rappel, une variable Javascript est remplacée par la dernière valeur qui lui a été affectée. Ainsi, si la valeur `6` a été affectée à la variable `maVariable` à l'aide de l'instruction `maVariable = 6;`, les mentions suivantes de `maVariable` seront remplacée par sa valeur `6`.
 
-En Javascript, une fonction est une valeur, au même titre qu'une valeur décimale ou une chaine de caractères. Elle peut donc aussi être attribuée à une variable.
+En Javascript, une fonction est une valeur, au même titre qu'une valeur décimale ou une chaîne de caractères. Elle peut donc aussi être attribuée à une variable.
 
 Ainsi il est possible d'affecter la fonction `multiplierParDeux` à la variable `maVariable`:
 
@@ -92,7 +92,7 @@ Ainsi il est possible d'affecter la fonction `multiplierParDeux` à la variable 
 maVariable = multiplierParDeux;
 ```
 
-…et de l'appeler de la manière suivante:
+...et de l'appeler de la manière suivante:
 
 ```
 maVariable(3); // => retourne la valeur 6;
@@ -106,7 +106,7 @@ var multiplierParTrois = function (nombre) {
 };
 ```
 
-… ce qui est équivalent à:
+... ce qui est équivalent à:
 
 ```
 function multiplierParTrois (nombre) {
@@ -114,7 +114,7 @@ function multiplierParTrois (nombre) {
 }
 ```
 
-C'est d'ailleurs ce type d'affectation (de fonction anonyme) qui permet de définir des comportements aux évènements du DOM. Pour rappel:
+C'est d'ailleurs ce type d'affectation (de fonction anonyme) qui permet de définir des comportements aux événements du DOM. Pour rappel:
 
 ```
 document.getElementById('mon-bouton').onclick = function(evt) {
@@ -186,11 +186,11 @@ une fonction `factorielle` qui retourne le produit des entiers entre 1 et l'enti
 `factorielle(3) == 6`
 `factorielle(4) == 24`
 
-Remarque: la fonction Math.random() renvoie un nombre décimal aléatoirement choisi entre 0 et 1. L'utilisation de cette fonction dans les tests permet d'assurer que votre fonction ne gère pas certains cas "en dur" dans le code. (c.a.d. avec un `return` par condition `if`, vérifiant plusieurs valeurs prédéfinies des paramètres)
+Remarque: la fonction `Math.random()` renvoie un nombre décimal aléatoirement choisi entre 0 et 1. L'utilisation de cette fonction dans les tests permet d'assurer que votre fonction ne gère pas certains cas "en dur" dans le code. (c.a.d. avec un `return` par condition `if`, vérifiant plusieurs valeurs prédéfinies des paramètres)
 
 ## Exercice 1 - formulaire simple
 
-Dans cet exercice, nous allons rattacher les fonctions écrites ci-dessus à des évènements de formulaire web. Nous allons donc utiliser le DOM.
+Dans cet exercice, nous allons rattacher les fonctions écrites ci-dessus à des événements de formulaire web. Nous allons donc utiliser le DOM, et tester depuis un navigateur web.
 
 Voici le code du formulaire:
 
@@ -199,12 +199,35 @@ Voici le code du formulaire:
 <button id="mon-bouton">Diviser par deux</button>
 ```
 
-Écrire le code Javascript permettant d'afficher dans une alerte modale le résultat de la division par 2 du nombre saisi par l'utilisateur dans le champ (dont l'`id` est `nombre`), à chaque fois que l'utilisateur cliquera sur le bouton (dont l'`id` est `mon-bouton`). Votre code ne doit pas effectuer directement de division, par contre vous pouvez utiliser la fonction `diviserParDeux` définie plus haut.
+1. Écrire le code Javascript permettant d'afficher dans une alerte modale le résultat de la division par 2 du nombre saisi par l'utilisateur dans le champ (dont l'`id` est `nombre`), à chaque fois que l'utilisateur cliquera sur le bouton (dont l'`id` est `mon-bouton`). Votre code ne doit pas effectuer directement de division, par contre vous pouvez utiliser la fonction `diviserParDeux` définie plus haut.
 
-2) Modifier votre code de manière à ce qu'une alerte modale affiche "veuillez saisir un nombre", dans le cas où le champ serait vide au moment où l'utilisateur clique sur le bouton.
-
-
+2. Modifier votre code de manière à ce qu'une alerte modale affiche "veuillez saisir un nombre", dans le cas où le champ serait vide au moment où l'utilisateur clique sur le bouton.
 
 ## Exercice 2 - formulaire dynamique
 
+Dans cet exercice, nous allons modifier un formulaire dynamiquement, c'est à dire en fonction de la saisie de l'utilisateur.
+
+Notre formulaire consiste en trois composants:
+
+- un sélecteur de mode
+- un premier champ de saisie
+- un second champ de saisie
+
+Voici le code HTML correspondant:
+
+```
+<select id="selecteur" placeholder="Sélectionner une opération">
+  <option value="diviserParDeux">Diviser par deux</option>
+  <option value="somme">Somme</option>
+</select>
+<input id="nombre">
+<input id="nombre2">
+<button id="mon-bouton">Appeler la fonction</button>
+```
+
+
+
 Validation et modification de formulaire en fonction d'une saisie
+
+TODO: demander aux étudiants d'uploader leur fichier sur leur compte FTP => mettre en place à moyen de tester s'ils l'ont fait
+TODO: demander a christophe si c'est réaliste de demander aux étudiants d'uploader le partiel sur leur FTP, et si le mapping entre email et url FTP est simple.
