@@ -1,5 +1,15 @@
 # TP E: Fonctions et formulaires dynamiques
 
+Plan du cours:
+
+- Javascript Awesomeness: [Multiphase flow](http://codepen.io/tholman/pen/LCaHB)
+- Correction du [QCM D](https://docs.google.com/forms/d/1vS_brLFhQHrc5cudOG89UHJVlffSXgNDZeSvu-bvx50/edit?usp=drive_web)
+- Présentation du partiel à venir
+- Pratique: Usage de jsbin et upload HTML+Javascript sur FTP
+- Théorie: Les fonctions
+- Pratique: Exercices
+- Devoir: Finir les exercices et les envoyer sur FTP (noté)
+
 ### Introduction
 
 Comme en mathématiques, une fonction Javascript est une opération transformant des paramètres (en "entrée") en une valeur de résultat (la "sortie").
@@ -203,9 +213,13 @@ Voici le code du formulaire:
 
 2. Modifier votre code de manière à ce qu'une alerte modale affiche "veuillez saisir un nombre", dans le cas où le champ serait vide au moment où l'utilisateur clique sur le bouton.
 
+3. Uploader vos fichiers HTML et Javascript en FTP, de manière à ce que votre formulaire soit testable directement depuis le répertoire `/cours-javascript/tp-e/ex-1/` de votre espace web EEMI. C'est depuis ce répertoire que votre travail sera évalué, pour compléter votre note de controle continu.
+
 ## Exercice 2 - formulaire dynamique
 
-Dans cet exercice, nous allons modifier un formulaire dynamiquement, c'est à dire en fonction de la saisie de l'utilisateur.
+Dans cet exercice, nous allons modifier un formulaire dynamiquement, c'est à dire que celui-ci va évoluer en fonction de la saisie de l'utilisateur.
+
+Le formulaire permettra de diviser par deux un nombre saisi par l'utilisateur, et de calculer la somme de deux nombres saisis par l'utilisateur. Dans le premier cas, seul un champ de saisie est nécéssaire. Dans le deuxième cas, deux champs sont nécéssaires. Et nous allons ajouter un composant de sélection, afin que l'utilisateur puisse choisir l'opération qu'il souhaite utiliser. (et la fonction qui sera utilisée pour donner le résultat)
 
 Notre formulaire consiste en trois composants:
 
@@ -225,9 +239,39 @@ Voici le code HTML correspondant:
 <button id="mon-bouton">Appeler la fonction</button>
 ```
 
+1. Écrire la fonction Javascript `evaluer()` permettant d'afficher une **alerte modale** quand l'utilisateur clique sur `mon-bouton`.
 
+2. Écrire la fonction Javascript `selection()` permettant de **cacher** le champ `nombre2` lorsque l'utilisateur choisit l'option `diviserParDeux`, et de l'afficher lorsque l'utilisateur choisit l'option `somme`. Utilisez la propriété CSS `display` pour cela.
 
-Validation et modification de formulaire en fonction d'une saisie
+3. Modifier la fonction `evaluer()` pour qu'elle affiche dans une alerte modale la **somme** des valeurs entrées par l'utilisateur dans les champs `nombre` et `nombre2`. 
 
-TODO: demander aux étudiants d'uploader leur fichier sur leur compte FTP => mettre en place à moyen de tester s'ils l'ont fait
-TODO: demander a christophe si c'est réaliste de demander aux étudiants d'uploader le partiel sur leur FTP, et si le mapping entre email et url FTP est simple.
+4. Créer la fonction `somme(a, b)` qui renvoie la somme des deux nombres passés en paramètres. Tester le bon fonctionnement de cette fonction. (cf partie "Mise en pratique 1")
+
+5. Modifier la fonction `evaluer()` de manière à ce qu'elle utilise la fonction `somme()` pour calculer le résultat.
+
+6. Ajouter la fonction `diviserParDeux()` (cf partie "Mise en pratique 1") dans le fichier Javascript. Tester le bon fonctionnement de cette fonction.
+
+7. Modifier la fonction `evaluer()` pour qu'elle affiche le résultat de la somme des deux nombres saisis, ou de la division par deux, **en fonction de l'opération séléctionnée par l'utilisateur**. Dans le cas où l'utilisateur n'aurait pas sélectionné d'opération, afficher "choisir une opération" dans l'alerte modale, au lieu du résultat. Dans le cas où l'utilisateur aurait oublié de saisir un nombre (dans l'un ou l'autre champ de saisie), afficher "saisir un nombre" dans l'alerte modale, au lieu du résultat.
+
+8. Uploader vos fichiers HTML et Javascript en FTP, de manière à ce que votre formulaire dynamique soit testable directement depuis le répertoire `/cours-javascript/tp-e/ex-2/` de votre espace web EEMI. C'est depuis ce répertoire que votre travail sera évalué, pour compléter votre note de controle continu.
+
+Contraintes à respecter: 
+
+- Il doit être possible de changer d'opération et de saisies plusieurs fois sans recharger la page.
+- A chaque clic sur le bouton, une seule alerte modale doit être affichée, contenant seulement le nombre résultant de l'opération.
+
+## Exercice 3 (optionnel, mais points extra) - formulaire réellement dynamique
+
+Dans l'exercice précédent, l'utilisateur pouvait obtenir le calcul d'une somme de deux termes.
+
+L'objectif de cet exercice est de créer un formulaire permettant de calculer la somme d'une liste dynamique de termes en entrée. C'est à dire que l'utilisateur pourra ajouter autant de champs de saisie qu'il le souhaite.
+
+Pour cela:
+
+- Vous allez initialement afficher deux champs de saisie et un bouton `mon-bouton` pour effectuer la somme des nombres saisis dans ces champs. (similairement à l'exercice précédent)
+- Ensuite, vous allez y intégrer un bouton `more`. A chaque clic sur ce bouton, un champ de saisie supplémentaire devra être ajouté dans le formulaire.
+- Enfin, vous vous assurerez que la somme retournée par le bouton `mon-bouton` prenne bien en compte les nombres saisis dans tous les champs.
+
+Si vous parvenez à faire fonctionner une telle page depuis le répertoire `/cours-javascript/tp-e/ex-3/` de votre espace web EEMI, vous gagnez 1 point bonus.
+
+Si votre solution utilise une fonction pour effectuer les additions et qu'elle est indépendante du DOM de la page, vous gagnez un 2ème point.
