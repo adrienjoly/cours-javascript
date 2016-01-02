@@ -19,7 +19,7 @@ Comme en mathématiques, une fonction Javascript est une opération transformant
     rankdir=LR;
     param [label="valeur\(s\)"]
     param -> func [label="paramètres en entrée"]
-    func [shape=box,label="fonction\n\(code\)"]
+    func [shape=box,label="fonction \(code\)"]
     func -> res [label="résultat en sortie"]
     res [label="valeur"]
   }
@@ -34,7 +34,7 @@ Dans le contexte d'un navigateur web, les fonctions sont utilisées par le déve
     rankdir=LR;
     param [label="événement"]
     param -> func [label="transmis par navigateur"]
-    func [shape=box,label="fonction\n\(code\)"]
+    func [shape=box,label="fonction \(code\)"]
     func -> res [label="résultat \(non requis\)"]
     res [label="valeur"]
   }
