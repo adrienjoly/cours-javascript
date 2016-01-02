@@ -5,7 +5,7 @@ Plan du cours:
 - Javascript Awesomeness: [Multiphase flow](http://codepen.io/tholman/pen/LCaHB)
 - Correction du [QCM D](https://docs.google.com/forms/d/1vS_brLFhQHrc5cudOG89UHJVlffSXgNDZeSvu-bvx50/edit?usp=drive_web)
 - Présentation du partiel à venir
-- Pratique: Usage de jsbin et upload HTML+Javascript sur FTP
+- Pratique: Usage de jsfiddle et upload HTML+Javascript sur FTP
 - Théorie: Les fonctions en Javascript, et comment les tester
 - Pratique: Exercices
 - Devoir: Finir les exercices et les envoyer sur FTP (noté)
@@ -309,11 +309,11 @@ Voici le code HTML correspondant:
 
 4. Créer la fonction `somme(a, b)` qui renvoie la somme des deux nombres passés en paramètres. Tester le bon fonctionnement de cette fonction. (cf partie "Mise en pratique 1")
 
-5. Modifier la fonction `evaluer()` de manière à ce qu'elle utilise la fonction `somme()` pour calculer le résultat.
+5. Modifier la fonction `evaluer()` de manière à ce qu'elle utilise la fonction `somme()` pour calculer le résultat. Note: vous allez devoir utiliser la fonction `parseFloat()` pour transformer les saisies en nombres.
 
 6. Ajouter la fonction `diviserParDeux()` (cf partie "Mise en pratique 1") dans le fichier Javascript. Tester le bon fonctionnement de cette fonction.
 
-7. Modifier la fonction `evaluer()` pour qu'elle affiche le résultat de la somme des deux nombres saisis, ou de la division par deux, **en fonction de l'opération séléctionnée par l'utilisateur**. Dans le cas où l'utilisateur n'aurait pas sélectionné d'opération, afficher "choisir une opération" dans l'alerte modale, au lieu du résultat. Dans le cas où l'utilisateur aurait oublié de saisir un nombre (dans l'un ou l'autre champ de saisie), afficher "saisir un nombre" dans l'alerte modale, au lieu du résultat.
+7. Modifier la fonction `evaluer()` pour qu'elle affiche le résultat de la somme des deux nombres saisis, ou de la division par deux, **en fonction de l'opération séléctionnée par l'utilisateur**. Dans le cas où l'utilisateur n'aurait pas sélectionné d'opération, afficher `"choisir une operation"` (*sans accent*) dans l'alerte modale, au lieu du résultat. Sinon, dans le cas où l'utilisateur aurait oublié de saisir un nombre (dans l'un ou l'autre champ de saisie), afficher `"saisir un nombre"` dans l'alerte modale, au lieu du résultat.
 
 8. Uploader vos fichiers HTML et Javascript en FTP, de manière à ce que votre formulaire dynamique soit testable directement depuis le répertoire `/cours-javascript/tp-e/ex-2/` de votre espace web EEMI. C'est depuis ce répertoire que votre travail sera évalué, pour compléter votre note de controle continu.
 
