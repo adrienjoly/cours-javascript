@@ -260,14 +260,14 @@ Remarque: la fonction `Math.random()` renvoie un nombre décimal aléatoirement 
 
 Dans cet exercice, nous allons rattacher les fonctions écrites ci-dessus à des événements de formulaire web. Nous allons donc utiliser le DOM, et tester depuis un navigateur web.
 
-![capture d'écran de jsbin](./E/jsbin.png)
-
 Voici le code du formulaire:
 
 ```
 <input id="nombre">
 <button id="mon-bouton">Diviser par deux</button>
 ```
+
+![capture d'écran de jsbin](./E/jsbin.png)
 
 1. Écrire le code Javascript permettant d'afficher dans une alerte modale le résultat de la division par 2 du nombre saisi par l'utilisateur dans le champ (dont l'`id` est `nombre`), à chaque fois que l'utilisateur cliquera sur le bouton (dont l'`id` est `mon-bouton`). Votre code ne doit pas effectuer directement de division, par contre vous pouvez utiliser la fonction `diviserParDeux` définie plus haut.
 
@@ -298,6 +298,8 @@ Voici le code HTML correspondant:
 <input id="nombre2">
 <button id="mon-bouton">Appeler la fonction</button>
 ```
+
+![capture d'écran de jsbin](./E/jsbin-2.png)
 
 1. Écrire la fonction Javascript `evaluer()` permettant d'afficher une **alerte modale** quand l'utilisateur clique sur `mon-bouton`.
 
