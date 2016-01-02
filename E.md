@@ -126,10 +126,11 @@ document.getElementById('mon-bouton').onclick = function(evt) {
 
 À noter que dans cet exemple:
 - `getElementById` est une fonction, car on lui passe un paramètre entre parenthèses (l'`id` du bouton, en l’occurrence). L'appel à cette fonction retourne un élément du DOM.
-La fonction que nous définissons à droite de l'affectation `=` n'a pas de nom. C'est ce qu'on appelle une fonction anonyme. Elle sera appelée par le navigateur, à chaque fois que l'utilisateur cliquera sur le bouton auquel elle a été rattachée.
-La fonction que nous définissons ne contient pas de `return`. Par conséquent, sa valeur de retour est `null`. Ceci n'a pas d'importance dans notre cas, car cette fonction sert seulement à définir un comportement définie par une liste d'instructions Javascript, et non à retourner une valeur.
-La valeur du paramètre `evt` sera fournie par le navigateur lors de son appel. La valeur de ce paramètre contient notamment le type d’événement qui a déclenché l'appel de cette fonction (en l'occurrence: `click`), et une référence de l'élément sur lequel cet événement à eu lieu (en l'occurrence: le bouton).
-La valeur du paramètre `evt` contient aussi une fonction `preventDefault()` qui permet d'empêcher le navigateur d'exécuter le comportement par défaut pour cette action.
+- `alert` est aussi une fonction.
+- La fonction que nous définissons à droite de l'affectation `=` n'a pas de nom. C'est ce qu'on appelle une fonction anonyme. Elle sera appelée par le navigateur, à chaque fois que l'utilisateur cliquera sur le bouton auquel elle a été rattachée.
+- La fonction que nous définissons ne contient pas de `return`. Par conséquent, sa valeur de retour est `null`. Ceci n'a pas d'importance dans notre cas, car cette fonction sert seulement à définir un comportement définie par une liste d'instructions Javascript, et non à retourner une valeur.
+- La valeur du paramètre `evt` sera fournie par le navigateur lors de son appel. La valeur de ce paramètre contient notamment le type d’événement qui a déclenché l'appel de cette fonction (en l'occurrence: `click`), et une référence de l'élément sur lequel cet événement à eu lieu (en l'occurrence: le bouton).
+- La valeur du paramètre `evt` contient aussi une fonction `preventDefault()` qui permet d'empêcher le navigateur d'exécuter le comportement par défaut pour cette action.
 
 ### Valeur et affectation d'une fonction
 
@@ -203,6 +204,20 @@ multiplierParDix(3) == 30; // => ok
 multiplierParDix(0.5) == 0.50; // => BUG! on aurait du obtenir 5 dans ce cas
 ```
 
+![test de la fonction multiplierParDix()](http://g.gravizo.com/g?
+  digraph G {
+    rankdir=LR;
+    func [shape=box,label="multiplierParDix"]
+    2 -> func
+    func -> 20
+    3 -> func
+    func -> 30
+    0.5 -> func [color="red"]
+    func -> 0.50 [color="red"]
+    0.50 [color="red", fontcolor="red"]
+  }
+)
+
 Dans l'exemple ci-dessus, nous avons saisi trois tests unitaires pour notre fonction `multiplierParDix`, et l'un deux nous a permis de détecter un bug dans notre fonction.
 
 À retenir: Un test unitaire consiste à vérifier qu'une fonction se comporte comme prévu dans un cas donné, en comparant le résultat retourné au résultat qui aurait du être retourné, pour chaque cas testé.
@@ -220,24 +235,24 @@ sur un site comme codepen, jsfiddle ou jsbin;
 ou à l'aide de l'interpréteur `node` à appeler depuis le terminal de votre système d'exploitation.
 
 Développer:
-une fonction `diviserParDeux` qui retourne la moitié de la valeur passée en paramètre. Tests:
-`diviserParDeux(2) == 1`
-`diviserParDeux(4) == 2`
-`var n = Math.radom(); diviserParDeux(n) == n / 2`
-une fonction `somme` qui retourne la somme des deux paramètres qui lui seront passés. Tests:
-`somme(1, 1) == 2`
-`somme(1, 2) == 3`
-`somme(2, 1) == 3`
-`var n = Math.radom(); somme(n, 1) == n + 1`
-une fonction `signe` qui retourne la chaine de caractères `positif`, `négatif` ou `nul`, selon le signe de la valeur passée en paramètre. Tests:
-`signe(-1) == 'negatif'`
-`signe(0) == 'nul'`
-`signe(Math.radom()) == 'positif'`
-une fonction `factorielle` qui retourne le produit des entiers entre 1 et l'entier passé en paramètre. Exemple: `factorielle(3)` retourne le résultat de `1 * 2 * 3`, soit `6`. Tests:
-`factorielle(0) == 0`
-`factorielle(1) == 1`
-`factorielle(3) == 6`
-`factorielle(4) == 24`
+- une fonction `diviserParDeux` qui retourne la moitié de la valeur passée en paramètre. Tests:
+  - `diviserParDeux(2) == 1`
+  - `diviserParDeux(4) == 2`
+  - `var n = Math.radom(); diviserParDeux(n) == n / 2`
+- une fonction `somme` qui retourne la somme des deux paramètres qui lui seront passés. Tests:
+  - `somme(1, 1) == 2`
+  - `somme(1, 2) == 3`
+  - `somme(2, 1) == 3`
+  - `var n = Math.radom(); somme(n, 1) == n + 1`
+- une fonction `signe` qui retourne la chaine de caractères `positif`, `négatif` ou `nul`, selon le signe de la valeur passée en paramètre. Tests:
+  - `signe(-1) == 'negatif'`
+  - `signe(0) == 'nul'`
+  - `signe(Math.radom()) == 'positif'`
+- une fonction `factorielle` qui retourne le produit des entiers entre 1 et l'entier passé en paramètre. Exemple: `factorielle(3)` retourne le résultat de `1 * 2 * 3`, soit `6`. Tests:
+  - `factorielle(0) == 0`
+  - `factorielle(1) == 1`
+  - `factorielle(3) == 6`
+  - `factorielle(4) == 24`
 
 Remarque: la fonction `Math.random()` renvoie un nombre décimal aléatoirement choisi entre 0 et 1. L'utilisation de cette fonction dans les tests permet d'assurer que votre fonction ne gère pas certains cas "en dur" dans le code. (c.a.d. avec un `return` par condition `if`, vérifiant plusieurs valeurs prédéfinies des paramètres)
 
