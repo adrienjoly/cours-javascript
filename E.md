@@ -6,7 +6,7 @@ Plan du cours:
 - Correction du [QCM D](https://docs.google.com/forms/d/1vS_brLFhQHrc5cudOG89UHJVlffSXgNDZeSvu-bvx50/edit?usp=drive_web)
 - Présentation du partiel à venir
 - Pratique: Usage de jsbin et upload HTML+Javascript sur FTP
-- Théorie: Les fonctions
+- Théorie: Les fonctions en Javascript, et comment les tester
 - Pratique: Exercices
 - Devoir: Finir les exercices et les envoyer sur FTP (noté)
 
@@ -14,9 +14,31 @@ Plan du cours:
 
 Comme en mathématiques, une fonction Javascript est une opération transformant des paramètres (en "entrée") en une valeur de résultat (la "sortie").
 
+![une fonction retourne un résultat à partir de paramètres](http://g.gravizo.com/g?
+  digraph G {
+    rankdir=LR;
+    param [label="valeur\(s\)"]
+    param -> func [label="paramètres en entrée"]
+    func [shape=box,label="fonction\n\(code\)"]
+    func -> res [label="résultat en sortie"]
+    res [label="valeur"]
+  }
+)
+
 Définir une fonction sert à regrouper des instructions Javascript, afin qu'elles puissent être exécutées à différentes occasions, sans avoir à répéter le code correspondant.
 
 Dans le contexte d'un navigateur web, les fonctions sont utilisées par le développeur pour définir le comportement que doit suivre le navigateur lorsque l'utilisateur effectue certaines actions (ex: saisie dans un champ, clic sur un bouton, soumission d'un formulaire). Les fonctions sont donc essentielles aux formulaires dynamiques, dont le fonctionnement dépend de la saisie de l'utilisateur.
+
+![une fonction définit le comportement d'un événement](http://g.gravizo.com/g?
+  digraph G {
+    rankdir=LR;
+    param [label="événement"]
+    param -> func [label="transmis par navigateur"]
+    func [shape=box,label="fonction\n\(code\)"]
+    func -> res [label="résultat \(non requis\)"]
+    res [label="valeur"]
+  }
+)
 
 ### Définition et appel de fonction
 
@@ -41,6 +63,15 @@ Pour exécuter une fonction, il faut "l'appeler" en citant son nom, et en lui fo
 
 Par exemple:
 
+![appel de multiplierParDeux(3)](http://g.gravizo.com/g?
+  digraph G {
+    rankdir=LR;
+    3 -> func [label="paramètre"]
+    func [shape=box,label="multiplierParDeux"]
+    func -> 6 [label="résultat"]
+  }
+)
+
 ```
 var resultat = multiplierParDeux(3); // => le paramètre nombre vaut 3 => la variable resultat vaut 6
 ```
@@ -50,6 +81,18 @@ Comme pour une variable, l'appel à une fonction peut être remplacé dans le co
 Ainsi, il est possible de passer le résultat de l'appel d'une fonction en paramètre d'une fonction.
 
 Exemple de substitution d'un appel de fonction par sa valeur de retour:
+
+![appel de multiplierParDeux(3)](http://g.gravizo.com/g?
+  digraph G {
+    rankdir=LR;
+    3 -> multiplierParDeux1 [label="paramètre"]
+    multiplierParDeux1 [shape=box]
+    multiplierParDeux1 -> 6 [label="résultat"]
+    multiplierParDeux2 [shape=box]
+    6 -> multiplierParDeux2 [label="paramètre"]
+    multiplierParDeux2 -> 12 [label="résultat"]
+  }
+)
 
 ```
 var resultat = multiplierParDeux(multiplierParDeux(3)); // équivaut à:
