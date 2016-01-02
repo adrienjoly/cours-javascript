@@ -260,6 +260,8 @@ Remarque: la fonction `Math.random()` renvoie un nombre décimal aléatoirement 
 
 Dans cet exercice, nous allons rattacher les fonctions écrites ci-dessus à des événements de formulaire web. Nous allons donc utiliser le DOM, et tester depuis un navigateur web.
 
+![capture d'écran de jsbin](./E/jsbin.png)
+
 Voici le code du formulaire:
 
 ```
