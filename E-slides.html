@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TP E - Slides</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      li {
+        line-height: 2;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+
+# Javascript TP-E
+# Fonctions
+
+---
+
+# Javascript TP-E - Plan
+
+- Demo JS: [Multiphase flow](http://codepen.io/tholman/pen/LCaHB)
+- Correction [QCM D](https://docs.google.com/forms/d/1vS_brLFhQHrc5cudOG89UHJVlffSXgNDZeSvu-bvx50/edit?usp=drive_web)
+- Partiel
+- jsfiddle &amp; FTP
+- **Cours: Les fonctions**
+- **Exercices (à publier via FTP, noté)**
+
+---
+
+# jsfiddle &amp; FTP
+
+![jsfiddle](./E/jsfiddle.png)
+
+1. [jsfiddle.net](http://jsfiddle.net)
+2. Run
+3. --> `index.html` + `index.js`
+4. `&lt;script src="./index.js"&gt;&lt;/script&gt;`
+5. --> FTP
+
+---
+
+# Fonction
+
+### Ré-utiliser du code:
+
+![une fonction retourne un résultat à partir de paramètres](./E/fct1.png)
+
+### Sur le web:
+
+![une fonction définit le comportement d'un événement](./E/fct2.png)
+
+---
+
+# Définition de fonction
+
+```javascript
+function nom_de_la_fonction (parametre_1, parametre_2, parametre_3 ...) {
+  // instructions javascript
+  return resultat;
+}
+```
+
+### Exemple:
+
+```javascript
+function multiplierParDeux (nombre) {
+  return nombre * 2;
+}
+```
+
+---
+
+# Appel de fonction
+
+### Définition:
+
+```javascript
+function multiplierParDeux (nombre) {
+  return nombre * 2;
+}
+```
+
+### Appel:
+
+```javascript
+var resultat = multiplierParDeux(3);
+```
+
+### Illustration:
+
+![](./E/fct-appel.png)
+
+---
+
+# À la chaine
+
+### Appels:
+
+```javascript
+var resultat = multiplierParDeux(multiplierParDeux(3)); // équivaut à:
+```
+
+### Équivaut à:
+
+```javascript
+var resultat = multiplierParDeux(3 * 2); // qui équivaut à:
+var resultat = (3 * 2) * 2; // qui vaut finalement:
+var resultat = 12;
+```
+
+### Illustration:
+
+![](./E/fct-chaine.png)
+
+---
+
+# Événements du DOM
+
+### Définition de comportement
+
+```javascript
+document.getElementById('mon-bouton').onclick = function(evt) {
+  alert('vous avez cliqué!');
+};
+```
+
+- 2 appels de fonction
+- 1 définition de fonction
+
+---
+
+# Fonction = valeur
+
+### Affectation:
+
+```javascript
+var maVariable = multiplierParDeux;
+```
+
+### Appel:
+
+```javascript
+maVariable(3); // => retourne la valeur 6;
+```
+
+### Affectation 2:
+
+```javascript
+var multiplierParTrois = function (nombre) {
+  return nombre * 3;
+};
+```
+
+---
+
+# Tests VS bugs - 1/3
+
+### Cas non prévu:
+
+```javascript
+function signe (nombre) {
+  if (nombre > 0) {
+    return 'positif';
+  } else {
+    return 'negatif';
+  }
+}
+```
+
+- appel avec nombre = 4
+- appel avec nombre = -4
+- appel avec nombre = 0
+
+---
+
+# Tests VS bugs - 2/3
+
+### Implémentation naïve:
+
+```javascript
+function multiplierParDix (nombre) {
+  return nombre + '0';
+}
+```
+
+- appel avec `nombre = 2`
+- appel avec `nombre = 3`
+- appel avec `nombre = 0.5`
+
+---
+
+# Tests VS bugs - 3/3
+
+### Tests unitaires:
+
+```javascript
+multiplierParDix(2) == 20;
+multiplierParDix(3) == 30;
+multiplierParDix(0.5) == 5;
+```
+
+- bug dans `multiplierParDix()` ?
+- 0.5 est un cas limite
+
+---
+
+# Mise en pratique 1
+
+### Fonctions à coder et tester:
+
+- `diviserParDeux()`
+- `somme()`
+- `signe()`
+- `factorielle()`
+
+---
+
+# Mise en pratique 1 - `diviserParDeux()`
+
+### Tests:
+
+- `diviserParDeux(2) == 1;`
+- `diviserParDeux(4) == 2;`
+- `var n = Math.radom(); diviserParDeux(n) == n / 2;`
+
+---
+
+# Mise en pratique 1 - `somme()`
+
+### Tests:
+
+- `somme(1, 1) == 2;`
+- `somme(1, 2) == 3;`
+- `somme(2, 1) == 3;`
+- `var n = Math.radom(); somme(n, 1) == n + 1;`
+
+---
+
+# Mise en pratique 1 - `signe()`
+
+### Tests:
+
+- `signe(-1) == 'negatif';`
+- `signe(0) == 'nul';`
+- `signe(Math.radom()) == 'positif';`
+
+---
+
+# Mise en pratique 1 - `factorielle()`
+
+### Tests:
+
+- `factorielle(0) == 0;`
+- `factorielle(1) == 1;`
+- `factorielle(3) == 6;`
+- `factorielle(4) == 24;`
+
+---
+
+# Exercice 1 - formulaire simple
+
+### Code HTML:
+
+```html
+&lt;input id="nombre"&gt;
+&lt;button id="mon-bouton">Diviser par deux&lt;/button&gt;
+```
+
+### Javascript à coder:
+
+1. Résultat de `diviserParDeux()` dans alerte modale
+2. `"veuillez saisir un nombre"` si `nombre` est vide
+3. -> FTP: `/cours-javascript/tp-e/ex-1/index.html`
+
+---
+
+# Exercice 2 - formulaire dynamique
+
+### Code HTML:
+
+```html
+&lt;select id="selecteur" placeholder="Sélectionner une opération"&gt;
+  &lt;option value="diviserParDeux"&gt;Diviser par deux&lt;/option&gt;
+  &lt;option value="somme"&gt;Somme&lt;/option&gt;
+&lt;/select&gt;
+&lt;input id="nombre"&gt;
+&lt;input id="nombre2"&gt;
+&lt;button id="mon-bouton"&gt;Appeler la fonction&lt;/button&gt;
+```
+
+### Javascript à coder:
+
+- Fonctions: `evaluer()`, `selection()`, `somme()`, `diviserParDeux()`
+- Alerte modale: résultat, `"choisir une opération"` ou `"saisir un nombre"`
+- Cacher `nombre2` quand l'opération de division est choisie
+- -> FTP: `/cours-javascript/tp-e/ex-2/index.html`
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
