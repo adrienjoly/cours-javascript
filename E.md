@@ -269,11 +269,18 @@ Voici le code du formulaire:
 
 ![capture d'écran de jsbin](./E/jsbin.png)
 
-1. Écrire le code Javascript permettant d'afficher dans une alerte modale le résultat de la division par 2 du nombre saisi par l'utilisateur dans le champ (dont l'`id` est `nombre`), à chaque fois que l'utilisateur cliquera sur le bouton (dont l'`id` est `mon-bouton`). Votre code ne doit pas effectuer directement de division, par contre vous pouvez utiliser la fonction `diviserParDeux` définie plus haut.
+1. Écrire le code Javascript permettant d'afficher dans une alerte modale le résultat de la division par 2 du nombre saisi par l'utilisateur dans le champ (dont l'`id` est `nombre`), à chaque fois que l'utilisateur cliquera sur le bouton (dont l'`id` est `mon-bouton`). Votre fonction `onclick` ne doit pas utiliser directement l'opérateur de division, vous devrez donc utiliser la fonction `diviserParDeux` définie plus haut.
 
 2. Modifier votre code de manière à ce qu'une alerte modale affiche "veuillez saisir un nombre", dans le cas où le champ serait vide au moment où l'utilisateur clique sur le bouton.
 
-3. Uploader vos fichiers HTML et Javascript en FTP, de manière à ce que votre formulaire soit testable directement depuis le répertoire `/cours-javascript/tp-e/ex-1/` de votre espace web EEMI. C'est depuis ce répertoire que votre travail sera évalué, pour compléter votre note de controle continu.
+3. Uploader vos fichiers HTML et Javascript en FTP, de manière à ce que votre formulaire soit testable directement depuis l'URL `http://***.etudiant-eemi.com/cours-javascript/tp-e/ex-1/index.html` de votre espace web EEMI. C'est depuis ce répertoire que votre travail sera évalué, pour compléter votre note de controle continu.
+
+Attention: Vous devez absolument respecter l'URL ci-dessus, ainsi que les ids et noms de variables et fonctions fournis dans l'exercice.
+
+**Conseils (valables pour tous les exercices)**:
+
+- Vous allez avoir besoin des fonctions de manipulation de DOM que nous avons apprises ensembles lors des TPs précédents. Je vous conseille donc de relire les supports de cours correspondants, et de ne pas hésiter à vous faire aider par vos camarades pour vous faire re-expliquer ces concepts si besoin.
+- Vous pouvez aussi utiliser les sites google et stackoverflow pour chercher des réponses à vos questions. (en anglais. ex: "javascript how to get the value of an input")
 
 ## Exercice 2 - formulaire dynamique
 
@@ -303,24 +310,25 @@ Voici le code HTML correspondant:
 
 1. Écrire la fonction Javascript `evaluer()` permettant d'afficher une **alerte modale** quand l'utilisateur clique sur `mon-bouton`.
 
-2. Écrire la fonction Javascript `selection()` permettant de **cacher** le champ `nombre2` lorsque l'utilisateur choisit l'option `diviserParDeux`, et de l'afficher lorsque l'utilisateur choisit l'option `somme`. Utilisez la propriété CSS `display` pour cela.
+2. Écrire la fonction Javascript `selection()` permettant de **cacher** le champ `nombre2` lorsque l'utilisateur choisit l'option `diviserParDeux`, et de l'afficher lorsque l'utilisateur choisit l'option `somme`. Utilisez la propriété CSS `display` pour cela. (cherchez sur internet pour savoir comment appliquer cette propriété de style en Javascript)
 
 3. Modifier la fonction `evaluer()` pour qu'elle affiche dans une alerte modale la **somme** des valeurs entrées par l'utilisateur dans les champs `nombre` et `nombre2`. 
 
-4. Créer la fonction `somme(a, b)` qui renvoie la somme des deux nombres passés en paramètres. Tester le bon fonctionnement de cette fonction. (cf partie "Mise en pratique 1")
+4. Créer la fonction `somme(a, b)` qui renvoie la somme des deux nombres passés en paramètres. Tester le bon fonctionnement de cette fonction depuis votre console de navigateur. (cf partie "Mise en pratique 1")
 
 5. Modifier la fonction `evaluer()` de manière à ce qu'elle utilise la fonction `somme()` pour calculer le résultat. Note: vous allez devoir utiliser la fonction `parseFloat()` pour transformer les saisies en nombres.
 
-6. Ajouter la fonction `diviserParDeux()` (cf partie "Mise en pratique 1") dans le fichier Javascript. Tester le bon fonctionnement de cette fonction.
+6. Ajouter la fonction `diviserParDeux()` (cf partie "Mise en pratique 1") dans le fichier Javascript. Tester le bon fonctionnement de cette fonction depuis votre console de navigateur.
 
-7. Modifier la fonction `evaluer()` pour qu'elle affiche le résultat de la somme des deux nombres saisis, ou de la division par deux, **en fonction de l'opération séléctionnée par l'utilisateur**. Dans le cas où l'utilisateur n'aurait pas sélectionné d'opération, afficher `"choisir une operation"` (*sans accent*) dans l'alerte modale, au lieu du résultat. Sinon, dans le cas où l'utilisateur aurait oublié de saisir un nombre (dans l'un ou l'autre champ de saisie), afficher `"saisir un nombre"` dans l'alerte modale, au lieu du résultat.
+7. Modifier la fonction `evaluer()` pour qu'elle affiche le résultat de la somme des deux nombres saisis (en utilisant la fonction `somme`), ou de la division par deux (en utilisant la fonction `diviserParDeux`), **en fonction de l'opération séléctionnée par l'utilisateur**. Dans le cas où l'utilisateur n'aurait pas sélectionné d'opération, afficher `"choisir une operation"` (*sans accent*) dans l'alerte modale, au lieu du résultat. Sinon, dans le cas où l'utilisateur aurait oublié de saisir un nombre (dans l'un ou l'autre champ de saisie), afficher `"saisir un nombre"` dans l'alerte modale, au lieu du résultat.
 
-8. Uploader vos fichiers HTML et Javascript en FTP, de manière à ce que votre formulaire dynamique soit testable directement depuis le répertoire `/cours-javascript/tp-e/ex-2/` de votre espace web EEMI. C'est depuis ce répertoire que votre travail sera évalué, pour compléter votre note de controle continu.
+8. Uploader vos fichiers HTML et Javascript en FTP, de manière à ce que votre formulaire dynamique soit testable directement depuis le répertoire `http://***.etudiant-eemi.com/cours-javascript/tp-e/ex-2/index.html` de votre espace web EEMI. C'est depuis ce répertoire que votre travail sera évalué, pour compléter votre note de controle continu.
 
 Contraintes à respecter: 
 
 - Il doit être possible de changer d'opération et de saisies plusieurs fois sans recharger la page.
 - A chaque clic sur le bouton, une seule alerte modale doit être affichée, contenant seulement le nombre résultant de l'opération.
+- Vous devez absolument respecter l'URL ci-dessus, ainsi que les ids d'éléments et noms de variables et fonctions fournis dans l'exercice.
 
 ## Exercice 3 (optionnel, mais points extra) - formulaire réellement dynamique
 
@@ -334,6 +342,6 @@ Pour cela:
 - Ensuite, vous allez y intégrer un bouton `more`. A chaque clic sur ce bouton, un champ de saisie supplémentaire devra être ajouté dans le formulaire.
 - Enfin, vous vous assurerez que la somme retournée par le bouton `mon-bouton` prenne bien en compte les nombres saisis dans tous les champs.
 
-Si vous parvenez à faire fonctionner une telle page depuis le répertoire `/cours-javascript/tp-e/ex-3/` de votre espace web EEMI, vous gagnez 1 point bonus.
+Si vous parvenez à faire fonctionner une telle page depuis le répertoire `http://***.etudiant-eemi.com/cours-javascript/tp-e/ex-3/index.html` de votre espace web EEMI, vous gagnez 1 point bonus.
 
 Si votre solution utilise une fonction pour effectuer les additions et qu'elle est indépendante du DOM de la page, vous gagnez un 2ème point.
