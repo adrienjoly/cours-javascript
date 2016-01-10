@@ -13,7 +13,7 @@
 - [C](A-recap.md): Variables: katas "[Onboarding](https://www.codingame.com/games/puzzles/43)" et "[Power of Thor](https://www.codingame.com/games/puzzles/4)" sur Codingame
 - [D](D-recap.md): Arrays et selections multiples dans formulaires (objets) + [QCM](D-QCM.md)
 - [E](E.md): Fonctions / formulaire dynamiques + [slides](http://adrienjoly.com/cours-javascript/E-slides.html)
-- F: Population d’une page à l’aide d’un appel Ajax sur une API
+- F: Population d’une page à l’aide d’un appel Ajax sur une API + [slides](http://adrienjoly.com/cours-javascript/F-slides.html)
 - (evaluation)
 - G: Sauvegarde de données via Post Ajax
 - H: Prévoir les cas d’erreurs synchrones (try) et asynchrones (ajax)

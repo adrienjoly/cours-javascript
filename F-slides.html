@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TP F - Slides</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      li {
+        line-height: 2;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+
+# Javascript TP-F
+
+---
+
+# Javascript TP-F - Objectifs
+
+- [Correction de devoir](https://github.com/adrienjoly/correct-tp-e) du [TP E](https://github.com/adrienjoly/cours-javascript/blob/gh-pages/E.md) sur les fonctions
+- Exploiter le web pour mieux coder
+- Cours: Les appels AJAX
+
+---
+
+# Devoir: erreurs et questions
+
+1. Non respect de l'URL demandée (chemin et nom de fichier)
+2. "On ne voit pas le code source depuis l'URL"
+2. Quoi d'autre ?
+
+---
+
+# Exploiter le web pour mieux coder
+
+1. **Identifier/localiser** la partie du code qui ne fonctionne pas, ou qui manque
+2. Chercher en anglais sur **Google**
+3. Chercher sur **StackOverflow**
+4. **Voter** pour les meilleures questions et réponses
+5. Sinon, **poser la question** sur StackOverflow
+6. Mieux encore: partager l'**extrait de code** sur jsfiddle ou jsbin
+
+---
+
+# StackOverflow
+
+![stackoverflow](./F/stackoverflow.png)
+
+---
+
+# Cours: les appels AJAX
+
+- AJAX = Asynchronous Javascript and XML
+- Requête HTTP depuis du code Javascript
+- Pour charger des données sans recharger la page
+- Permet d'accéder à des API
+- Réponse traitée dans une fonction ou collée dans la page
+
+---
+
+# Formats de données
+
+- HTML (pour rendu)
+
+```html
+<h1>Vos emails</h1>
+<ul>
+  <li>Amazon: votre colis a été envoyé</li>
+</ul>
+```
+
+- XML (données brutes)
+
+```xml
+<inbox>
+  <email from="amazon">votre colis a été envoyé</email>
+</inbox>
+```
+
+- JSON (idéal pour javascript)
+
+```json
+inbox: {
+  email: {
+    from: "amazon",
+    subject: "votre colis a été envoyé"
+  }
+}
+```
+
+---
+
+# Requête AJAX
+
+Executez ceci dans votre console, depuis une page (non HTTPS):
+
+```javascript
+var xhr = new XMLHttpRequest(); 
+xhr.open('GET', 'http://jsonplaceholder.typicode.com/users/1');
+xhr.send(null);
+xhr.onreadystatechange = function() {
+  if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+    alert(xhr.responseText);
+  }
+};
+```
+
+---
+
+# Texte brut -> données structurées
+
+- JSON stocké dans une chaine de caractères => pas exploitable:
+
+```javascript
+var chaine = '{"message":"bonjour!"}';
+chaine.message; // => undefined
+```
+
+- Extraire l'objet JSON depuis la chaine de caractères
+
+```javascript
+var chaine = '{"message":"bonjour!"}';
+var objet = JSON.parse(chaine);
+objet.message; // => "bonjour!"
+```
+
+---
+
+# Extraction de données JSON
+
+Requête AJAX avec JSON.parse():
+
+```javascript
+var xhr = new XMLHttpRequest(); 
+xhr.open('GET', 'http://jsonplaceholder.typicode.com/users/1');
+xhr.send(null);
+xhr.onreadystatechange = function() {
+  if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+    var result = JSON.parse(xhr.responseText);
+    alert(result.name);
+  }
+};
+```
+
+---
+
+# Exemples d'APIs simples
+
+- http://httpbin.org/ip
+- http://time.jsontest.com/
+- http://openweathermap.org/current
+- http://jsonplaceholder.typicode.com/users/1
+- http://puppygifs.tumblr.com/api/read/json
+- http://www.flickr.com/services/feeds/photos_public.gne?tags=soccer&format=json
+- Liste: http://www.programmableweb.com/
+
+---
+
+# Exercice
+
+Dans un répertoire, développer:
+- une page HTML contenant un champ de saisie de tag et un bouton,
+- et un fichier JS qui affiche (avec `alert`) le titre de la 1ère image correspondant au tag saisi, quand on clique sur le bouton.
+
+Les images sont accédées par un appel AJAX vers cet URL: 
+```url
+http://www.flickr.com/services/feeds/photos_public.gne?tags=soccer&format=json
+```
+...où `soccer` est à remplacer par le tag saisi par l'utilisateur.
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
