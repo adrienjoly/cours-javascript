@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TP F - Slides</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      li {
+        clear: left;
+        line-height: 2;
+      }
+      .column {
+        color: #777;
+        width: 49%;
+        height: 92%;
+        float: left;
+      }
+      .column img {
+        display: inline;
+        max-width: 100%;
+      }
+      .clear {
+        clear: both;
+      }
+      .pull-right {
+        float: right;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+
+# Javascript TP-G
+# AJAX
+
+---
+
+# Javascript TP-G - Objectifs
+
+- Correction rapide du partiel
+- Résultats du sondage
+- Présentation du QCM
+- Cours: AJAX
+
+---
+
+# Partiel - Répartition des notes
+
+- Partiel et QCM
+
+.column[![notes partiel](./G/partiel-histo.png)]
+.column[![notes exo 1](./G/partiel-histo-1.png)]
+
+- Exercices 2 et 3
+
+.column[![notes exo 2](./G/partiel-histo-2.png)]
+.column[![notes exo 3](./G/partiel-histo-3.png)]
+
+- [Notes par test](https://docs.google.com/a/eemi.com/spreadsheets/d/1gYVdjC7OjaWNbAJbvdAJHfDyStGK5qJTd9JZGB5Y4mg/edit?usp=sharing)
+
+---
+
+# Partiel - Recommandations
+
+1. Lisez l'énoncé (code javascript)
+2. Testez votre code à chaque étape
+3. Inspirez-vous du code fourni (fonctions)
+4. <del>Trichez</del> Copiez intelligemment (identifiants)
+
+---
+
+# Résultats du sondage
+
+- [Sondage et réponses](https://docs.google.com/a/eemi.com/forms/d/1pPKP5Xy7Y4bFleT7qKDFMI3fUIftW6vAvZoDPegwPug/edit?usp=drive_web)
+
+---
+
+# Cours: les appels AJAX
+
+.pull-right[![diagramme ajax](./G/ajax.svg)]
+
+- **A**synchronous **J**avascript **a**nd **X**ML
+- Requête HTTP depuis du code JS
+- Charger des données sans recharger la page
+- Permet d'accéder à des **API** (**A**pplication **P**rogramming **I**nterface)
+- Réponse traitée dans une fonction
+
+---
+
+# Formats de données
+
+- HTML (pour rendu)
+
+```html
+<h1>Vos emails</h1>
+<ul>
+  <li>Amazon: votre colis a été envoyé</li>
+</ul>
+```
+
+- XML (données brutes)
+
+```xml
+<inbox>
+  <email from="amazon">votre colis a été envoyé</email>
+</inbox>
+```
+
+- JSON (idéal pour javascript)
+
+```json
+inbox: {
+  email: {
+    from: "amazon",
+    subject: "votre colis a été envoyé"
+  }
+}
+```
+
+---
+
+# Requête AJAX
+
+Executez ceci dans votre console, depuis une page (non HTTPS):
+
+```javascript
+var xhr = new XMLHttpRequest(); 
+xhr.open('GET', 'http://jsonplaceholder.typicode.com/users/1');
+xhr.send(null);
+xhr.onreadystatechange = function() {
+  if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+    alert(xhr.responseText);
+  }
+};
+```
+
+---
+
+# Texte brut -> données structurées
+
+- JSON stocké dans une chaine de caractères => pas exploitable:
+
+```javascript
+var chaine = '{"message":"bonjour!"}';
+chaine.message; // => undefined
+```
+
+- Extraire l'objet JSON depuis la chaine de caractères
+
+```javascript
+var chaine = '{"message":"bonjour!"}';
+var objet = JSON.parse(chaine);
+objet.message; // => "bonjour!"
+```
+
+---
+
+# Extraction de données JSON
+
+Requête AJAX avec JSON.parse():
+
+```javascript
+var xhr = new XMLHttpRequest(); 
+xhr.open('GET', 'http://jsonplaceholder.typicode.com/users/1');
+xhr.send(null);
+xhr.onreadystatechange = function() {
+  if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+    var result = JSON.parse(xhr.responseText);
+    alert(result.name);
+  }
+};
+```
+
+---
+
+# Exemples d'APIs simples
+
+- http://httpbin.org/ip
+- http://time.jsontest.com/
+- http://openweathermap.org/current
+- http://jsonplaceholder.typicode.com/users/1
+- http://puppygifs.tumblr.com/api/read/json
+- http://www.flickr.com/services/feeds/photos_public.gne?tags=soccer&format=json
+- Liste: http://www.programmableweb.com/
+
+---
+
+# Exercice
+
+Dans un répertoire, développer:
+- une page HTML contenant un champ de saisie de tag et un bouton,
+- et un fichier JS qui affiche (avec `alert`) le titre de la 1ère image correspondant au tag saisi, quand on clique sur le bouton.
+
+Les images sont accédées par un appel AJAX vers cet URL: 
+```url
+http://www.flickr.com/services/feeds/photos_public.gne?tags=soccer&format=json
+```
+...où `soccer` est à remplacer par le tag saisi par l'utilisateur.
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
