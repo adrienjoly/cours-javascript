@@ -1,0 +1,35 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+
+      var puppygifs = "http://puppygifs.tumblr.com/api/read/json";
+
+      var flickr = "https://api.flickr.com/services/rest/?method=flickr.photos.search"
+        + "&api_key=74a9b070d21072ccac3a7b5f44f09efa"
+        + "&tags=soccer"
+        + "&format=json"
+        //+ "&per_page=5"
+        //+ "&page=1"
+        + "&nojsoncallback=1"; // Request plain old JSON instead of JSONP
+
+      var weather = "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=44db6a862fba0b067b1930da0d769e98";
+
+      var url = weather;
+
+      console.log('ajax request url:', url);
+
+      var xhr = new XMLHttpRequest(); 
+      xhr.open('GET', url, true);
+      xhr.onreadystatechange = function() {
+        console.log('onreadystatechange', xhr.readyState, xhr.status /*, xhr.responseText*/);
+        if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+          document.write(xhr.responseText);
+          console.log(JSON.parse(xhr.responseText));
+        }
+      };
+      xhr.send(null);
+    </script>
+  </body>
+</html>
