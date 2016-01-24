@@ -6,6 +6,8 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
+    <p>Saisissez un message à envoyer à la classe, puis cliquez sur le bouton Google Connect:</p>
+    <input id="message" placeholder="Votre message" style="padding: 5px; margin: 10px 0;">
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     <script>
       function onSignIn(googleUser) {
@@ -16,6 +18,7 @@
         var user = {
           name: googleProfile.getName(),
           email: googleProfile.getEmail(),
+          message: document.getElementById('message').value
           //token: googleUser.getAuthResponse().id_token
         };
         console.log('user profile:', user);

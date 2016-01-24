@@ -7,16 +7,36 @@ var serveStatic = require('serve-static');
 
 var PORT = 8080;
 
+var users = {}; // remoteAddress -> user object
+
 // Configure the app
 var app = connect();
 app.use(require('qs')); // Parse query string into `request.query`
 app.use(require('body-parser').json({ type: '*/*', strict: false })); // parse json request bodies into req.body 
 app.use(serveStatic('./public', {'index': ['index.html']})); // Serve public files 
 
+app.use('/users', function (req, response, next) {
+  console.log('/users request from:', req.connection.remoteAddress, req.body);
+  var renderedUsers = Object.keys(users).map(function(ip){
+    return '<li>' + users[ip].name.replace(/[<>]*/g, '') + ': ' + users[ip].message + '</li>';
+  });
+  response.end([
+    '<!DOCTYPE html>',
+    '<html>',
+    '<body>',
+    '<p>Utilisateurs: ' + Object.keys(users).length + '</p>',
+    '<ul>' + renderedUsers + '</ul>',
+    '</body>',
+    '</html>'
+  ].join('\n'));
+});
+
 app.use('/hello', function (req, response, next) {
   console.log('/hello request from:', req.connection.remoteAddress, req.body);
+  var nbUsers = Object.keys(users).length;
+  users[req.connection.remoteAddress] = req.body;
   response.end(JSON.stringify({
-    message: 'Bonjour, ' + req.body.name
+    message: 'Bonjour, ' + req.body.name + '! Vous êtes le ' + (nbUsers ? (nbUsers + 1) + 'ème' : '1er') + '!'
   }));
 });
 
