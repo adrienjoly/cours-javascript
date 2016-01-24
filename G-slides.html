@@ -235,13 +235,13 @@ Requête AJAX avec JSON.parse():
 ```javascript
 var xhr = new XMLHttpRequest(); 
 xhr.open('GET', 'http://jsonplaceholder.typicode.com/users/1');
-xhr.send(null);
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
     var result = JSON.parse(xhr.responseText);
     alert(result.name);
   }
 };
+xhr.send(null);
 ```
 
 ---
