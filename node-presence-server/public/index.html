@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <!-- setup google auth from: https://console.developers.google.com/home/dashboard?project=eemi-node-presence-server&authuser=1 -->
+    <meta name="google-signin-client_id" content="635994372911-52tulemm0lkeb5pm0dvu9sh1gdc9ppmn.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+
+        // 1) get user data from google
+
+        var googleProfile = googleUser.getBasicProfile();
+        var user = {
+          name: googleProfile.getName(),
+          email: googleProfile.getEmail(),
+          //token: googleUser.getAuthResponse().id_token
+        };
+        console.log('user profile:', user);
+
+        // 2) send user data to aj-mbp (local classroom server)
+
+        var xhr = new XMLHttpRequest(); 
+        xhr.open('POST', 'http://aj-mbp.local:8080/hello');
+        xhr.onreadystatechange = function() {
+          console.log('onreadystatechange', xhr.readyState, xhr.status, xhr.responseText);
+          if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+            var result = JSON.parse(xhr.responseText);
+            alert(result.message);
+          }
+        };
+        xhr.send(JSON.stringify(user));
+
+      };
+    </script>
+  </body>
+</html>

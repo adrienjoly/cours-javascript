@@ -1,0 +1,19 @@
+{
+  "name": "node-presence-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "setup-host": "scutil --set LocalHostName \"aj-mbp\"; scutil --set HostName \"aj-mbp\";",
+    "test": "curl localhost:8080/hello -d '{\"name\":\"adrien\"}'",
+    "start": "node server.js"
+  },
+  "author": "Adrien Joly <contact@adrienjoly.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "connect": "^3.4.1",
+    "my-local-ip": "^1.0.0",
+    "qs": "^6.0.2",
+    "serve-static": "^1.10.2"
+  }
+}
