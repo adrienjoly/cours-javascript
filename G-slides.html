@@ -33,6 +33,7 @@
       .pull-right {
         float: right;
       }
+      .comment { display: none; }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
     </style>
   </head>
@@ -40,16 +41,16 @@
     <textarea id="source">
 class: center, middle
 
-# Javascript TP-G
+# Javascript
+# TP G
 # AJAX
 
 ---
 
-# Javascript TP-G - Objectifs
+# Javascript - TP G - Objectifs
 
 - Correction rapide du partiel
 - Résultats du sondage
-- Présentation du QCM
 - Cours: AJAX
 
 ---
@@ -87,19 +88,47 @@ class: center, middle
 
 # Cours: les appels AJAX
 
+- Demo (local)
+- [Gabarit de support de cours](https://docs.google.com/document/d/14dI3GPB2OpoP76tYddM_2olj-Aoth4R3vxTPNhnHdHA/edit?usp=sharing)
+
+---
+
+# Cours: les appels AJAX
+
 .pull-right[![diagramme ajax](./G/ajax.svg)]
 
+.comment[
+[//]: # ( -- as generated from http://bramp.github.io/js-sequence-diagrams/ -- )
+[//]: # (Navigateur-->Server: GET /)
+[//]: # (Server->Navigateur: index.html)
+[//]: # (Navigateur-->Server: GET index.js)
+[//]: # (Server->Navigateur: index.js)
+[//]: # (Navigateur-->API: GET data.json)
+[//]: # (API->Navigateur: data.json)
+]
+
 - **A**synchronous **J**avascript **a**nd **X**ML
-- Requête HTTP depuis du code JS
-- Charger des données sans recharger la page
-- Permet d'accéder à des **API** (**A**pplication **P**rogramming **I**nterface)
-- Réponse traitée dans une fonction
+- Requête **HTTP** depuis du code JS
+--
+
+- Permet de:
+  - **Échanger** des données avec l'extérieur
+  - **Charger** des données sans recharger la page
+  - Accéder à des **API** (**A**pplication **P**rogramming **I**nterface)
 
 ---
 
 # Formats de données
 
-- HTML (pour rendu)
+- XML (ancien standard pour données brutes)
+
+```xml
+<inbox>
+  <email from="amazon">votre colis a été envoyé</email>
+</inbox>
+```
+--
+- HTML (pour rendu web)
 
 ```html
 <h1>Vos emails</h1>
@@ -107,18 +136,10 @@ class: center, middle
   <li>Amazon: votre colis a été envoyé</li>
 </ul>
 ```
+--
+- JSON (**J**ava**S**cript **O**bject **N**otation)
 
-- XML (données brutes)
-
-```xml
-<inbox>
-  <email from="amazon">votre colis a été envoyé</email>
-</inbox>
-```
-
-- JSON (idéal pour javascript)
-
-```json
+```javascript
 inbox: {
   email: {
     from: "amazon",
@@ -129,19 +150,54 @@ inbox: {
 
 ---
 
-# Requête AJAX
+# Objets JSON en Javascript
+
+```javascript
+var inbox = {
+  email: {
+    from: "amazon",
+    subject: "votre colis a été envoyé"
+  }
+};
+```
+
+--
+
+- Une variable peut être un objet JSON.
+- Un objet contient des **propriétés**.
+- Les accolades servent à définir la valeur des propriétés d'un objet.
+- Une propriété, comme une variable, peut être un objet.
+
+--
+
+```javascript
+console.log(inbox);
+console.log(inbox.email);
+console.log(inbox.email.from);
+console.log(inbox.email.subject);
+```
+
+---
+
+# Requête AJAX en Javascript
 
 Executez ceci dans votre console, depuis une page (non HTTPS):
 
 ```javascript
 var xhr = new XMLHttpRequest(); 
 xhr.open('GET', 'http://jsonplaceholder.typicode.com/users/1');
-xhr.send(null);
+```
+--
+```javascript
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
     alert(xhr.responseText);
   }
 };
+```
+--
+```javascript
+xhr.send(null);
 ```
 
 ---
@@ -152,15 +208,22 @@ xhr.onreadystatechange = function() {
 
 ```javascript
 var chaine = '{"message":"bonjour!"}';
-chaine.message; // => undefined
+console.log(chaine.message); // => undefined
 ```
-
-- Extraire l'objet JSON depuis la chaine de caractères
+--
+- Extraire l'objet JSON depuis une chaine de caractères
 
 ```javascript
 var chaine = '{"message":"bonjour!"}';
 var objet = JSON.parse(chaine);
-objet.message; // => "bonjour!"
+console.log(objet.message); // => "bonjour!"
+```
+--
+- Extraire l'objet JSON depuis la réponse à la requête AJAX
+
+```javascript
+var reponse = JSON.parse(xhr.responseText);
+console.log(reponse.message);
 ```
 
 ---
@@ -183,15 +246,19 @@ xhr.onreadystatechange = function() {
 
 ---
 
-# Exemples d'APIs simples
+# Exemples d'APIs ouvertes
 
-- http://httpbin.org/ip
-- http://time.jsontest.com/
-- http://openweathermap.org/current
-- http://jsonplaceholder.typicode.com/users/1
-- http://puppygifs.tumblr.com/api/read/json
-- http://www.flickr.com/services/feeds/photos_public.gne?tags=soccer&format=json
-- Liste: http://www.programmableweb.com/
+- Simples:
+  - Adresse IP: [httpbin.org/ip](http://httpbin.org/ip)
+  - Heure: [time.jsontest.com](http://time.jsontest.com/)
+  - Utilisateur: [jsonplaceholder.typicode.com/users/1](http://jsonplaceholder.typicode.com/users/1)
+
+- Plus complexes:
+  - Météo: [openweathermap.org/current](http://openweathermap.org/current) (doc)
+  - Chatons: [puppygifs.tumblr.com/api/read/json](http://puppygifs.tumblr.com/api/read/json) (JSON var)
+  - Photos: [flickr.com/services/feeds/photos_public.gne?tags=soccer](http://www.flickr.com/services/feeds/photos_public.gne?tags=soccer&format=json) (JSONP)
+
+- Annuaire d'APIs: [Programmable Web](http://www.programmableweb.com/)
 
 ---
 
