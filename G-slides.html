@@ -267,15 +267,17 @@ xhr.send(null);
 
 # Exercice
 
-Dans un répertoire, développer:
-- une page HTML contenant un champ de saisie de tag et un bouton,
-- et un fichier JS qui affiche (avec `alert`) le titre de la 1ère image correspondant au tag saisi, quand on clique sur le bouton.
+*Formulaire faisant une requête AJAX en fonction de la saisie de l'utilisateur.*
 
-Les images sont accédées par un appel AJAX vers cet URL: 
-```url
-http://www.flickr.com/services/feeds/photos_public.gne?tags=soccer&format=json
-```
-...où `soccer` est à remplacer par le tag saisi par l'utilisateur.
+Exemples:
+- afficher la météo de demain, en fonction de la ville choisie.
+- afficher une photo Flickr, en fonction d'un tag saisi.
+
+Etapes:
+1. réaliser une page HTML contenant un champ de saisie et un bouton.
+2. ajouter un code Javascript qui affiche le contenu du champ quand on clique sur le bouton.
+3. ajouter la requête AJAX dans le code, afficher le résultat dans la console.
+4. faire en sorte que l'appel AJAX s'adapte en fonction de la saisie, à chaque clic sur le bouton.
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
