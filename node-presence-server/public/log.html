@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <p>utilisateurs: <span id="users">0</span></p>
+    <ul id="log"></ul>
+    <script>
+      function sanitize(str){
+        return (''+str).replace(/[<>]*/g, '');
+      }
+
+      var socket = io();
+      var log = document.getElementById('log');
+      var users = document.getElementById('users');
+
+      socket.on('chat', function(msg){
+        users.innerHTML = sanitize(msg.users);
+        log.innerHTML = '<li>' + sanitize(msg.userName) + ': '
+            + sanitize(msg.message) + '</li>' + log.innerHTML;
+      });
+    </script>
+  </body>
+</html>
