@@ -131,7 +131,7 @@ Serveur API-->XMLHttpRequest: responseText
 
 ```javascript
 var xhr = new XMLHttpRequest();
-xhr.open('POST', 'https://serveur.com/api');
+xhr.open('POST', 'http://httpbin.org/post');
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
     alert(xhr.responseText);
@@ -150,6 +150,7 @@ xhr.send(JSON.stringify({ message: 'bonjour!' }));
 --
 - `JSON.stringify()` fait l'opération inverse de `JSON.parse()`
 - `JSON.stringify()` transforme un objet JSON en chaine de caractères
+- L'API `http://httpbin.org/post` est très pratique pour tester vos requêtes
 
 ---
 
