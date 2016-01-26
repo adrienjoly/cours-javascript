@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TP F - Slides</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      li {
+        clear: left;
+        line-height: 2;
+      }
+      .column {
+        color: #777;
+        width: 49%;
+        height: 92%;
+        float: left;
+      }
+      .column img {
+        display: inline;
+        max-width: 100%;
+      }
+      .clear {
+        clear: both;
+      }
+      .pull-left {
+        float: left;
+      }
+      .pull-right {
+        float: right;
+      }
+      .comment { display: none; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+
+# Javascript
+# TP H
+# Envoi de données avec AJAX
+
+---
+
+# Javascript - TP H - Objectifs
+
+- Présentation des idées proposées (sondage)
+- Présentation des résultats du TP G
+- Cours: Envoi de données avec AJAX
+
+---
+
+# Rappels AJAX
+
+- AJAX: requête HTTP controlée par Javascript
+- Récupération de données depuis une API en utilisant GET.
+- Utilisation de `JSON.parse()` pour transformer `responseText` en objet
+- Extraction de données en utilisant notation pointée sur objets
+- L'extension [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) est pratique pour observer les réponses d'API dans Chrome
+
+
+
+--
+- [Gabarit de support de cours](https://docs.google.com/a/eemi.com/document/d/1Qt_uwv5x0IbhIX_P6vrykVXf_czBpxgS4WzIFrDlubA/edit?usp=sharing)
+
+---
+
+# Envoi de données avec AJAX
+
+- Récupérer des données: HTTP GET -> `responseText`
+
+.pull-left[
+  ![diagramme get](./H/diagram-get.svg)
+]
+.comment[ -- as generated from http://bramp.github.io/js-sequence-diagrams/ --
+XMLHttpRequest-->Serveur API: GET /data
+Serveur API->XMLHttpRequest: responseText
+]
+
+--
+
+.pull-left[
+  ![diagramme post](./H/diagram-post.svg)
+]
+.comment[ -- as generated from http://bramp.github.io/js-sequence-diagrams/ --
+XMLHttpRequest->Serveur API: POST /data
+Serveur API-->XMLHttpRequest: responseText
+]
+
+- Envoyer des données: HTTP POST avec `send(data)`
+
+
+--
+
+- Demo: node-presence-server, [http://aj-mbp.local:8080/](http://aj-mbp.local:8080/)
+
+---
+
+# Exercice
+
+*Formulaire faisant une requête AJAX en fonction de la saisie de l'utilisateur.*
+
+Exemples:
+- afficher la météo de demain, en fonction de la ville choisie.
+- afficher une photo Flickr, en fonction d'un tag saisi.
+
+Etapes:
+1. réaliser une page HTML contenant un champ de saisie et un bouton.
+2. ajouter un code Javascript qui affiche le contenu du champ quand on clique sur le bouton.
+3. ajouter la requête AJAX dans le code, afficher le résultat dans la console.
+4. faire en sorte que l'appel AJAX s'adapte en fonction de la saisie, à chaque clic sur le bouton.
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

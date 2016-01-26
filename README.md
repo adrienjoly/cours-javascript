@@ -13,23 +13,24 @@
 - [C](A-recap.md): Variables: katas "[Onboarding](https://www.codingame.com/games/puzzles/43)" et "[Power of Thor](https://www.codingame.com/games/puzzles/4)" sur Codingame
 - [D](D-recap.md): Arrays et selections multiples dans formulaires (objets) + [QCM](D-QCM.md)
 - [E](E.md): Fonctions / formulaire dynamiques + [slides](http://adrienjoly.com/cours-javascript/E-slides.html)
-- F: Correction de TP E, et conseils pour trouver des solutions en ligne + [slides](http://adrienjoly.com/cours-javascript/F-slides.html)
+- [F](http://adrienjoly.com/cours-javascript/F-slides.html): Correction de TP E, et conseils pour trouver des solutions en ligne
 - ([evaluation](https://js-partiel-1.herokuapp.com/))
-- G: AJAX: Population et sauvegarde de données
-- H: Prévoir les cas d’erreurs synchrones (try) et asynchrones (ajax)
-- I: Ajustement dynamique du rendu via les classes CSS
-- J: One-page app basique: notion de persistence d’état
-- K: Erreurs de débutants 1 / 2: visibilité des variables (scope, hoisting)
-- L: Erreurs de débutants 2 / 2: chargement du DOM et dépendances
-- M: Utiliser Chrome Dev Tools pour déboguer une application
-- N: Introduction à jQuery
-- O: Manipulation de données et rendu de templates avec Underscore.js
-- P: One-page app avec Backbone et Facebook Connect, 1 / 2
-- Q: One-page app avec Backbone et Facebook Connect, 2 / 2
-- R: Utiliser Chrome Dev Tools pour tester l’adaptivité et les perfs
-- S: Composants et tests d’intégration
-- T: Minification et mise en production sur Github Pages
-- U: Introduction à AngularJS
+- [G](http://adrienjoly.com/cours-javascript/G-slides.html): Récupération de données avec AJAX
+- [H](http://adrienjoly.com/cours-javascript/H-slides.html): Envoi de données avec AJAX
+- Utiliser Chrome Dev Tools pour déboguer une application
+- Prévoir les cas d’erreurs synchrones (try) et asynchrones (ajax)
+- Ajustement dynamique du rendu via les classes CSS
+- One-page app basique: notion de persistence d’état
+- Erreurs de débutants 1 / 2: visibilité des variables (scope, hoisting)
+- Erreurs de débutants 2 / 2: chargement du DOM et dépendances
+- Introduction à jQuery
+- Manipulation de données et rendu de templates avec Underscore.js
+- One-page app avec Backbone et Facebook Connect, 1 / 2
+- One-page app avec Backbone et Facebook Connect, 2 / 2
+- Utiliser Chrome Dev Tools pour tester l’adaptivité et les perfs
+- Composants et tests d’intégration
+- Minification et mise en production sur Github Pages
+- Introduction à AngularJS
 - (evaluation)
 
 ### Logiciels nécéssaires
