@@ -73,7 +73,7 @@ class: center, middle
 
 ---
 
-# Envoi de données avec AJAX
+# Envoi de données HTTP POST
 
 - Récupérer des données: HTTP GET -> `responseText`
 
@@ -100,23 +100,75 @@ Serveur API-->XMLHttpRequest: responseText
 
 --
 
-- Demo: node-presence-server, [http://aj-mbp.local:8080/](http://aj-mbp.local:8080/)
+- Demo: [js-ajax-twitter](https://js-ajax-twitter.herokuapp.com/log.html), client: [js-ajax-twitter.herokuapp.com](https://js-ajax-twitter.herokuapp.com/)
 
 ---
 
-# Exercice
+# Requête HTTP POST par formulaire
 
-*Formulaire faisant une requête AJAX en fonction de la saisie de l'utilisateur.*
+- Code source: [index.html](view-source:https://js-ajax-twitter.herokuapp.com/index.html)
 
-Exemples:
-- afficher la météo de demain, en fonction de la ville choisie.
-- afficher une photo Flickr, en fonction d'un tag saisi.
+```html
+<form method="POST" action="/tweet">
+  <input name="message">
+</form>
+```
 
-Etapes:
-1. réaliser une page HTML contenant un champ de saisie et un bouton.
-2. ajouter un code Javascript qui affiche le contenu du champ quand on clique sur le bouton.
-3. ajouter la requête AJAX dans le code, afficher le résultat dans la console.
-4. faire en sorte que l'appel AJAX s'adapte en fonction de la saisie, à chaque clic sur le bouton.
+--
+- N'oubliez pas l'attribut `name` pour vos champs !
+
+--
+- **Mise en pratique:**
+  - *tweetez* depuis un formulaire HTML en local
+  - URL de l'API: `https://js-ajax-twitter.herokuapp.com/tweet`
+  - Utilisez l'onglet "Réseau" de Chrome Dev Tools pour tester la requête
+
+---
+
+# Requête HTTP POST en AJAX
+
+- Envoi d'une chaine de caractères:
+
+```javascript
+var xhr = new XMLHttpRequest();
+xhr.open('POST', 'https://serveur.com/api');
+xhr.onreadystatechange = function() {
+  if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+    alert(xhr.responseText);
+  }
+};
+xhr.send('données à envoyer');
+```
+
+--
+- Envoi d'un objet Javascript (JSON):
+
+```javascript
+xhr.send(JSON.stringify({ message: 'bonjour!' }));
+```
+
+--
+- `JSON.stringify()` fait l'opération inverse de `JSON.parse()`
+- `JSON.stringify()` transforme un objet JSON en chaine de caractères
+
+---
+
+# Exercice: *Tweeter* en AJAX
+
+- **But**: éviter le changement de page pour l'utilisateur quand il *tweete*
+
+- **Comment**: même formulaire HTML, mais en effectuant une requête AJAX
+
+
+
+--
+- **Étapes proposées**:
+  1. Dupliquer le formulaire créé pendant la mise en pratique
+  2. Empêcher qu'il soit soumis lorsque l'utilisateur presse <kbd>ENTRÉE</kbd>
+  3. Intégrer AJAX, pour que la requête HTTP POST soit émise quand l'utilisateur presse <kbd>ENTRÉE</kbd>
+  4. Faire en sorte que le message saisi dans le champ par l'utilisateur soit envoyé
+
+- Pensez à utiliser l'onglet "Réseau" de Chrome Dev Tools pour diagnostiquer.
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
