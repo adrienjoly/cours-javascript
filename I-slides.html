@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TP I - Slides</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      li {
+        clear: left;
+        line-height: 2;
+      }
+      .column {
+        color: #777;
+        width: 49%;
+        height: 92%;
+        float: left;
+      }
+      .column img {
+        display: inline;
+        max-width: 100%;
+      }
+      .clear {
+        clear: both;
+      }
+      .pull-left {
+        float: left;
+      }
+      .pull-right {
+        float: right;
+      }
+      .comment { display: none; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+
+# Javascript
+# TP I
+# Pages dynamiques avec AJAX
+
+---
+
+# Javascript - TP I - Objectifs
+
+- Correction exercice du TP H
+- Cours: Population HTML depuis AJAX
+
+- [Support de cours](https://docs.google.com/document/d/1fu_xVfmVUzN_qpeZmkpVfHGH4jorj4WyqB94yIIHCOQ/edit)
+
+---
+
+# Rappels AJAX
+
+- Requêtes HTTP possibles depuis `<form>` (HTML) et AJAX (Javascript).
+
+  - Utiliser preventDefault() pour éviter changement de page du `<form>`.
+
+--
+
+- Quand on appelle une API au format JSON, via AJAX:
+
+  - Utiliser `JSON.parse()` pour extraire données de `responseText`.
+  - Utiliser `JSON.stringify()` pour envoyer un objet JSON.
+
+--
+
+- Pour tester le contenu et la réponse de vos requêtes HTTP:
+
+  - Utiliser l'onglet "Network" de Chrome Dev Tools.
+  - Ou remplacer l'URL de destination par `http://httpbin.org/post` (ou `/get`), et afficher la réponse.
+
+---
+
+# Structure du TP
+
+BUT: Refaire Google Images
+
+--
+1. Modifier le contenu d'un élément HTML depuis Javascript
+1. Afficher la réponse d'une requête AJAX dans la page HTML
+1. Afficher une image en HTML
+1. Afficher une image depuis Javascript
+1. Afficher une liste d'images
+1. Afficher une liste d'images retournée par une API
+1. Afficher une liste d'images à partir d'un mot-clé
+
+--
+
+Chaque étape = 5mn d'essai + 5mn de cours + 10mn d'implémentation
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
