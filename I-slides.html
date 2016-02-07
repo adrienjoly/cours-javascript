@@ -53,9 +53,42 @@ class: center, middle
 # Javascript - TP I - Objectifs
 
 - Correction exercice du TP H
-- Cours: Population HTML depuis AJAX
+- Présentation du Sujet + [Support](https://docs.google.com/document/d/1fu_xVfmVUzN_qpeZmkpVfHGH4jorj4WyqB94yIIHCOQ/edit): réaliser un clone de Google Images
+- Format: itérations
+  - 5mn d'intervention (écran fermé)
+  - 15mn de réalisation en groupe
+- 1ère itération:
+  - 5mn de présentation du sujet
+  - 15mn pour répondre aux questions du support
 
-- [Support de cours](https://docs.google.com/document/d/1fu_xVfmVUzN_qpeZmkpVfHGH4jorj4WyqB94yIIHCOQ/edit)
+---
+
+# Expression des besoins
+
+BUT: Réaliser un clone de Google Images
+
+.pull-left[
+  ![diagramme get](./I/diagram.svg)
+]
+.comment[ -- as generated from http://bramp.github.io/js-sequence-diagrams/ --
+Utilisateur->HTML: Mots-clés
+HTML->Javascript: Lecture formulaire
+Javascript->API: Requête images
+API->Javascript: Liste images
+Javascript->HTML: Affichage images
+]
+
+---
+
+# Proposition de plan de mise en oeuvre
+
+1. Modifier le contenu d'un élément HTML depuis Javascript
+1. Afficher la réponse d'une requête AJAX dans la page HTML
+1. Afficher une image en HTML
+1. Afficher une image depuis Javascript
+1. Afficher une liste d'images
+1. Afficher une liste d'images retournée par une API
+1. Afficher une liste d'images à partir d'un mot-clé
 
 ---
 
@@ -78,25 +111,6 @@ class: center, middle
 
   - Utiliser l'onglet "Network" de Chrome Dev Tools.
   - Ou remplacer l'URL de destination par `http://httpbin.org/post` (ou `/get`), et afficher la réponse.
-
----
-
-# Structure du TP
-
-BUT: Refaire Google Images
-
---
-1. Modifier le contenu d'un élément HTML depuis Javascript
-1. Afficher la réponse d'une requête AJAX dans la page HTML
-1. Afficher une image en HTML
-1. Afficher une image depuis Javascript
-1. Afficher une liste d'images
-1. Afficher une liste d'images retournée par une API
-1. Afficher une liste d'images à partir d'un mot-clé
-
---
-
-Chaque étape = 5mn d'essai + 5mn de cours + 10mn d'implémentation
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">

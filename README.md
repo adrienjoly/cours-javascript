@@ -17,7 +17,7 @@
 - ([évaluation](https://js-partiel-1.herokuapp.com/))
 - [G](http://adrienjoly.com/cours-javascript/G-slides.html): Récupération de données avec AJAX
 - [H](http://adrienjoly.com/cours-javascript/H-slides.html): Envoi de données avec AJAX
-- [I](http://adrienjoly.com/cours-javascript/I-slides.html): Pages dynamiques avec AJAX: manipulation de données et rendu de templates
+- [I](http://adrienjoly.com/cours-javascript/I-slides.html): Pages dynamiques avec AJAX: population de données depuis une API
 - J: One-page app: Ajustement dynamique du rendu via les classes CSS
 - K: One-page app: Identification avec Facebook Connect
 - L: One-page app: Utilisation d'un back-end 1 / 2 (Firebase)
