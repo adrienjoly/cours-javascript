@@ -70,6 +70,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       on-iron-localstorage-load-empty="initDefaults"
     ></iron-localstorage>
 
+    <polymer-element name="app-globals">
+      <script>
+      (function() {
+        // these variables are shared by all instances of app-globals
+        var myQuestions = {
+          1: { message: "yeah" },
+          2: { message: "youh" }
+        }
+        Polymer({
+          ready: function() {
+            // make global values available on instance.
+            this.myQuestions = myQuestions;
+          }
+        });
+      })();
+      </script>
+    </polymer-element>
+
+    <app-globals id="globals"></app-globals>
+
     <paper-drawer-panel id="paperDrawerPanel">
       <!-- Drawer Scroll Header Panel -->
       <paper-scroll-header-panel drawer fixed>
@@ -88,6 +108,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <a data-route="exercise" href="{{baseUrl}}ex/1">
             <iron-icon icon="exercise"></iron-icon>
             <span>Exercice 1</span>
+          </a>
+          <a data-route="exercise" href="{{baseUrl}}ex/2">
+            <iron-icon icon="exercise"></iron-icon>
+            <span>Exercice 2</span>
+          </a>
+          <a data-route="submit" href="{{baseUrl}}submit">
+            <iron-icon icon="submit"></iron-icon>
+            <span>Terminer</span>
           </a>
         </paper-menu>
       </paper-scroll-header-panel>
@@ -125,6 +153,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <section data-route="exercise">
               <paper-material elevation="1">
+
+                <p>{{$.globals.myQuestions[params.number].message}}</p>
 
                 <h2>Exercice {{params.number}} - QCM</h2>
                 <p class="paper-font-subhead">Question bla bla</p>
