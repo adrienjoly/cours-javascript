@@ -9,15 +9,15 @@
 ### Plan par semaine
 
 - [A](A.md): Hacker google.com avec Chrome Dev Tools (DOM et events) + [QCM](A-QCM.md)
-- [B](B.md): Validation d’un champs de formulaire texte (conditions et alerts)
+- [B](B.md): Validation d’un champs de formulaire texte (conditions et alerts) + solutions des exercices [0](https://github.com/adrienjoly/correct-tp-b/tree/master/JS-B-0) et [2](https://github.com/adrienjoly/correct-tp-b/tree/master/JS-B-2)
 - [C](A-recap.md): Variables: katas "[Onboarding](https://www.codingame.com/games/puzzles/43)" et "[Power of Thor](https://www.codingame.com/games/puzzles/4)" sur Codingame
 - [D](D-recap.md): Arrays et sélections multiples dans formulaires (objets) + [QCM](D-QCM.md)
-- [E](E.md): Fonctions / formulaire dynamiques + [slides](http://adrienjoly.com/cours-javascript/E-slides.html)
+- [E](E.md): Fonctions / formulaire dynamiques + [slides](http://adrienjoly.com/cours-javascript/E-slides.html) + solutions des exercices [1](https://github.com/adrienjoly/correct-tp-e/blob/master/ex-1/index.html) et [2](https://github.com/adrienjoly/correct-tp-e/blob/master/ex-2/index.html)
 - [F](http://adrienjoly.com/cours-javascript/F-slides.html): Correction de TP E, et conseils pour trouver des solutions en ligne
-- ([évaluation](https://js-partiel-1.herokuapp.com/))
+- ([évaluation](https://js-partiel-1.herokuapp.com/)) + [solutions](https://github.com/adrienjoly/js-partiel-1-correct/tree/master/solutions)
 - [G](http://adrienjoly.com/cours-javascript/G-slides.html): Récupération de données avec AJAX
-- [H](http://adrienjoly.com/cours-javascript/H-slides.html): Envoi de données avec AJAX
-- [I](http://adrienjoly.com/cours-javascript/I-slides.html): Pages dynamiques avec AJAX: population de données depuis une API
+- [H](http://adrienjoly.com/cours-javascript/H-slides.html): Envoi de données avec AJAX => [clone de Twitter](https://github.com/adrienjoly/js-ajax-twitter) + [solution](https://github.com/adrienjoly/js-ajax-twitter/blob/master/public/index-ajax.html)
+- [I](http://adrienjoly.com/cours-javascript/I-slides.html): Pages dynamiques avec AJAX: clone de Google Images en utilisant une [API](https://github.com/adrienjoly/js-ajax-pinterest)
 - J: One-page app: Ajustement dynamique du rendu via les classes CSS
 - K: One-page app: Identification avec Facebook Connect
 - L: One-page app: Utilisation d'un back-end 1 / 2 (Firebase)
