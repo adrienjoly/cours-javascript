@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TP J - Slides</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      li {
+        clear: left;
+        line-height: 2;
+      }
+      .wide img {
+        width: 100%;
+      }
+      .column {
+        color: #777;
+        width: 49%;
+        height: 92%;
+        float: left;
+      }
+      .column img {
+        display: inline;
+        max-width: 100%;
+      }
+      .clear {
+        clear: both;
+      }
+      .pull-left {
+        float: left;
+      }
+      .pull-right {
+        float: right;
+      }
+      .comment { display: none; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+
+# Javascript
+# TP J
+# CSS et animation
+
+---
+
+# Javascript - TP J - Objectifs
+
+- Contrôle individuel des connaissances
+- [Correction exercice du TP I](https://github.com/adrienjoly/js-ajax-pinterest/blob/master/public/client.html) + rappels
+- Objectif TP J: dynamiser notre clone de Google Images avec CSS
+  - 5mn d'intervention (écran fermé)
+  - 15mn de réalisation en groupe
+- => [Support de cours](https://docs.google.com/document/d/1mxIIgo3LrCjEhnQKMNa1sCoaL2oYsuvAdqnkQSWCYuw/edit) à remplir
+
+---
+
+# Rappels du TP I
+
+- En HTML, on affiche une image avec: `<img src="http://...">`.
+
+  ```javascript
+  var monImage = document.getElementById('monImage');
+  monImage.setAttribute('src', 'http://...'); // pour modifier l'URL
+  ```
+
+--
+
+- Modifier le contenu HTML d'un élément + concaténation:
+
+  ```javascript
+  var monDiv = document.getElementById('monDiv');
+  monDiv.innerHTML = '<img src="http://...">'; // ajoute une image
+  monDiv.innerHTML = '<h1>Titre</h1>' + monDiv.innerHTML; // pré-concaténation
+  monDiv.innerHTML = monDiv.innerHTML + '<img src="' + url + '">'; // post-concaténation
+  ```
+
+--
+
+- En utilisant AJAX et `innerHTML`, les pages deviennent dynamiques.
+
+---
+
+# Expression des besoins (*à votre tour !*)
+
+.wide[![google images ui screenshot](./J/ui.jpg)]
+
+- Que pourrait-on ajouter pour améliorer l’esthétique ?
+- Que manque t-il pour une meilleure expérience utilisateur ?
+
+---
+
+# Exemples
+
+- Grossissement de l'image au hover (CSS)
+- Sélection de plusieurs images au clic
+- Zoom plein écran au double-clic
+- Mode diaporama en plein écran
+
+---
+
+# À savoir
+
+- Plusieurs manières de s'y prendre:
+  - CSS pur,
+  - CSS via JS/DOM,
+  - jQuery
+
+- CSS est le plus rapide/fluide car usage du GPU
+
+- Bonne pratique: appliquer des classes CSS depuis JS
+
+- Intro: [Javascript &amp; CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/JavaScript)
+
+---
+
+# Conseils pour tester et intégrer
+
+1. Manipuler le CSS via l'inspecteur Chrome Dev Tools
+2. Copier-coller styles dans des classes CSS
+3. Tester en modifiant les classes du DOM via l'inspecteur
+4. Écrire le code JS pour modifier les classes du DOM
+
+---
+
+# Références et exemples CSS
+
+- [CSS Transitions &amp; Animations](http://learn.shayhowe.com/advanced-html-css/transitions-animations/)
+
+- [FR] [Tutoriel sur les transitions CSS 3](http://www.alsacreations.com/tuto/lire/873-transitions-css3-animations.html)
+
+- [CSS sur Webplatform.com](http://docs.webplatform.org/wiki/css): [Transforms](http://docs.webplatform.org/wiki/tutorials/css_transforms) &amp; [Transitions](http://docs.webplatform.org/wiki/tutorials/css_transitions)
+
+- [CSS3 Animation Cheatsheet](http://www.justinaguilar.com/animations/)
+
+- ... et observer le CSS des autres via l'inspecteur Chrome Dev Tools
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
