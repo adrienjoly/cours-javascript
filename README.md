@@ -17,8 +17,8 @@
 - ([évaluation](https://js-partiel-1.herokuapp.com/)) + [solutions](https://github.com/adrienjoly/js-partiel-1-correct/tree/master/solutions)
 - [G](http://adrienjoly.com/cours-javascript/G-slides.html): Récupération de données avec AJAX
 - [H](http://adrienjoly.com/cours-javascript/H-slides.html): Envoi de données avec AJAX => [clone de Twitter](https://github.com/adrienjoly/js-ajax-twitter) + [solution](https://github.com/adrienjoly/js-ajax-twitter/blob/master/public/index-ajax.html)
-- [I](http://adrienjoly.com/cours-javascript/I-slides.html): Pages dynamiques avec AJAX: clone de Google Images en utilisant une [API](https://github.com/adrienjoly/js-ajax-pinterest)
-- J: One-page app: Ajustement dynamique du rendu via les classes CSS
+- [I](http://adrienjoly.com/cours-javascript/I-slides.html): Pages dynamiques avec AJAX: clone de Google Images en utilisant une [API](https://github.com/adrienjoly/js-ajax-pinterest) + [solution](https://github.com/adrienjoly/js-ajax-pinterest/blob/master/public/client.html)
+- J: One-page app: CSS et animation controlés par Javascript
 - K: One-page app: Identification avec Facebook Connect
 - L: One-page app: Utilisation d'un back-end 1 / 2 (Firebase)
 - M: One-page app: Utilisation d'un back-end 2 / 2
