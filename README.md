@@ -1,10 +1,13 @@
 # Cours Javascript
 
-### Objectifs
+### Objectifs pédagogiques
 
 - Comprendre les rôles respectifs des différentes technologies utilisées dans les projets web.
-- Apprendre les syntaxes de base du HTML et du CSS.
-- Appréhender les concepts du JavaScript, le rôle, les principes d’intégration dans les pages HTML en se concentrant sur quelques sujets incontournables du JavaScript.
+- Comprendre l'usage de JavaScript pour manipuler un DOM HTML, et rendre des pages web dynamiques.
+- Développer les qualités de résolution de problèmes, questionnement, recherche d'information, autonomie et de rigueur nécéssaire au développement logiciel.
+- Apprendre à développer et tester de manière itérative avec Chrome Dev Tools et jsfiddle.
+- Apprendre à diagnostiquer et résoudre une anomalie à l'aide de la console et des ressources disponibles en ligne.
+- Mettre en pratique les concepts abordés en réalisant des exercices inspirés d'applications courantes: Twitter, Google Images, etc...
 
 ### Plan par semaine
 
@@ -18,7 +21,7 @@
 - [G](http://adrienjoly.com/cours-javascript/G-slides.html): Récupération de données avec AJAX
 - [H](http://adrienjoly.com/cours-javascript/H-slides.html): Envoi de données avec AJAX => [clone de Twitter](https://github.com/adrienjoly/js-ajax-twitter) + [solution](https://github.com/adrienjoly/js-ajax-twitter/blob/master/public/index-ajax.html)
 - [I](http://adrienjoly.com/cours-javascript/I-slides.html): Pages dynamiques avec AJAX: clone de Google Images en utilisant une [API](https://github.com/adrienjoly/js-ajax-pinterest) + [solution](https://github.com/adrienjoly/js-ajax-pinterest/blob/master/public/client.html)
-- [J](http://adrienjoly.com/cours-javascript/J-slides.html): CSS et animation controlés par Javascript
+- [J](http://adrienjoly.com/cours-javascript/J-slides.html): CSS et animation controlés par Javascript + [Test individuel sur AJAX](http://js-exo-ajax.herokuapp.com)
 - K: One-page app: Identification avec Facebook Connect
 - L: One-page app: Utilisation d'un back-end 1 / 2 (Firebase)
 - M: One-page app: Utilisation d'un back-end 2 / 2
