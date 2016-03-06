@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+/* default styling and layouts */
+
+body {
+  font-family: 'Droid Serif';
+}
+
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz';
+  font-weight: normal;
+}
+
+li {
+  clear: left;
+  line-height: 2;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 3em;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Ubuntu Mono';
+}
+
+.inverse {
+  background: #272822;
+  color: #777872;
+  text-shadow: 0 0 20px #333;
+}
+
+.inverse h1, .inverse h2 {
+  color: #f3f3f3;
+  line-height: 0.8em;
+}
+
+/* my customizations */
+
+.full-bg-image {
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+}
+
+.left-bg-image {
+  background-size: contain !important;
+  background-position: left 50% !important;
+}
+
+.right-bg-image {
+  background-size: contain !important;
+  background-position: right 50% !important;
+}
+
+/* my layout helpers */
+
+.absolute {
+  position: absolute;
+}
+
+.col-25pct {
+  overflow: auto;
+  float: left;
+  width: 25%;
+}
+
+.col-50pct {
+  width: 50%;
+}
+
+.center {
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}
+
+.clear-block {
+  display: block;
+  clear: both;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.column {
+  color: #777;
+  width: 49%;
+  height: 92%;
+  float: left;
+}
+
+.column img {
+  display: inline;
+  max-width: 100%;
+}
+
+.margin-20px {
+  margin-top: 20px;
+}
+
+.highlight {
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+/* my styling */
+
+.bold {
+  font-weight: bold;
+}
+
+.wide img {
+  width: 100%;
+}
+
+.gray {
+  color: gray;
+}
+
+.white-on-black {
+  color: white;
+  background-color: black;
+}
+
+.blurred-bg {
+  background-color: rgba(255,255,255,0.5);
+}
