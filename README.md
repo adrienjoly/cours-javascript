@@ -23,7 +23,7 @@
 - [I](http://adrienjoly.com/cours-javascript/I-slides.html): Pages dynamiques avec AJAX: clone de Google Images en utilisant une [API](https://github.com/adrienjoly/js-ajax-pinterest) + [solution](https://github.com/adrienjoly/js-ajax-pinterest/blob/master/public/client.html)
 - [J](http://adrienjoly.com/cours-javascript/J-slides.html): CSS et animation controlés par Javascript + [Test individuel sur AJAX](http://js-exo-ajax.herokuapp.com)
 - [K](http://adrienjoly.com/cours-javascript/K): One-page app: Utilisation d'un back-end 1 / 2 (Firebase) + [Video](https://www.youtube.com/watch?v=TWrKeBP4Dms) + [Code](https://github.com/adrienjoly/cours-javascript/tree/gh-pages/K/code)
-- L: One-page app: Utilisation d'un back-end 2 / 2
+- [L](http://adrienjoly.com/cours-javascript/L): One-page app: Utilisation d'un back-end 2 / 2
 - M: One-page app: Identification avec Facebook Connect
 - N: Mise en production sur Github Pages
 - O: Introduction à jQuery
