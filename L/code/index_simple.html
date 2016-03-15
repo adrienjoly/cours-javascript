@@ -57,8 +57,11 @@
                     afaire.appendChild(el);    
                 }
                 */
-                afaire.innerHTML = afaire.innerHTML + '<p onclick="console.log(\'' + tache.name + '\')">' + tache.name + '</p>'; 
+                afaire.innerHTML = afaire.innerHTML + '<p onclick="clicSurParag(this)">' + tache.name + '</p>'; 
             });
+            function clicSurParag(element) {
+                console.log(element.innerText);
+            }
         </script>
     </body>
 </html>
