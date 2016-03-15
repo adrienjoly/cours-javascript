@@ -32,7 +32,6 @@
             myDataRef.on('child_added', function(snapshot) {
                 var tache = snapshot.val();
                 var idTache = snapshot.key();
-                var dbTache = new Firebase(dbUrl + '/' + idTache);
                 /*
                 var el = document.createElement('p');
                 el.setAttribute('id', idTache);
@@ -57,12 +56,13 @@
                     afaire.appendChild(el);    
                 }
                 */
-                afaire.innerHTML = afaire.innerHTML + '<p onclick="clicSurParag(this)">' + tache.name + '</p>'; 
+                afaire.innerHTML = afaire.innerHTML + '<p id="' + idTache + '" onclick="clicSurParag(this)">' + tache.name + '</p>'; 
             });
             function clicSurParag(element) {
                 console.log(element.innerText);
                 element.parentNode.removeChild(element);
-                // ne supprime que depuis le DOM. => rafraichir la page affiche à nouveau la tache
+                var dbTache = new Firebase(dbUrl + '/' + element.getAttribute("id"));
+                dbTache.remove();
             }
         </script>
     </body>
