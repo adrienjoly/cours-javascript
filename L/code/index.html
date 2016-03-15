@@ -32,7 +32,7 @@
                     console.log(idTache, tache.name);
                     var myDataRef = new Firebase(dbUrl + '/' + idTache);
                     myDataRef.remove();
-                    // ... puis recharger la page pour vérifier la suppression, en attendant qu'on modifie le DOM
+                    el.parentNode.removeChild(el);
                 };
                 afaire.appendChild(el);
             });
