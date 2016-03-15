@@ -37,9 +37,13 @@
                 var checkbox = document.createElement('input');
                 checkbox.setAttribute('type', 'checkbox');
                 checkbox.onchange = function() {
-                    faites.appendChild(el);
-                    // par contre, si on re-clique dessus, il ne se passe rien (deja dans #faites)
-                    dbTache.update({ done: true }); 
+                    console.log('onchange', this.checked);
+                    if (this.checked) {
+                        faites.appendChild(el);
+                    } else {
+                        afaire.appendChild(el);
+                    }
+                    dbTache.update({ done: this.checked }); 
                 };
                 el.appendChild(checkbox);
                 el.appendChild(document.createTextNode(tache.name));
