@@ -32,13 +32,14 @@
             myDataRef.on('child_added', function(snapshot) {
                 var tache = snapshot.val();
                 var idTache = snapshot.key();
+                var dbTache = new Firebase(dbUrl + '/' + idTache);
                 var el = document.createElement('p');
                 var checkbox = document.createElement('input');
                 checkbox.setAttribute('type', 'checkbox');
                 checkbox.onchange = function() {
                     faites.appendChild(el);
                     // par contre, si on re-clique dessus, il ne se passe rien (deja dans #faites)
-                    // et firebase n'a pas retenu qu'on l'avait cochée, quand on rafraichit la page 
+                    dbTache.update({ done: true }); 
                 };
                 el.appendChild(checkbox);
                 el.appendChild(document.createTextNode(tache.name));
@@ -46,12 +47,15 @@
                 bouton.appendChild(document.createTextNode('suppr'));
                 el.appendChild(bouton);
                 bouton.onclick = function() {
-                    console.log(idTache, tache.name);
-                    var myDataRef = new Firebase(dbUrl + '/' + idTache);
-                    myDataRef.remove();
+                    //console.log(idTache, tache.name);
+                    dbTache.remove();
                     el.parentNode.removeChild(el);
                 };
-                afaire.appendChild(el);
+                if (tache.done) {
+                    faites.appendChild(el);    
+                } else {
+                    afaire.appendChild(el);    
+                }
             });
         </script>
     </body>
