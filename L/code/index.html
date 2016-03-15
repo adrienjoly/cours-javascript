@@ -25,8 +25,11 @@
             };
             myDataRef.on('child_added', function(snapshot) {
                 var tache = snapshot.val();
-                var idTache = snapshot.key(); 
+                var idTache = snapshot.key();
                 var el = document.createElement('p');
+                var checkbox = document.createElement('input');
+                checkbox.setAttribute('type', 'checkbox');
+                el.appendChild(checkbox); 
                 el.appendChild(document.createTextNode(tache.name));
                 el.onclick = function() {
                     console.log(idTache, tache.name);
