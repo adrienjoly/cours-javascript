@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    </head>
+    <body>
+        <form id="formulaire">
+            <input id="saisie">
+        </form>
+        <div id="afaire">
+        </div>
+        <div id="faites">
+        </div>
+        <script>
+            var myDataRef = new Firebase('https://flickering-inferno-5369.firebaseIO.com');
+            document.getElementById('formulaire').onsubmit = function(evt) {
+                evt.preventDefault();
+                console.log(document.getElementById('saisie').value);
+                myDataRef.push({
+                    name: document.getElementById('saisie').value,
+                    done: false
+                });
+            };
+            myDataRef.on('child_added', function(snapshot) {
+                var message = snapshot.val();
+                console.log(snapshot.key(), message.name);
+                var afaire = document.getElementById('afaire');
+                afaire.innerHTML = afaire.innerHTML + '<p>' + message.name + '</p>'; 
+            });            
+        </script>
+    </body>
+</html>
