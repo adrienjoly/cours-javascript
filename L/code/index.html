@@ -13,7 +13,8 @@
         </div>
         <script>
             var afaire = document.getElementById('afaire');
-            var myDataRef = new Firebase('https://flickering-inferno-5369.firebaseIO.com');
+            var dbUrl = 'https://flickering-inferno-5369.firebaseIO.com';
+            var myDataRef = new Firebase(dbUrl);
             document.getElementById('formulaire').onsubmit = function(evt) {
                 evt.preventDefault();
                 console.log(document.getElementById('saisie').value);
@@ -29,6 +30,9 @@
                 el.appendChild(document.createTextNode(tache.name));
                 el.onclick = function() {
                     console.log(idTache, tache.name);
+                    var myDataRef = new Firebase(dbUrl + '/' + idTache);
+                    myDataRef.remove();
+                    // ... puis recharger la page pour vérifier la suppression, en attendant qu'on modifie le DOM
                 };
                 afaire.appendChild(el);
             });
