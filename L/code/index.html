@@ -2,6 +2,11 @@
 <html>
     <head>
         <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <style>
+            #faites > p {
+                text-decoration: line-through;
+            }
+        </style>
     </head>
     <body>
         <form id="formulaire">
@@ -13,6 +18,7 @@
         </div>
         <script>
             var afaire = document.getElementById('afaire');
+            var faites = document.getElementById('faites');
             var dbUrl = 'https://flickering-inferno-5369.firebaseIO.com';
             var myDataRef = new Firebase(dbUrl);
             document.getElementById('formulaire').onsubmit = function(evt) {
@@ -29,6 +35,11 @@
                 var el = document.createElement('p');
                 var checkbox = document.createElement('input');
                 checkbox.setAttribute('type', 'checkbox');
+                checkbox.onchange = function() {
+                    faites.appendChild(el);
+                    // par contre, si on re-clique dessus, il ne se passe rien (deja dans #faites)
+                    // et firebase n'a pas retenu qu'on l'avait cochée, quand on rafraichit la page 
+                };
                 el.appendChild(checkbox);
                 el.appendChild(document.createTextNode(tache.name));
                 var bouton = document.createElement('button');
