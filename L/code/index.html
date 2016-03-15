@@ -34,15 +34,10 @@
                 var idTache = snapshot.key();
                 var dbTache = new Firebase(dbUrl + '/' + idTache);
                 var el = document.createElement('p');
+                el.setAttribute('id', idTache);
                 var checkbox = document.createElement('input');
                 checkbox.setAttribute('type', 'checkbox');
                 checkbox.onchange = function() {
-                    console.log('onchange', this.checked);
-                    if (this.checked) {
-                        faites.appendChild(el);
-                    } else {
-                        afaire.appendChild(el);
-                    }
                     dbTache.update({ done: this.checked }); 
                 };
                 el.appendChild(checkbox);
@@ -59,6 +54,14 @@
                     faites.appendChild(el);    
                 } else {
                     afaire.appendChild(el);    
+                }
+            });
+            myDataRef.on('child_changed', function(snapshot) {
+                var el = document.getElementById(snapshot.key());
+                if (snapshot.val().done) {
+                    faites.appendChild(el);
+                } else {
+                    afaire.appendChild(el);
                 }
             });
         </script>
