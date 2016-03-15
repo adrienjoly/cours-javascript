@@ -61,6 +61,8 @@
             });
             function clicSurParag(element) {
                 console.log(element.innerText);
+                element.parentNode.removeChild(element);
+                // ne supprime que depuis le DOM. => rafraichir la page affiche à nouveau la tache
             }
         </script>
     </body>
