@@ -12,6 +12,7 @@
         <div id="faites">
         </div>
         <script>
+            var afaire = document.getElementById('afaire');
             var myDataRef = new Firebase('https://flickering-inferno-5369.firebaseIO.com');
             document.getElementById('formulaire').onsubmit = function(evt) {
                 evt.preventDefault();
@@ -23,18 +24,11 @@
             };
             myDataRef.on('child_added', function(snapshot) {
                 var tache = snapshot.val();
-                console.log(snapshot.key(), tache.name);
-                var afaire = document.getElementById('afaire');
-                /*
-                afaire.innerHTML = afaire.innerHTML + '<p id="' + snapshot.key() + '">' + tache.name + '</p>'; 
-                document.getElementById(snapshot.key()).onclick = function() {
-                    console.log('click', this.getAttribute('id'));
-                };
-                */
+                var idTache = snapshot.key(); 
                 var el = document.createElement('p');
                 el.appendChild(document.createTextNode(tache.name));
                 el.onclick = function() {
-                    console.log(tache.name);
+                    console.log(idTache, tache.name);
                 };
                 afaire.appendChild(el);
             });
