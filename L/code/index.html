@@ -30,14 +30,16 @@
                 var checkbox = document.createElement('input');
                 checkbox.setAttribute('type', 'checkbox');
                 el.appendChild(checkbox);
-                var noeudTexte = document.createTextNode(tache.name) 
-                noeudTexte.onclick = function() {
+                el.appendChild(document.createTextNode(tache.name));
+                var bouton = document.createElement('button');
+                bouton.appendChild(document.createTextNode('suppr'));
+                el.appendChild(bouton);
+                bouton.onclick = function() {
                     console.log(idTache, tache.name);
                     var myDataRef = new Firebase(dbUrl + '/' + idTache);
                     myDataRef.remove();
                     el.parentNode.removeChild(el);
                 };
-                el.appendChild(noeudTexte);
                 afaire.appendChild(el);
             });
         </script>
