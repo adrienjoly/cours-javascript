@@ -25,8 +25,19 @@
                 var tache = snapshot.val();
                 console.log(snapshot.key(), tache.name);
                 var afaire = document.getElementById('afaire');
-                afaire.innerHTML = afaire.innerHTML + '<p>' + tache.name + '</p>'; 
-            });            
+                /*
+                afaire.innerHTML = afaire.innerHTML + '<p id="' + snapshot.key() + '">' + tache.name + '</p>'; 
+                document.getElementById(snapshot.key()).onclick = function() {
+                    console.log('click', this.getAttribute('id'));
+                };
+                */
+                var el = document.createElement('p');
+                el.appendChild(document.createTextNode(tache.name));
+                el.onclick = function() {
+                    console.log(tache.name);
+                };
+                afaire.appendChild(el);
+            });
         </script>
     </body>
 </html>
