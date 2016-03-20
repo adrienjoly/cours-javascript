@@ -25,7 +25,7 @@
 - M: One-page app: Identification avec Facebook Connect
 - N: Mise en production sur Github Pages
 - [K](http://adrienjoly.com/cours-javascript/K): One-page app avec CRUD: Utilisation d'un back-end Firebase 1/2 + [Video](https://www.youtube.com/watch?v=TWrKeBP4Dms) + [Code](https://github.com/adrienjoly/cours-javascript/tree/gh-pages/K/code)
-- [L](http://adrienjoly.com/cours-javascript/L): One-page app avec CRUD: Utilisation d'un back-end Firebase 2/2 + [Video]() + [Code](https://github.com/adrienjoly/cours-javascript/tree/gh-pages/L/code)
+- [L](http://adrienjoly.com/cours-javascript/L): One-page app avec CRUD: Utilisation d'un back-end Firebase 2/2 + [Video](https://www.youtube.com/watch?v=L31ZscCZp34) + [Code](https://github.com/adrienjoly/cours-javascript/tree/gh-pages/L/code)
 - O: Introduction à jQuery
 - P: Introduction à AngularJS, Polymer ou React
 - Q: Composants et tests d’intégration
