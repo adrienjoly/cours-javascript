@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    </head>
+    <body>
+        <form id="formulaire">
+            <input id="saisie">
+        </form>
+        <div id="afaire">
+        </div>
+        <div id="faites">
+        </div>
+        <script>
+            var myDataRef = new Firebase('https://flickering-inferno-5369.firebaseIO.com');
+            document.getElementById('formulaire').onsubmit = function(evt) {
+                evt.preventDefault();
+                console.log(document.getElementById('saisie').value);
+                myDataRef.push({
+                    name: document.getElementById('saisie').value,
+                    done: false
+                });
+            };
+            myDataRef.on('child_added', function(snapshot) {
+                var tache = snapshot.val();
+                console.log(snapshot.key(), tache.name);
+                var afaire = document.getElementById('afaire');
+                var checked = '';
+                if (tache.done) {
+                    checked = 'checked="true"';
+                }
+                afaire.innerHTML = afaire.innerHTML + '<p '
+                    + 'id="' + snapshot.key() + '">'
+                    + '<input onclick="cocherTache(\'' + snapshot.key() + '\')" type="checkbox" ' + checked + '">'
+                    + '<span onclick="supprimerTache(\'' + snapshot.key() + '\')">' + tache.name + '</span>'
+                    + '</p>';
+            });
+            function supprimerTache(key) {
+                console.log('supprimer', key);
+                var refTache = new Firebase('https://flickering-inferno-5369.firebaseIO.com/' + key);
+                refTache.remove();
+                var elem = document.getElementById(key);
+                elem.parentElement.removeChild(elem);
+            }
+            function cocherTache(key) {
+                console.log('cocher', key);
+                var refTache = new Firebase('https://flickering-inferno-5369.firebaseIO.com/' + key);
+                refTache.update({ done: true });
+            }
+            /*
+            checkbox.onclick = function(event) {
+                var checkbox = event.target;
+
+                if (checkbox.checked) {
+                    //Checkbox has been checked
+                } else {
+                    //Checkbox has been unchecked
+                }
+            };
+            */
+        </script>
+    </body>
+</html>
