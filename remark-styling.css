@@ -67,6 +67,17 @@ li {
   width: 25%;
 }
 
+.col-33pct {
+  position: relative;
+  overflow: auto;
+  float: left;
+  width: 33%;
+}
+
+.col-33pct img {
+  width: 100%;
+}
+
 .col-50pct {
   width: 50%;
 }
