@@ -2,68 +2,66 @@
 <html>
     <head>
         <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-        <style>
-            #faites > p {
-                text-decoration: line-through;
-            }
-        </style>
     </head>
     <body>
         <form id="formulaire">
             <input id="saisie">
         </form>
-        <div id="afaire">
-        </div>
-        <div id="faites">
-        </div>
+        <div id="afaire"></div>
         <script>
-            var afaire = document.getElementById('afaire');
-            var faites = document.getElementById('faites');
-            var dbUrl = 'https://flickering-inferno-5369.firebaseIO.com';
+            // cette version utilise innerHTML pour gérer le DOM.
+
+            // référence vers notre back-end firebase
+            var dbUrl = 'https://flickering-inferno-5369.firebaseIO.com'; // URL fournie lors de la 
             var myDataRef = new Firebase(dbUrl);
+
+            // cette fonction sera appelée quand l'utilisateur pressera entrée dans le champ            
             document.getElementById('formulaire').onsubmit = function(evt) {
                 evt.preventDefault();
                 console.log(document.getElementById('saisie').value);
+                // enregistrement de la nouvelle tache dans firebase
                 myDataRef.push({
-                    name: document.getElementById('saisie').value,
-                    done: false
+                    name: document.getElementById('saisie').value, // nom saisi de la tache
+                    done: false // par défaut, une nouvelle tache n'est pas effectuée
                 });
             };
+
+            // cette fonction est appelé par firebase pour chaque tache stockée en base de données
             myDataRef.on('child_added', function(snapshot) {
+                var key = snapshot.key();
                 var tache = snapshot.val();
-                var idTache = snapshot.key();
-                var dbTache = new Firebase(dbUrl + '/' + idTache);
-                var el = document.createElement('p');
-                el.setAttribute('id', idTache);
-                var checkbox = document.createElement('input');
-                checkbox.setAttribute('type', 'checkbox');
-                checkbox.onchange = function() {
-                    dbTache.update({ done: this.checked }); 
-                };
-                el.appendChild(checkbox);
-                el.appendChild(document.createTextNode(tache.name));
-                var bouton = document.createElement('button');
-                bouton.appendChild(document.createTextNode('suppr'));
-                el.appendChild(bouton);
-                bouton.onclick = function() {
-                    //console.log(idTache, tache.name);
-                    dbTache.remove();
-                    el.parentNode.removeChild(el);
-                };
+                // cocher la checkbox seulement si la tache est terminée
+                var checked = '';
                 if (tache.done) {
-                    faites.appendChild(el);    
-                } else {
-                    afaire.appendChild(el);    
+                    checked = 'checked="true"';
                 }
+                // rendu HTML de la tache en cours
+                var afaire = document.getElementById('afaire'); // référence du div de la liste
+                afaire.innerHTML = afaire.innerHTML + '<p '
+                    + 'id="' + key + '">'
+                    + '<input onclick="cocherTache(\'' + key + '\')" type="checkbox" ' + checked + '">'
+                    + '<span onclick="supprimerTache(\'' + key + '\')">' + tache.name + '</span>'
+                    + '</p>';
             });
-            myDataRef.on('child_changed', function(snapshot) {
-                var el = document.getElementById(snapshot.key());
-                if (snapshot.val().done) {
-                    faites.appendChild(el);
-                } else {
-                    afaire.appendChild(el);
-                }
-            });
+
+            // fonction appelée par le navigateur quand l'utilisateur clique sur une tache
+            function supprimerTache(key) {
+                console.log('supprimer', key);
+                // supprimer l'objet de firebase
+                var refTache = new Firebase(dbUrl + '/' + key);
+                refTache.remove();
+                // supprimer l'élément HTML du DOM
+                var elem = document.getElementById(key);
+                elem.parentElement.removeChild(elem);
+            }
+
+            // fonction appelée par le navigateur quant l'utilisateur clique sur une checkbox
+            function cocherTache(key) {
+                console.log('cocher', key);
+                // modifier l'objet de firebase
+                var refTache = new Firebase(dbUrl + '/' + key);
+                refTache.update({ done: true });
+            }
         </script>
     </body>
 </html>
