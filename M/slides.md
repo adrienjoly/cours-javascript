@@ -165,3 +165,5 @@ background-image: url(./img/git-local-remotes.png)
 5. Créer une *branche* "gh-pages" avec `git checkout -b`
 6. Pousser cette branche vers votre repo Github, avec `git push`
 7. Vérifier que votre TODO-list fonctionne depuis `http://<username>.github.io/todolist`
+8. Chaque personne de l'équipe va ajouter son nom dans CONTRIBUTORS.md puis pousser
+9. Envoyer votre lien github par email, avec votre equipe en copie, avant mardi prochain 8h
