@@ -111,11 +111,13 @@ background-image: url(./img/git-local-remotes.png)
 
 0. Installer [`git`](https://git-scm.com/downloads)
 1. Cloner le *repo* `https://github.com/adrienjoly/cours-javascript` localement
-2. Ouvrir le fichier `README.md` depuis le répertoire local
-3. Explorer l'historique du *repository* avec `git log` (<kbd>:q</kbd> pour quitter)
+2. Entrer dans le répertoire `cours-javascript` ainsi créé, à l'aide de la commande `cd`, puis lister les fichiers et répertoires qui y sont contenus à l'aide de la commande `ls`
+3. Explorer l'historique du *repository* avec `git log` (presser <kbd>ESPACE</kbd> pour scroller, <kbd>q</kbd> pour quitter)
 4. Revenir à une version antérieure (*commit*) du repo, avec `git checkout`
-5. Afficher le diff: modifications apportées à `README.md` entre ce *commit* et la dernière version
-6. Noter vos trouvailles dans le support de cours
+5. Exécuter `ls` à nouveau pour constater que la version en cours contient moins de fichiers
+6. Afficher les modifications apportées entre ce *commit* et la dernière version, en utilisant `git diff`
+7. Noter vos trouvailles dans le support de cours
+8. Pour revenir au commit le plus récent, utiliser `git checkout gh-pages`
 
 ---
 
@@ -130,13 +132,14 @@ background-image: url(./img/git-local-remotes.png)
 
 # Exercice 1: Créer un repo git local
 
-1. Initialiser un repo dans un nouveau répertoire local avec `git init`
-2. Y copier le fichier `index.html` du TP précédent
-3. Vérifier les modifications en cours avec `git status`
+0. Aller dans votre répertoire personnel (`cd` sans paramètre), créer un répertoire `todolist` avec la commande `mkdir`, puis y entrer avec la commande `cd`
+1. Initialiser un repo local dans ce nouveau répertoire avec `git init`
+2. Y copier le fichier `index.html` du TP précédent, vérifiez sa présence avec `ls`
+3. Lancer `git status` pour constater que `index.html` n'est pas encore indexé
 4. Intégrer ce fichier à l'index avec `git add`
-5. Re-vérifier les modifications en cours avec `git status`
-6. Valider et décrire vos modifications avec `git commit`
-7. Consulter l'historique avec `git log`
+5. Lancer `git status` à nouveau pour constater que `index.html` a bien été indexé
+6. Valider et décrire vos modifications avec `git commit -m "mon premier commit"`
+7. Vérifier que ce commit apparait bien dans l'historique du repo avec `git log`
 
 ---
 
@@ -145,9 +148,10 @@ background-image: url(./img/git-local-remotes.png)
 .column[
 * Un repo git a une structure de graphe
 * Par défaut les commits se succèdent sur la branche `master`
-* Une branche se base sur un commit particulier
+* Pour se placer sur le dernier commit d'une branche, il faut taper `git checkout <nom_de_la_branche>`
+* Toute branche se base sur un commit
 * Une branche peut être *mergée* dans une autre branche
-* Github publie les fichiers HTML depuis la branche `gh-pages`
+* Github publie les fichiers HTML trouvés dans la branche `gh-pages`
 ]
 
 .column[
@@ -159,11 +163,21 @@ background-image: url(./img/git-local-remotes.png)
 # Exercice 2: Publier l'app TODO-list
 
 1. Créer un compte sur Github
-2. Configurer l'outil `git` pour l'associer avec votre compte
-3. Créer un repo public "todolist" sur votre compte Github
-4. Importer le code de l'exercice 1 dans votre repo Github avec `git push`
-5. Créer une *branche* "gh-pages" avec `git checkout -b`
-6. Pousser cette branche vers votre repo Github, avec `git push`
-7. Vérifier que votre TODO-list fonctionne depuis `http://<username>.github.io/todolist`
-8. Chaque personne de l'équipe va ajouter son nom dans CONTRIBUTORS.md puis pousser
-9. Envoyer votre lien github par email, avec votre equipe en copie, avant mardi prochain 8h
+2. Créer un repo public "todolist" sur votre compte Github, sans cocher la case "README.md"
+3. Une fois sur la page Github de votre repo, poussez le(s) commit(s) de votre repo local (cf exercice 1) dans votre repo Github, en suivant les instructions proposées:
+    - `git remote add` pour associer le repo local au repo Github,
+    - puis `git push` pour envoyer vos commits
+4. Créer une *branche* "gh-pages" dans votre repo local avec la commande `git checkout -b`
+5. Pousser cette branche locale vers celle de votre repo Github, avec `git push origin gh-pages`
+6. Vérifier que votre TODO-list s'affiche bien depuis `http://<votre_username>.github.io/todolist`
+
+---
+
+# Exercice 2: Publier l'app TODO-list (suite)
+
+7. Créer un fichier `CONTRIBUTORS.md` contenant votre nom dans votre repo local.
+8. Créer et pousser un commit à partir de ce fichiers avec les commandes `git add`, `git commit` (cf exercice 1) puis `git push`
+9. Chaque personne de l'équipe va ajouter son nom dans CONTRIBUTORS.md depuis son propre repo local puis pousser son commit sur le repo Github. Pour cela:
+    - Le créateur du repo Github doit autoriser les contributions depuis les comptes Github de ses co-équipiers, via l'interface d'administration du repo
+    - Chaque co-équipier à son tour va: cloner le repo Github dans son répertoire personnel (cf Mise en pratique), ajouter son nom dans CONTRIBUTORS.md, créér puis pousser un commit pour enregistrer cette modification (cf étape 8)
+10. Envoyer l'URL de votre repo Github par email à votre enseignant, avec vos co-équipiers en copie, avant Mardi prochain 8h.
