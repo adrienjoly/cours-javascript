@@ -1,6 +1,6 @@
 // thank you, https://github.com/sawmac/display-markdown
 
-(function () {
+function renderMd(file) {
 
   var MD_URL_PREFIX = 'https://github.com/adrienjoly/cours-javascript/blob/gh-pages/';
 
@@ -16,8 +16,10 @@
 
   function display(xhr) {
     var markdown = xhr.responseText;
-    // transform relative github-hosted markdown links into absolute links to github
-    markdown = markdown.replace(/\(([^\.\(\)]+\.md)\)/g, '(' + MD_URL_PREFIX + '$1)');
+    // transform relative github-hosted markdown links into...
+    //markdown = markdown.replace(/\(([^\.\(\)]+\.md)\)/g, '(' + MD_URL_PREFIX + '$1)'); // ... absolute links to github
+    //markdown = markdown.replace(/\(([^\.\(\)]+\.md)\)/g, '(javascript:renderMd("$1");)'); // ... javascript calls to renderMd()
+    markdown = markdown.replace(/\(([^\.\(\)]+\.md)\)/g, '(#$1)'); // ... hash-links (see window.onhashchange handler on index.html)
     var parsed = reader.parse(markdown);
     var content = writer.renderBlock(parsed);
     document.getElementById('content').innerHTML = content;
@@ -34,4 +36,4 @@
 
   xhr.open('GET', file);
   xhr.send();
-})();
+}
