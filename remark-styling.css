@@ -25,6 +25,8 @@ li {
 
 .remark-code, .remark-inline-code {
   font-family: 'Ubuntu Mono';
+  background-color: #ddd;
+  padding: 2px 5px;
 }
 
 .inverse {
@@ -86,6 +88,10 @@ li {
   text-align: center;
 }
 
+.center-block {
+  margin: 0 auto;
+}
+
 .clear {
   clear: both;
 }
@@ -122,6 +128,10 @@ li {
 .highlight {
   padding: 5px 10px;
   border-radius: 15px;
+}
+
+.yellow-bg {
+  background: rgba(255,255,0,0.25);
 }
 
 /* my styling */
