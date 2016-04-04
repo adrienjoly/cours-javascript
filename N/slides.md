@@ -103,7 +103,7 @@ Conseil: faites un *git commit* à chaque étape pour garder un historique
 # Mise en pratique: Google Sign-in en local (30mn)
 
 1. Cloner localement votre repo `todolist` contenant index.html (cf [TP M](../M/#16))
-2. Lancer un serveur web depuis le répertoire `todolist`: `$ python -m SimpleHTTPServer`
+2. Depuis le répertoire `todolist`, lancer un serveur web: `$ python -m SimpleHTTPServer` (remplacer `python` par `py` et/ou `SimpleHTTPServer` par `http.server`, si besoin)
   <br>→ Vérifiez que vous accédez bien à votre app depuis [http://localhost:8000](http://localhost:8000)
 3. Mettre tout le code Javascript de index.html dans une fonction `startApp()`
   <br>→ Vérifiez que l'app ne s'affiche plus, sauf si vous appelez la fonction.
@@ -112,7 +112,7 @@ Conseil: faites un *git commit* à chaque étape pour garder un historique
 6. Ajouter dans le `<body>` de votre page:
   <br>`<div class="g-signin2" data-onsuccess="onSignIn"></div>`
 7. Ajouter la fonction `onSignIn()` telle que définie sur [cette page](https://developers.google.com/identity/sign-in/web/sign-in#get_profile_information)
-8. Faire en sorte que l'app ToDo-list (`startApp()`) ne se lance qu'après l'identification de l'utilisateur
+8. Faire en sorte que l'app ToDo-list (`startApp()`) ne se lance qu'après le login
 
 ---
 
@@ -139,9 +139,9 @@ Conseil: faites un *git commit* à chaque étape pour garder un historique
 1. Se connecter à la [Console Google Developers](https://console.developers.google.com/project/_/apiui/apis/library) avec son compte EEMI
 2. Créer un projet `todolist`
 3. Cliquer sur "Utiliser les API Google" puis cliquer sur "Identifiants" depuis le menu de gauche
-4. Dans l'onglet "OAuth", saisir "ToDo-list" comme nom de projet, puis confirmer.
+4. Dans l'onglet "OAuth", saisir "ToDo-list" comme nom de produit, puis confirmer.
   <br>Dans l'onglet "Identifiants", cliquer sur "Créer des identifiants", choisir l'option "OAuth"
-5. Cocher "Application Web", saisir l'URL github.io de votre app (cf lien ci-dessous) dans "Origines JavaScript autorisées", puis confirmer
+5. Cocher "Application Web", saisir le nom de domaine github.io de votre app (cf URL ci-dessous) dans "Origines JavaScript autorisées", puis confirmer
 6. Dans votre `index.html` remplacer la valeur du meta `google-signin-client_id` par celle fournie par la Console Google Developers.
 7. Pousser votre code vers la branche `gh-pages` de votre repository sur Github
   <br>→ Vérifiez que votre bouton Google fonctionne depuis http://USERNAME.github.io/todolist
