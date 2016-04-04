@@ -4,7 +4,7 @@
 
 - Comprendre les rôles respectifs des différentes technologies utilisées dans les projets web.
 - Comprendre l'usage de JavaScript pour manipuler un DOM HTML, et rendre des pages web dynamiques.
-- Développer les qualités de résolution de problèmes, questionnement, recherche d'information, autonomie et de rigueur nécéssaire au développement logiciel.
+- Développer les qualités de résolution de problèmes, questionnement, recherche d'information, autonomie et de rigueur nécessaire au développement logiciel.
 - Apprendre à développer et tester de manière itérative avec Chrome Dev Tools et jsfiddle.
 - Apprendre à diagnostiquer et résoudre une anomalie à l'aide de la console et des ressources disponibles en ligne.
 - Mettre en pratique les concepts abordés en réalisant des exercices inspirés d'applications courantes: Twitter, Google Images, etc...
@@ -21,7 +21,7 @@
 - [G](http://adrienjoly.com/cours-javascript/G-slides.html): Récupération de données avec AJAX
 - [H](http://adrienjoly.com/cours-javascript/H-slides.html): Envoi de données avec AJAX => [clone de Twitter](https://github.com/adrienjoly/js-ajax-twitter) + [solution](https://github.com/adrienjoly/js-ajax-twitter/blob/master/public/index-ajax.html)
 - [I](http://adrienjoly.com/cours-javascript/I-slides.html): Pages dynamiques avec AJAX: clone de Google Images en utilisant une [API](https://github.com/adrienjoly/js-ajax-pinterest) + [solution](https://github.com/adrienjoly/js-ajax-pinterest/blob/master/public/client.html)
-- [J](http://adrienjoly.com/cours-javascript/J-slides.html): CSS et animation controlés par Javascript + [Test individuel sur AJAX](http://js-exo-ajax.herokuapp.com)
+- [J](http://adrienjoly.com/cours-javascript/J-slides.html): CSS et animation contrôlés par Javascript + [Test individuel sur AJAX](http://js-exo-ajax.herokuapp.com)
 - [K](http://adrienjoly.com/cours-javascript/K): One-page app avec CRUD: Utilisation d'un back-end Firebase 1/2 + [Video](https://www.youtube.com/watch?v=TWrKeBP4Dms) + [Code](https://github.com/adrienjoly/cours-javascript/tree/gh-pages/K/code)
 - [L](http://adrienjoly.com/cours-javascript/L): One-page app avec CRUD: Utilisation d'un back-end Firebase 2/2 + [Video](https://www.youtube.com/watch?v=L31ZscCZp34) + [Code](https://github.com/adrienjoly/cours-javascript/tree/gh-pages/L/code)
 - [M](http://adrienjoly.com/cours-javascript/M): Introduction à Git et Github Pages
