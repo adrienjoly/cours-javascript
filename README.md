@@ -26,7 +26,7 @@
 - [L](http://adrienjoly.com/cours-javascript/L): One-page app avec CRUD: Utilisation d'un back-end Firebase 2/2 + [Video](https://www.youtube.com/watch?v=L31ZscCZp34) + [Code](https://github.com/adrienjoly/cours-javascript/tree/gh-pages/L/code)
 - [M](http://adrienjoly.com/cours-javascript/M): Introduction à Git et Github Pages
 - [N](http://adrienjoly.com/cours-javascript/N): Identification avec Google et Facebook Connect + [Code](https://github.com/adrienjoly/cours-javascript/tree/gh-pages/N/code) + [Commits](https://github.com/adrienjoly/js-todolist/commits/gh-pages)
-- [O](http://adrienjoly.com/cours-javascript/O): Introduction à jQuery
+- [O](http://adrienjoly.com/cours-javascript/O): Introduction à jQuery + [QCM](https://raw.githubusercontent.com/adrienjoly/js-quizz/master/questions-qcm.md)
 - P: Introduction à AngularJS, Polymer ou React
 - Q: Composants et tests d’intégration
 - R: Erreurs de débutants 1 / 2: visibilité des variables (scope, hoisting)
