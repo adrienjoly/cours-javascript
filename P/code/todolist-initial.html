@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <!-- TODO: (2) inclure underscore -->
+    </head>
+    <body>
+        <form id="formulaire">
+            <input id="saisie">
+        </form>
+        <div id="afaire"></div>
+        <script>
+            // référence vers notre back-end firebase
+            var dbUrl = 'https://flickering-inferno-5369.firebaseIO.com'; // TODO: (1) insérer URL de votre propre base de données
+            var myDataRef = new Firebase(dbUrl);
+
+            // cette fonction sera appelée quand l'utilisateur pressera entrée dans le champ            
+            document.getElementById('formulaire').onsubmit = function(evt) {
+                evt.preventDefault();
+                // enregistrement de la nouvelle tache dans firebase
+                myDataRef.push({
+                    name: document.getElementById('saisie').value, // nom saisi de la tache
+                    done: false // par défaut, une nouvelle tache n'est pas effectuée
+                });
+            };
+
+            // cette fonction retourne le code HTML permettant d'afficher une tache
+            function renderTache(tache, key) {
+                // TODO: (4) cocher la checkbox seulement si la tache est terminée
+                /* ancienne version:
+                var checked = '';
+                if (tache.done) {
+                    checked = 'checked="true"';
+                }
+                */
+                // TODO: (3) générer le code HTML de la tache en cours avec underscore
+                /* ancienne version:
+                return '<p id="' + key + '">'
+                    + '<input onclick="cocherTache(\'' + key + '\')" type="checkbox" ' + checked + '">'
+                    + '<span onclick="supprimerTache(\'' + key + '\')">' + tache.name + '</span>'
+                    + '</p>';
+                */
+                return tache.name + '<br>';
+            }
+
+            // cette fonction est appelée par firebase pour chaque tache stockée en base de données
+            myDataRef.on('child_added', function(snapshot) {
+                var tacheHTML = renderTache(snapshot.val(), snapshot.key());
+                var afaire = document.getElementById('afaire');
+                afaire.innerHTML = tacheHTML + afaire.innerHTML;
+            });
+
+            // fonction appelée par le navigateur quand l'utilisateur clique sur une tache
+            function supprimerTache(key) {
+                // supprimer l'objet de firebase
+                (new Firebase(dbUrl + '/' + key)).remove();
+                // supprimer l'élément HTML du DOM
+                var elem = document.getElementById(key);
+                elem.parentElement.removeChild(elem);
+            }
+
+            // fonction appelée par le navigateur quant l'utilisateur clique sur une checkbox
+            function cocherTache(key) {
+                // modifier l'objet de firebase
+                (new Firebase(dbUrl + '/' + key)).update({ done: true });
+            }
+        </script>
+    </body>
+</html>

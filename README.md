@@ -27,17 +27,32 @@
 - [M](http://adrienjoly.com/cours-javascript/M): Introduction à Git et Github Pages
 - [N](http://adrienjoly.com/cours-javascript/N): Identification avec Google et Facebook Connect + [Code](https://github.com/adrienjoly/cours-javascript/tree/gh-pages/N/code) + [Commits](https://github.com/adrienjoly/js-todolist/commits/gh-pages)
 - [O](http://adrienjoly.com/cours-javascript/O): Introduction à jQuery + [QCM](https://raw.githubusercontent.com/adrienjoly/js-quizz/master/questions-qcm.md)
-- P: Introduction à AngularJS, Polymer ou React
-- Q: Composants et tests d’intégration
-- R: Erreurs de débutants 1 / 2: visibilité des variables (scope, hoisting)
-- S: Erreurs de débutants 2 / 2: chargement du DOM et dépendances
+- [P](http://adrienjoly.com/cours-javascript/P): Templates avec Underscore
+- Q: Initiation MVC avec Backbone 1/2
+- R: Initiation MVC avec Backbone 1/2
+- S: Erreurs de débutants: visibilité des variables (scope, hoisting)
 - T: Utiliser Chrome Dev Tools pour déboguer une application
-- U: Utiliser Chrome Dev Tools pour tester l’adaptivité et les perfs
+- U: Révisions
 - (évaluation)
 
-### Concepts à planifier
+### Références Backbone
+
+- [Backbone en douceur](https://github.com/e-books/backbone.en.douceur)
+- [Annotated source code](http://backbonejs.org/docs/backbone.html)
+- [Backbone TODO with annotated code](http://backbonejs.org/docs/todos.html)
+- [Templates avec Underscore](https://github.com/e-books/backbone.en.douceur/blob/master/07-VUES-ET-TEMPLATING.md#utilisation-du-templating-1ère-fois)
+- [Backbone: Simple search field with events, on jsfiddle](http://jsfiddle.net/adrienjoly/m7bbc66z/)
+- [Backbone: Simple object rendering on jsfiddle](http://jsfiddle.net/superhacker/P2JR8/3/)
+- [Backbone 101 drinks on JSBin](http://jsbin.com/arihiw/2/edit?html,js,output)
+
+### Notions additionnelles (non planifiées)
 
 - Prévoir les cas d’erreurs synchrones (try) et asynchrones (ajax)
+- Introduction à AngularJS
+- Composants et tests d’intégration
+- Erreurs de débutants: chargement du DOM et dépendances
+- Utiliser Chrome Dev Tools pour tester l’adaptivité et les perfs
+- XSS et notions de sécurité
 
 ### Logiciels nécessaires
 
