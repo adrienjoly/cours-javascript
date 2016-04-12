@@ -226,8 +226,8 @@ Comme en PHP, il est possible de mélanger code HTML de rendu et code Javascript
 1. Variable: `bonjour('le monde')` => `<p>Bonjour, le monde !</p>`
 2. Opération: `doubler(3)` => `2 * 3 = 6`
 3. Condition: `people(1)` => `1 personne`, `people(2)` => `2 personnes`
-4. Boucle: `repeter(3)` => `répétition répétition répétition`
-5. Boucle avec variable: `repeter(4, 'ok')` => `ok ok ok ok`
+4. Boucle: `repeter(3)` => `répétition1 répétition2 répétition3`
+5. Boucle avec variable: `repeter(4, 'ok')` => `ok1 ok2 ok3 ok4`
 6. Tableau: `chiffre(1)` => `un`, `chiffre(2)` => `deux`, ...
 
 **Objectif:**
