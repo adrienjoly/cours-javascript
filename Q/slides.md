@@ -151,16 +151,12 @@ var tab = [
 
 --
 
-- Deux moyens d'accéder aux valeurs d'un tableau:
+- Accéder aux valeurs d'un tableau:
 
 ```js
-// notation pointée
-tab.0 // => 'valeur 1'
-tab.1.maProp3 // => 4
-
 // notation avec crochets (permet l'utilisation de variables)
 tab[0] // => 'valeur 1'
-tab[1]['maProp3'] // => 4
+tab[1] // => { maProp3: 4 }
 ```
 
 - La notation avec crochets `tab[i]` est souvent utilisée dans boucles `for`.
