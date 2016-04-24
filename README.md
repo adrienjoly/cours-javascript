@@ -28,8 +28,8 @@
 - [N](http://adrienjoly.com/cours-javascript/N): Identification avec Google et Facebook Connect + [Code](https://github.com/adrienjoly/cours-javascript/tree/gh-pages/N/code) + [Commits](https://github.com/adrienjoly/js-todolist/commits/gh-pages)
 - [O](http://adrienjoly.com/cours-javascript/O): Introduction à jQuery + [QCM](https://raw.githubusercontent.com/adrienjoly/js-quizz/master/questions-qcm.md)
 - [P](http://adrienjoly.com/cours-javascript/P): Templates avec Underscore
-- Q: Initiation MVC avec Backbone 1/2
-- R: Initiation MVC avec Backbone 1/2
+- Q: Variables et types
+- R: Initiation MVC avec Backbone
 - S: Erreurs de débutants: visibilité des variables (scope, hoisting)
 - T: Utiliser Chrome Dev Tools pour déboguer une application
 - U: Révisions
@@ -52,7 +52,6 @@
 - Composants et tests d’intégration
 - Erreurs de débutants: chargement du DOM et dépendances
 - Utiliser Chrome Dev Tools pour tester l’adaptivité et les perfs
-- XSS et notions de sécurité
 
 ### Logiciels nécessaires
 
