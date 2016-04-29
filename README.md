@@ -29,33 +29,15 @@
 - [O](http://adrienjoly.com/cours-javascript/O): Introduction à jQuery + [QCM](https://raw.githubusercontent.com/adrienjoly/js-quizz/master/questions-qcm.md)
 - [P](http://adrienjoly.com/cours-javascript/P): Templates avec Underscore
 - [Q](http://adrienjoly.com/cours-javascript/Q): Variables et types
-- R: Initiation MVC avec Backbone
-- S: Erreurs de débutants: visibilité des variables (scope, hoisting)
-- T: Utiliser Chrome Dev Tools pour déboguer une application
-- U: Révisions
+- [R](http://adrienjoly.com/cours-javascript/R): Jeux et algorithmes
+- S:
+- T:
+- U:
 - (évaluation)
-
-### Références Backbone
-
-- [Backbone en douceur](https://github.com/e-books/backbone.en.douceur)
-- [Annotated source code](http://backbonejs.org/docs/backbone.html)
-- [Backbone TODO with annotated code](http://backbonejs.org/docs/todos.html)
-- [Templates avec Underscore](https://github.com/e-books/backbone.en.douceur/blob/master/07-VUES-ET-TEMPLATING.md#utilisation-du-templating-1ère-fois)
-- [Backbone: Simple search field with events, on jsfiddle](http://jsfiddle.net/adrienjoly/m7bbc66z/)
-- [Backbone: Simple object rendering on jsfiddle](http://jsfiddle.net/superhacker/P2JR8/3/)
-- [Backbone 101 drinks on JSBin](http://jsbin.com/arihiw/2/edit?html,js,output)
-
-### Notions additionnelles (non planifiées)
-
-- Prévoir les cas d’erreurs synchrones (try) et asynchrones (ajax)
-- Introduction à AngularJS
-- Composants et tests d’intégration
-- Erreurs de débutants: chargement du DOM et dépendances
-- Utiliser Chrome Dev Tools pour tester l’adaptivité et les perfs
 
 ### Logiciels nécessaires
 
 - Google Chrome, avec Chrome Dev Tools
 - Cygwin (à utiliser comme shell, uniquement pour utilisateurs de Windows)
 - Git
-- Node.js + npm
+- Node.js + npm (pour lancer le serveur de certains des TPs)
