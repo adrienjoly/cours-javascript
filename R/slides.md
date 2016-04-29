@@ -39,6 +39,19 @@ Chaque exercice = 15 minutes en autonomie + 10 minutes de correction
 
 => `1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz` ...
 
+--
+
+Utiliser l'opérateur modulo pour déterminer les multiples:
+
+```js
+1 % 3 == 1
+2 % 3 == 2
+3 % 3 == 0 // => 3 est un multiple de 3
+4 % 3 == 1
+5 % 3 == 2
+6 % 3 == 0 // => 6 est un multiple de 3
+```
+
 ---
 
 # 2. Devine le nombre
@@ -59,6 +72,8 @@ Joueur: 16
 Réponse: Bravo !
 ```
 
+--
+
 Utiliser la fonction `Math.random()` pour générer un nombre aléatoire.
 
 Utiliser la fonction `prompt()` pour que le joueur saisisse un nombre.
@@ -72,6 +87,8 @@ Utiliser la fonction `prompt()` pour que le joueur saisisse un nombre.
   + `ciseaux` > `feuille` (*les ciseaux coupent la feuille*)
   + `pierre` > `ciseaux` (*la pierre casse les ciseaux*)
   + `feuille` > `pierre` (*la feuille enveloppe la pierre*)
+
+--
 
 => Récupérer le choix du joueur et de l'ordinateur, et définir une fonction `comparer()` permettant de savoir qui remporte chaque manche.
 
