@@ -30,6 +30,21 @@ Chaque exercice = 15 minutes en autonomie + 10 minutes de correction
 
 ---
 
+# 0. Qu'est-ce qu'un algorithme ?
+
+Un **algorithme** est une suite finie et non ambiguë d’opérations ou d'instructions permettant de résoudre un problème ou d'obtenir un résultat.
+
+Une **recette de cuisine** peut être réduite à un algorithme, si on peut réduire sa spécification aux éléments constitutifs :
+- des entrées (les ingrédients, le matériel utilisé) ;
+- des instructions élémentaires simples, dont l'exécution amène au résultat voulu ;
+- un résultat : le plat préparé.
+
+Un **casse-tête**, tel le Rubik's Cube, peut être résolu de façon systématique par un algorithme qui mécanise sa résolution.
+
+Source: Wikipedia
+
+---
+
 # 1. FizzBuzz
 
 - Écrire un programme qui affiche les nombres de 1 à 199 dans la console.
