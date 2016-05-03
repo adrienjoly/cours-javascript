@@ -92,7 +92,7 @@ Utiliser la fonction `prompt()` pour que le joueur saisisse un nombre.
 
 => Récupérer le choix du joueur et de l'ordinateur, et définir une fonction `comparer()` permettant de savoir qui remporte chaque manche.
 
-Suivre les étapes de [cette page](https://www.codecademy.com/en/courses/javascript-beginner-fr-FR-aba4j/1/5).
+Suivre les étapes de [cette page](https://www.codecademy.com/en/courses/javascript-beginner-fr-FR-aba4j).
 
 ???
 
