@@ -30,7 +30,7 @@
 - [P](http://adrienjoly.com/cours-javascript/P): Templates avec Underscore
 - [Q](http://adrienjoly.com/cours-javascript/Q): Variables et types
 - [R](http://adrienjoly.com/cours-javascript/R): Jeux et algorithmes
-- S:
+- [S](http://adrienjoly.com/cours-javascript/S): Tableaux / Arrays
 - T:
 - U:
 - (évaluation)
