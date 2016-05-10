@@ -235,3 +235,5 @@ Pendu: Le joueur doit deviner le mot, lettre par lettre. Il perd après 10 mauva
 4. Demander une lettre au joueur, en utilisant `prompt()`.
 5. Si la lettre fait partie du tableau `lettres`, la retirer. Sinon décrémenter `tentatives`. Afficher un message dans chaque cas.
 6. Créer une boucle permettant de jouer jusqu'à la fin de partie (perdu ou bravo).
+
+BONUS: Dans le cas où le joueur devine une lettre qui apparait plus d'une fois dans le mot, retirer toutes les occurrences de cette lettre.
