@@ -26,13 +26,13 @@
 - [L](http://adrienjoly.com/cours-javascript/L): One-page app avec CRUD: Utilisation d'un back-end Firebase 2/2 + [Video](https://www.youtube.com/watch?v=L31ZscCZp34) + [Code](https://github.com/adrienjoly/cours-javascript/tree/gh-pages/L/code)
 - [M](http://adrienjoly.com/cours-javascript/M): Introduction à Git et Github Pages
 - [N](http://adrienjoly.com/cours-javascript/N): Identification avec Google et Facebook Connect + [Code](https://github.com/adrienjoly/cours-javascript/tree/gh-pages/N/code) + [Commits](https://github.com/adrienjoly/js-todolist/commits/gh-pages)
-- [O](http://adrienjoly.com/cours-javascript/O): Introduction à jQuery + [QCM](https://raw.githubusercontent.com/adrienjoly/js-quizz/master/questions-qcm.md)
-- [P](http://adrienjoly.com/cours-javascript/P): Templates avec Underscore
-- [Q](http://adrienjoly.com/cours-javascript/Q): Variables et types
-- [R](http://adrienjoly.com/cours-javascript/R): Jeux et algorithmes
-- [S](http://adrienjoly.com/cours-javascript/S): Tableaux / Arrays
-- T:
-- U:
+- [O](http://adrienjoly.com/cours-javascript/O): Introduction à jQuery + [QCM](https://raw.githubusercontent.com/adrienjoly/js-quizz/master/questions-qcm.md) ([solution](https://raw.githubusercontent.com/adrienjoly/js-quizz/master/questions-qcm.md))
+- [P](http://adrienjoly.com/cours-javascript/P): Templates avec Underscore (solutions: [1](https://jsfiddle.net/adrienjoly/cdusrn6h/), [2](https://jsfiddle.net/adrienjoly/5xkt9akr/), [3a](https://jsfiddle.net/adrienjoly/h3dbty4a/) et [3b](https://jsfiddle.net/adrienjoly/nua2gv0o/))
+- [Q](http://adrienjoly.com/cours-javascript/Q): Variables et types (solutions: [mise en pratique](http://adrienjoly.com/cours-javascript/Q/pratique.js) et [exercice](http://adrienjoly.com/cours-javascript/Q/exercice.js))
+- [R](http://adrienjoly.com/cours-javascript/R): Jeux et algorithmes (solutions: [fizzbuzz](http://adrienjoly.com/cours-javascript/R/fizzbuzz.js), [devine](http://adrienjoly.com/cours-javascript/R/devine.js) et [chifoumi](http://adrienjoly.com/cours-javascript/R/chifoumi.js))
+- [S](http://adrienjoly.com/cours-javascript/S): Tableaux / Arrays (solutions: [mise en pratique](http://adrienjoly.com/cours-javascript/S/pratique.js) et [pendu](http://adrienjoly.com/cours-javascript/S/pendu.js)) + [Test d'algo](https://github.com/cours-javascript-eemi-2015-2016/js-exo-algo/) (et [solution](https://github.com/cours-javascript-eemi-2015-2016/js-exo-algo/blob/master/solutions/exercice.variant.0.js))
+- T: Révisions
+- U: Révisions
 - (évaluation)
 
 ### Logiciels nécessaires
