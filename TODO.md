@@ -1,14 +1,9 @@
-### Notions à prévoir
+### Notions non couvertes
 
-- push / slice (ex: pour hangman?)
-- parseInt / parseFloat
 - date
 - regex
 - try / catch
 - Visibilité des variables (scope, hoisting, usage de setTimeout)
-
-### Notions additionnelles (non planifiées)
-
 - Prévoir les cas d’erreurs synchrones (try) et asynchrones (ajax)
 - Chargement du DOM et dépendances
 - Initiation MVC avec Backbone
