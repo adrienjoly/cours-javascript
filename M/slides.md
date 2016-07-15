@@ -176,7 +176,7 @@ background-image: url(./img/git-local-remotes.png)
 # Exercice 2: Publier l'app TODO-list (suite)
 
 7. Créer un fichier `CONTRIBUTORS.md` contenant votre nom dans votre repo local.
-8. Créer et pousser un commit à partir de ce fichiers avec les commandes `git add`, `git commit` (cf exercice 1) puis `git push`
+8. Créer et pousser un commit à partir de ce fichiers avec les commandes `git add`, `git commit -m "message"` (cf exercice 1) puis `git push`
 9. Chaque personne de l'équipe va ajouter son nom dans CONTRIBUTORS.md depuis son propre repo local puis pousser son commit sur le repo Github. Pour cela:
     - Le créateur du repo Github doit autoriser les contributions depuis les comptes Github de ses co-équipiers, via l'interface d'administration du repo
     - Chaque co-équipier à son tour va: cloner le repo Github dans son répertoire personnel (cf Mise en pratique), ajouter son nom dans CONTRIBUTORS.md, créér puis pousser un commit pour enregistrer cette modification (cf étape 8)
