@@ -1,25 +1,29 @@
 # Les bases
 
-JavaScript est un langage qui permet de donner des ordres à une machine.
+## Langage de programmation
+
+JavaScript est un langage qui permet de donner des ordres (appelés instructions) à une machine.
 
 La machine en question peut être:
 
-- votre navigateur web
-- votre ordinateur
+- un navigateur web
+- un ordinateur
 - un serveur sur internet
 - un objet intelligent (ex: Arduino, Raspberry Pi...)
 - voire même une carte à puce ! (ex: carte SIM, carte bleue...)
 
 On va donc apprendre des commandes et structures pour expliquer ce qu'on attend de cette machine.
 
-Il y a deux façons d'exécuter nos ordres:
+## Exécution de code
 
-1. de manière interactive: la console
-2. de manière programmative: un code source
+Il y a deux façons d'exécuter nos instructions:
 
-Dans le premier cas, chaque instruction sera exécutée immédiatement, comme sur une calculatrice.
+1. de manière interactive: via la console
+2. de manière programmative: en rédigeant un code source
 
-Dans le deuxième cas, on va écrire une liste d'instructions dans un fichier (appelé "code source"), puis exécutera ce fichier en une seule fois.
+Dans le premier cas, chaque instruction sera exécutée immédiatement puis retournera un résultat, comme sur une calculatrice.
+
+Dans le deuxième cas, on va écrire une liste d'instructions dans un fichier (appelé "code source"), pour que notre machine puisse exécuter ce fichier en une seule fois.
 
 Un code source est un peu comme une recette de cuisine. On y définit une liste d'actions qui permettent à quiconque de reproduire le plat ou dessert, autant de fois qu'il le veut. Comme dans une recette, si votre code source est trop vague ou contient des erreurs, le résultat risque d'être décevant, voire complètement à côté de la plaque.
 
@@ -30,7 +34,14 @@ Si vous écrivez votre code de manière approximative, deux choses peuvent se pa
 - si vous avez de la chance, la machine vous avertira qu'elle n'a pas compris une de vos instructions => elle affichera un message d'erreur pour vous aider à la corriger;
 - soit, dans certains cas, il ne se passera rien de visible. Dans ce cas, ce sera à vous de relire votre code, et de vous mettre à la place de la machine pour essayer de comprendre comment elle l'interprète.
 
-TODO:
+> Pour tester JavaScript en mode interactif, visitez n'importe quelle page web depuis Google Chrome, ouvrez la console Javascript (raccourci clavier: `Cmd`+`Alt`+`J`), tapez `1+1` et validez. La console devrait afficher le résultat de cette opération. Ensuite tapez `alert('bonjour');` et observez ce qui se passe.
+
+## Spécificités du langage JavaScript
+
+JavaScript a été créé en 1995, puis standardisé sous le nom d'ECMAScript (souvent réduit à ses initiales "ES"). Utilisable sur de nombreuses plateformes, JavaScript est le seul langage de programmation inclus en standard dans les navigateurs web. On dit donc que c'est "le langage du web".
+
+> Même si le nom ressemble, Java est un langage différent de JavaScript. Si vous avez la flemme de prononcer "JavaScript", utilisez donc ses initiales "JS" plutôt que "Java".
+
 
 
 # Javascript - TP Q
