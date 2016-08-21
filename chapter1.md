@@ -36,35 +36,19 @@ Si vous écrivez votre code de manière approximative, deux choses peuvent se pa
 
 > Pour tester JavaScript en mode interactif, visitez n'importe quelle page web depuis Google Chrome, ouvrez la console Javascript (raccourci clavier: `Cmd`+`Alt`+`J`), tapez `1+1` et validez. La console devrait afficher le résultat de cette opération. Ensuite tapez `alert('bonjour');` et observez ce qui se passe.
 
-## Spécificités du langage JavaScript
+## Histoire du langage JavaScript
 
-JavaScript a été créé en 1995, puis standardisé sous le nom d'ECMAScript (souvent réduit à ses initiales "ES"). Utilisable sur de nombreuses plateformes, JavaScript est le seul langage de programmation inclus en standard dans les navigateurs web. On dit donc que c'est "le langage du web".
+JavaScript a été créé en 1995, pour le compte de la société Netscape (éditeur d'un des premiers navigateurs web, dont Mozilla Firefox est l'héritier), puis standardisé sous le nom d'ECMAScript (souvent réduit à ses initiales "ES"). Utilisable sur de nombreuses plateformes, JavaScript est le seul langage de programmation inclus en standard dans les navigateurs web. On dit donc que c'est "le langage du web".
 
 > Même si le nom ressemble, Java est un langage différent de JavaScript. Si vous avez la flemme de prononcer "JavaScript", utilisez donc ses initiales "JS" plutôt que "Java".
 
+Malgré ses nombreuses évolutions, JavaScript est plutôt un langage de script qu'un langage de programmation, à proprement parler. En effet, il a été conçu comme une solution simple pour ajouter des interactions aux pages HTML du web, et non pour créer des logiciels à haut niveau de sûreté. Une des conséquences: c'est un langage faiblement typé. Nous allons voir ça plus bas.
+
+## Types de données
+
+Comme en maths, JavaScript permet de manipuler plusieurs types
 
 
-# Javascript - TP Q
-# Variables et types
-
----
-
-# Javascript - TP Q
-
-- Objectifs:
-    + Consolider connaissances sur variables
-    + Pratiquer l'usage des différents types de variables
-    + Utilisation de boucles
-
----
-
-# Programme du TP
-
-- Rappel sur les variables et types
-- Mise en pratique (30mn)
-- Exercices
-
----
 
 # Types de variables ?
 
