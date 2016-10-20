@@ -16,16 +16,16 @@ On va donc apprendre des commandes et structures pour expliquer ce qu'on attend 
 
 ## Exécution de code
 
+Un code source est un peu comme une recette de cuisine. On y définit une liste d'actions qui permettent à quiconque de reproduire le plat ou dessert, autant de fois qu'il le veut. Comme dans une recette, si votre code source est trop vague ou contient des erreurs, le résultat risque d'être décevant, voire complètement à côté de la plaque.
+
 Il y a deux façons d'exécuter nos instructions:
 
-1. de manière interactive: via la console
+1. de manière interactive: via une console
 2. de manière programmative: en rédigeant un code source
 
 Dans le premier cas, chaque instruction sera exécutée immédiatement puis retournera un résultat, comme sur une calculatrice.
 
 Dans le deuxième cas, on va écrire une liste d'instructions dans un fichier (appelé "code source"), pour que notre machine puisse exécuter ce fichier en une seule fois.
-
-Un code source est un peu comme une recette de cuisine. On y définit une liste d'actions qui permettent à quiconque de reproduire le plat ou dessert, autant de fois qu'il le veut. Comme dans une recette, si votre code source est trop vague ou contient des erreurs, le résultat risque d'être décevant, voire complètement à côté de la plaque.
 
 Contrairement à une recette de cuisine, il faut garder en tête que ce n'est pas un humain qui va interpréter votre code source, mais une machine. Sachant que, contrairement à un humain, une machine n'est pas capable de raisonner intuitivement, il faut être extrêmement rigoureux dans le respect des règles de grammaire et d'orthographe du langage.
 
@@ -34,7 +34,12 @@ Si vous écrivez votre code de manière approximative, deux choses peuvent se pa
 - si vous avez de la chance, la machine vous avertira qu'elle n'a pas compris une de vos instructions => elle affichera un message d'erreur pour vous aider à la corriger;
 - soit, dans certains cas, il ne se passera rien de visible. Dans ce cas, ce sera à vous de relire votre code, et de vous mettre à la place de la machine pour essayer de comprendre comment elle l'interprète.
 
-> Pour tester JavaScript en mode interactif, visitez n'importe quelle page web depuis Google Chrome, ouvrez la console Javascript (raccourci clavier: `Cmd`+`Alt`+`J`), tapez `1+1` et validez. La console devrait afficher le résultat de cette opération. Ensuite tapez `alert('bonjour');` et observez ce qui se passe.
+> Pour tester JavaScript en mode interactif, visitez n'importe quelle page web depuis Google Chrome, ouvrez la console Javascript (raccourci clavier: `Cmd`+`Alt`+`J` ou `Ctrl`+`Shift`+`J`), tapez `1+1` et validez. La console devrait afficher le résultat de cette opération. Ensuite tapez `alert('bonjour');` et observez ce qui se passe.
+
+> Il existe de nombreux consoles JavaScript plus ou moins évoluées:
+> - https://jsconsole.com/ est ma préférée, car la plus simple;
+> - https://repl.it/languages/javascript et https://glot.io/new/javascript permettent d'éditer son code de manière un peu plus confortable mais ne conserve pas d'historique de vos instructions;
+> - https://runkit.com/, cumule les avantages des autres, mais il est plus complexe à utiliser.
 
 ## Histoire du langage JavaScript
 
@@ -46,11 +51,14 @@ Malgré ses nombreuses évolutions, JavaScript est plutôt un langage de script 
 
 ## Types de données
 
-Comme en maths, JavaScript permet de manipuler plusieurs types
+En langue Française, il existe plusieurs types de mots: les noms, les verbes, les adjectifs, les prénoms...
+
+De la même façon, en maths, on peut manipuler plusieurs types de valeurs: nombres entiers, décimaux, rationnels (fractions), complexes, etc...
+
+En JavaScript, c'est pareil. Il est possible d'exprimer et de manipuler des valeurs de différents types.
 
 
-
-# Types de variables ?
+# Types de valeurs
 
 --
 
