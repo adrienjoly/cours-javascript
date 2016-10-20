@@ -34,7 +34,7 @@ Si vous écrivez votre code de manière approximative, deux choses peuvent se pa
 - si vous avez de la chance, la machine vous avertira qu'elle n'a pas compris une de vos instructions => elle affichera un message d'erreur pour vous aider à la corriger;
 - soit, dans certains cas, il ne se passera rien de visible. Dans ce cas, ce sera à vous de relire votre code, et de vous mettre à la place de la machine pour essayer de comprendre comment elle l'interprète.
 
-> Pour tester JavaScript en mode interactif, visitez n'importe quelle page web depuis Google Chrome, ouvrez la console Javascript (raccourci clavier: `Cmd`+`Alt`+`J` ou `Ctrl`+`Shift`+`J`), tapez `1+1` et validez. La console devrait afficher le résultat de cette opération. Ensuite tapez `alert('bonjour');` et observez ce qui se passe.
+Pour tester JavaScript en mode interactif depuis Google Chrome, visitez n'importe quelle page web, ouvrez la console JavaScript (raccourci clavier: `Cmd`+`Alt`+`J` ou `Ctrl`+`Shift`+`J`), tapez `1+1` et validez. La console devrait afficher le résultat de cette opération. Ensuite tapez `alert('bonjour');` et observez ce qui se passe.
 
 > Il existe de nombreux consoles JavaScript plus ou moins évoluées:
 > - https://jsconsole.com/ est ma préférée, car la plus simple;
