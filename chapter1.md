@@ -1,3 +1,5 @@
+![Logo JavaScript](logo-javascript.png)
+
 # Les bases
 
 ## Langage de programmation
@@ -13,6 +15,15 @@ La machine en question peut être:
 - voire même une carte à puce ! (ex: carte SIM, carte bleue...)
 
 On va donc apprendre des commandes et structures pour expliquer ce qu'on attend de cette machine.
+
+## Histoire du langage JavaScript
+
+JavaScript a été créé en 1995, pour le compte de la société Netscape (éditeur d'un des premiers navigateurs web, dont Mozilla Firefox est l'héritier), puis standardisé sous le nom d'ECMAScript (souvent réduit à ses initiales "ES"). Utilisable sur de nombreuses plateformes, JavaScript est le seul langage de programmation inclus en standard dans les navigateurs web. On dit donc que c'est "le langage du web".
+
+> Même si le nom ressemble, Java est un langage différent de JavaScript. Si vous avez la flemme de prononcer "JavaScript", utilisez donc ses initiales "JS" plutôt que "Java".
+
+Malgré ses nombreuses évolutions, JavaScript est plutôt un langage de script qu'un langage de programmation, à proprement parler. En effet, il a été conçu comme une solution simple pour ajouter des interactions aux pages HTML du web, et non pour créer des logiciels à haut niveau de sûreté. Une des conséquences: c'est un langage faiblement typé. Nous allons voir ça plus bas.
+
 
 ## Exécution de code
 
@@ -40,14 +51,6 @@ Pour tester JavaScript en mode interactif depuis Google Chrome, visitez n'import
 > - https://jsconsole.com/ est ma préférée, car la plus simple;
 > - https://repl.it/languages/javascript et https://glot.io/new/javascript permettent d'éditer son code de manière un peu plus confortable mais ne conserve pas d'historique de vos instructions;
 > - https://runkit.com/, cumule les avantages des autres, mais il est plus complexe à utiliser.
-
-## Histoire du langage JavaScript
-
-JavaScript a été créé en 1995, pour le compte de la société Netscape (éditeur d'un des premiers navigateurs web, dont Mozilla Firefox est l'héritier), puis standardisé sous le nom d'ECMAScript (souvent réduit à ses initiales "ES"). Utilisable sur de nombreuses plateformes, JavaScript est le seul langage de programmation inclus en standard dans les navigateurs web. On dit donc que c'est "le langage du web".
-
-> Même si le nom ressemble, Java est un langage différent de JavaScript. Si vous avez la flemme de prononcer "JavaScript", utilisez donc ses initiales "JS" plutôt que "Java".
-
-Malgré ses nombreuses évolutions, JavaScript est plutôt un langage de script qu'un langage de programmation, à proprement parler. En effet, il a été conçu comme une solution simple pour ajouter des interactions aux pages HTML du web, et non pour créer des logiciels à haut niveau de sûreté. Une des conséquences: c'est un langage faiblement typé. Nous allons voir ça plus bas.
 
 ## Types de données
 
