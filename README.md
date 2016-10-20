@@ -3,4 +3,4 @@
 # Cours JavaScript
 
 
-Intro yeah :-)
+[Chapitre 1 - Les bases](1.md)
