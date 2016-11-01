@@ -11,7 +11,7 @@ W45 - T: premier cours - intro
 W46 - Q: Variables et types (solutions: mise en pratique et exercice)
 -->
 
-Chapitre 2 - Algorithmes et jeux
+[Chapitre 2 - Algorithmes et jeux](2.md)
 <!--
 seances:
 W47 - C: Variables: katas "Onboarding" et "Power of Thor" sur Codingame
