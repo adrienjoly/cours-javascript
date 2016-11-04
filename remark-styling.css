@@ -18,6 +18,10 @@ li {
   line-height: 2;
 }
 
+.remark-slide-number {
+  display: none;
+}
+
 .footnote {
   position: absolute;
   bottom: 3em;
@@ -93,6 +97,20 @@ li {
   text-align: center;
 }
 
+.center ul,
+.center ol,
+.center pre {
+  display: table;
+  margin: 0 auto;
+}
+
+.center li,
+.center pre > code {
+  float: left;
+  clear: left;
+  text-align: left;
+}
+
 .center-block {
   margin: 0 auto;
 }
@@ -135,6 +153,10 @@ li {
   border-radius: 15px;
 }
 
+.red-bg {
+  background: rgba(255,0,0,0.25);
+}
+
 .yellow-bg {
   background: rgba(255,255,0,0.25);
 }
@@ -162,6 +184,14 @@ li {
   background-color: rgba(255,255,255,0.5);
 }
 
+.dbl-size * {
+  font-size: 2rem;  
+}
+
+.dbl-line * {
+  line-height: 1.5em;
+}
+
 .quote p {
   font-size: 2rem;
   font-style: italic;
@@ -174,9 +204,4 @@ li {
 
 .quote p::after {
   content: ' »';
-}
-
-.dbl-size p,
-.dbl-size code {
-  font-size: 2rem;  
 }
