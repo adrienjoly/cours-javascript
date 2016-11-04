@@ -47,6 +47,11 @@ li {
   background-position: 50% 50% !important;
 }
 
+.fit-bg-image {
+  background-size: contain !important;
+  background-position: 50% 50% !important;
+}
+
 .left-bg-image {
   background-size: contain !important;
   background-position: left 50% !important;
@@ -169,4 +174,9 @@ li {
 
 .quote p::after {
   content: ' »';
+}
+
+.dbl-size p,
+.dbl-size code {
+  font-size: 2rem;  
 }
