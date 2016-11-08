@@ -159,12 +159,12 @@ class: middle, dbl-size
 ]
 
 ```js
-var maVariable = 'mon texte';
-maVariable = `mon nouveau texte`;
+var tauxConversion = 1.43;
+tauxConversion = 1.47;
 ```
 
 .center[
-⇒ Quelle est la valeur finale de `maVariable` ?
+⇒ Quelle est la valeur finale de `tauxConversion` ?
 ]
 
 ---
