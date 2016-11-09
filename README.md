@@ -11,13 +11,13 @@ W45 - T: premier cours - intro
 W46 - Q: Variables et types (solutions: mise en pratique et exercice)
 -->
 
-[Chapitre 2 - Algorithmes et jeux](2.md)
+Chapitre 2 - Algorithmes et jeux
 <!--
 seances:
-W47 - C: Variables: katas "Onboarding" et "Power of Thor" sur Codingame
-W48 - D: Arrays et sélections multiples dans formulaires (objets) + QCM
-W49 - R: Jeux et algorithmes (solutions: fizzbuzz, devine et chifoumi)
+W48 - D: √ Arrays et sélections multiples dans formulaires (objets) + QCM
+W49 - R: √ Jeux et algorithmes (solutions: fizzbuzz, devine et chifoumi)
 W50 - S: Tableaux / Arrays (solutions: mise en pratique et pendu) + Test d'algo (et solution)
+W47 - C: Variables: katas "Onboarding" et "Power of Thor" sur Codingame
 -->
 
 Chapitre 3 - Validation de formulaires
