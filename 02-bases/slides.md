@@ -223,7 +223,7 @@ class: center, middle
 Programme qui dialogue avec l'utilisateur:
 - si l'utilisateur saisit `bonjour`, afficher `Bonjour à toi !`;
 - si l'utilisateur saisit `tu vas bien ?`, afficher `Bien, et toi ?`;
-- sinon, afficher `Désolé, je ne vous ai pas compris...`.
+- sinon, afficher `Désolé, je n'ai pas compris...`.
 
 ---
 class: center, middle
@@ -239,10 +239,22 @@ Sur la base de l'exercice précédent, dans le cas où l'utilisateur a saisi `bo
 ---
 class: center, middle
 
+## Exercice 3: 🤖💬 Votre propre chat-bot
+
+Produire et rendre deux fichiers:
+1. Arbre de 10 questions + réponses associées.
+2. Code JavaScript fonctionnel correspondant.
+
+📌 Mots clés: `var`, `if`, `else`, `=`, `===`, `prompt` et `alert`.
+
+---
+class: center, middle
+
 ## 🏋
-## Exercices à rendre individuellement
+## Exercice 3 à rendre en binôme
 ## via Classroom
-## pour la veille du prochain TP
+## (2 fichiers: votre arbre + code js)
+## avant Lundi prochain
 ## 👋
 
 ???
