@@ -197,9 +197,9 @@ class: center, middle, dbl-size, dbl-line
 alert(message);
 ```
 
-.margin-20px[
+???
+
 `alert()` permet d'afficher un `message`.
-]
 
 ---
 class: center, middle, dbl-size, dbl-line
@@ -210,11 +210,10 @@ class: center, middle, dbl-size, dbl-line
 var reponse = prompt(question);
 ```
 
-.margin-20px[
-- `prompt()` permet d'interroger l'utilisateur
+???
 
+- `prompt()` permet d'interroger l'utilisateur
 - la saisie est retournée sous forme d'une chaîne de caractères.
-]
 
 ---
 class: center, middle
