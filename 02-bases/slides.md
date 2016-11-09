@@ -27,12 +27,15 @@ class: center, middle
 ## Ex: diagnostic médical
 
 ---
+class: center
 background-image: url(./img/arbre-decision.png)
+
+## 🌵 Arbre de décision
 
 ---
 class: center, middle, dbl-size
 
-## 🌵 Pseudo-code
+## 🌵 ...en pseudo-code
 
 - `si` *douleur à abdomen*, `alors` **appendicite**
 - `ou si` *douleur à la gorge* `et`:
@@ -44,7 +47,7 @@ class: center, middle, dbl-size
 ---
 class: center, middle, dbl-size, dbl-line
 
-## 🌵 Javascript
+## 🌵 ... en JavaScript
 
 ```js
 if (douleur === 'abdomen') {
@@ -173,7 +176,7 @@ if (monNombre === 1) {
 ---
 class: center, middle
 
-# UN PEU DE PRATIQUE 🏌
+# 2. Mise en pratique 🏌
 
 ---
 class: center, middle, dbl-size, dbl-line
@@ -216,7 +219,7 @@ var reponse = prompt(question);
 ---
 class: center, middle
 
-## Exercice: 🤖💬 Chat-bot bête mais poli
+## Exercice 1: 🤖💬 Chat-bot bête mais poli
 
 Programme qui dialogue avec l'utilisateur:
 - si l'utilisateur saisit `bonjour`, afficher `Bonjour à toi !`;
@@ -226,7 +229,7 @@ Programme qui dialogue avec l'utilisateur:
 ---
 class: center, middle
 
-## Exercice: 🤖💬 Chat-bot poli mais pas sympa
+## Exercice 2: 🤖💬 Chat-bot poli mais pas sympa
 
 Sur la base de l'exercice précédent, dans le cas où l'utilisateur a saisi `bonjour`:
 - afficher `Bonjour ! Comment vas-tu ?`,
