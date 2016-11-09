@@ -148,7 +148,7 @@ class: center, middle, dbl-size, dbl-line
 ## 🌵 Exemple de condition
 
 ```js
-var monNombre = 1;
+var monNombre = 1, resultat;
 if (monNombre === 1) {
     resultat = 'monNombre vaut 1';
 } else {
