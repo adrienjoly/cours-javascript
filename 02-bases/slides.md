@@ -12,6 +12,9 @@ Avant de commencer, interroger les étudiants sur:
 - comment afficher la valeur d'une variable depuis la console
 - comment changer la valeur d'une variable
 - est-ce qu'il est possible de donner une valeur d'un autre type a une variable
+- comment ouvrir la console de google chrome
+
+=> préciser qu'il vaut mieux ouvrir la console en mode incognito / navigation privée
 
 ---
 class: center, middle, dbl-size
