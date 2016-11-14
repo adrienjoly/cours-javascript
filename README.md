@@ -14,9 +14,9 @@ W46 - Q: Variables et types (solutions: mise en pratique et exercice)
 Chapitre 2 - Algorithmes et jeux
 <!--
 seances:
-W49 - R: √ Jeux et algorithmes (solutions: fizzbuzz, devine et chifoumi)
+W49 - R: [X] Jeux et algorithmes (solutions: fizzbuzz, devine et chifoumi)
 W50 - S: Tableaux / Arrays (solutions: mise en pratique et pendu) + Test d'algo (et solution)
-W48 - D: √ Arrays et sélections multiples dans formulaires (objets) + QCM
+W48 - D: [X] Arrays et sélections multiples dans formulaires (objets) + QCM
 W47 - C: Variables: katas "Onboarding" et "Power of Thor" sur Codingame
 + fonctions ?
 -->
