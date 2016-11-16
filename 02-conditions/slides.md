@@ -1,7 +1,7 @@
 class: center, middle
 
 # JavaScript
-## Les Bases 🗿 2/2
+## 🌵 Conditions
 
 ???
 
@@ -41,11 +41,11 @@ class: center, middle, dbl-size
 ## 🌵 ...en pseudo-code
 
 - `si` *douleur à abdomen*, `alors` **appendicite**
-- `ou si` *douleur à la gorge* `et`:
+- `sinon, si` *douleur à la gorge* `et`:
   - `si` *fièvre*, `alors` **rhume**
   - `sinon`, **mal de gorge**
   -
-- `ou si`...
+- `sinon, si`...
 
 ---
 class: center, middle, dbl-size, dbl-line
@@ -55,8 +55,7 @@ class: center, middle, dbl-size, dbl-line
 ```js
 if (douleur === 'abdomen') {
     diag = 'appendicite';
-}
-else if (douleur === 'gorge') {
+} else if (douleur === 'gorge') {
     if (fievre === true) {
         diag = 'rhume';
     } else {
@@ -164,7 +163,7 @@ if (monNombre === 1) {
 ---
 class: center, middle, dbl-size, dbl-line
 
-## 🌵🌵 Conditions multiples
+## 🌵🌵 Conditions à alternatives multiples
 
 ```js
 if (monNombre === 1) {
@@ -225,7 +224,7 @@ class: center, middle
 
 Programme qui dialogue avec l'utilisateur:
 - si l'utilisateur saisit `bonjour`, afficher `Bonjour à toi !`;
-- si l'utilisateur saisit `tu vas bien ?`, afficher `Bien, et toi ?`;
+- sinon, si l'utilisateur saisit `tu vas bien ?`, afficher `Bien, et toi ?`;
 - sinon, afficher `Désolé, je n'ai pas compris...`.
 
 ---
@@ -234,7 +233,7 @@ class: center, middle
 ## Exercice 2: 🤖💬 Chat-bot poli mais pas sympa
 
 Sur la base de l'exercice précédent, dans le cas où l'utilisateur a saisi `bonjour`:
-- afficher `Bonjour ! Comment vas-tu ?`,
+- afficher `Bonjour ! Ca va ?`,
 - inviter l'utilisateur à saisir une deuxième réponse, puis:
   - si l'utilisateur saisit `oui`, afficher `Je suis content pour toi.`;
   - sinon, afficher `Désolé, il faut que je file.`.
@@ -245,7 +244,7 @@ class: center, middle
 ## Exercice 3: 🤖💬 Votre propre chat-bot
 
 Produire et rendre deux fichiers:
-1. Arbre de 10 questions + réponses associées.
+1. Arbre de 5 questions, sur 2 niveaux + réponses associées.
 2. Code JavaScript fonctionnel correspondant.
 
 📌 Mots clés: `var`, `if`, `else`, `=`, `===`, `prompt` et `alert`.
@@ -256,8 +255,8 @@ class: center, middle
 ## 🏋
 ## Exercice 3 à rendre en binôme
 ## via Classroom
-## (2 fichiers: votre arbre + code js)
-## avant Lundi prochain
+## (fichiers: `arbre.jpg` + `chatbot.js`)
+## avant Dimanche, minuit
 ## 👋
 
 ???
