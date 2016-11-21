@@ -102,6 +102,7 @@ li {
 .center pre {
   display: table;
   margin: 0 auto;
+  line-height: 1.5em;
 }
 
 .center li,
