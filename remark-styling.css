@@ -72,6 +72,10 @@ li {
   position: absolute;
 }
 
+.col {
+  display: table-cell;
+}
+
 .col-25pct {
   overflow: auto;
   float: left;
