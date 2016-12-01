@@ -152,7 +152,7 @@ fruits; // => [ 'Mangue', 'Raisin' ];
 fruits.length; // => 2, désormais
 ```
 
-## 7. Pratique: Calendrier
+### Pratique: Calendrier
 
 ```js
 var jours = [ 'lun', '007', 'mer', 'jeu', 'ven', 'sam', 'BUG' ];
@@ -169,7 +169,7 @@ Quelles instructions JavaScript faut-il exécuter pour effectuer les opérations
 
 Quelle est la valeur finale du tableau, après avoir effectué toutes ces opérations ?
 
-## 8. Tableaux, fonctions avancées
+## Tableaux, fonctions avancées
 
 ### Recherche d'élément par valeur
 
@@ -245,7 +245,7 @@ fruits; // => [ 'Mangue', 'Pomme', 'Kiwi' ]
 
 > Contrairement aux méthodes `concat()` et `slice()`, `splice()` ne retourne pas un nouveau tableau, mais modifie le tableau sur lequel elle est appelée.
 
-## 9. Exercice: Jeu du Pendu
+### Exercice: Jeu du Pendu
 
 Principe du jeu: Le joueur doit deviner un mot, lettre par lettre. Il perd après 10 mauvaises tentatives.
 
