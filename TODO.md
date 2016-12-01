@@ -245,6 +245,35 @@ fruits; // => [ 'Mangue', 'Pomme', 'Kiwi' ]
 
 > Contrairement aux méthodes `concat()` et `slice()`, `splice()` ne retourne pas un nouveau tableau, mais modifie le tableau sur lequel elle est appelée.
 
+### Pratique: Épicerie
+
+```js
+var fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
+```
+
+Écrire un programme qui:
+
+1. Affiche la liste de `fruits` disponibles;
+2. Demande au client quel fruit il désire acheter:
+  - s'il est présent dans le tableau `fruits`: le retirer du tableau, et afficher `'ok!'`,
+  - sinon, afficher `'indisponible...'`.
+3. Affiche à nouveau la liste de fruits disponibles.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Exercice: Jeu du Pendu
 
 Principe du jeu: Le joueur doit deviner un mot, lettre par lettre. Il perd après 10 mauvaises tentatives.
