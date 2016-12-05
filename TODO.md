@@ -5,6 +5,11 @@ TODO
 
 
 
+6. Tableaux, introduction
+7. Pratique: Calendrier
+8. Tableaux, fonctions avancées
+9. Exercice: Jeu du Pendu
+
 
 
 
