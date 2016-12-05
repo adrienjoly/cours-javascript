@@ -2,8 +2,6 @@
 
 # Cours JavaScript
 
-
-
 [Chapitre 1 - Les bases](1.md)
 <!--
 seances:
@@ -58,3 +56,9 @@ W19 - N: Identification avec Google et Facebook Connect + Code + Commits
 W20 - U: Révisions
 W22 - (évaluation S2)
 -->
+
+## Tests et corrigés
+
+- QCM 1: Bases ([solutions](qcms/js-test-1-solutions.pdf))
+- QCM 2: Conditions ([solutions](qcms/js-test-2-solutions.pdf))
+- Contrôle 1: Bases et Conditions ([solutions](qcms/js-controle-1-solutions.pdf))
