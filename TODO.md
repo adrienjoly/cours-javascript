@@ -14,50 +14,6 @@ TODO
 
 
 
-### Exercice: Jeu ChiFouMi
-
-#### Fonctionnement du jeu à implémenter
-
-À chaque manche, l'ordinateur et le joueur choisissent chacun un élément parmi `pierre`, `feuille` ou `ciseaux`.
-
-Un point est donné à celui qui à choisit l'élément le plus fort, sachant que:
-- `ciseaux` > `feuille` *(les ciseaux coupent la feuille)*
-- `pierre` > `ciseaux` *(la pierre casse les ciseaux)*
-- `feuille` > `pierre` *(la feuille enveloppe la pierre)*
-
-Si l'ordinateur et le joueur ont choisi le même élément, aucun d'eux n'emporte de point.
-
-#### Exemple de déroulement d'une manche
-
-- l'ordinateur choisit secrètement `pierre` (parmi les trois valeurs d'éléments possibles);
-- le joueur est invité à saisir son choix => il tape `feuille`;
-- l'ordinateur affiche que le joueur a remporté cette manche, car la feuille enveloppe la pierre => le score est alors de 1 à 0 pour le joueur.
-
-#### Étapes proposées pour l'implémentation progressive du jeu
-
-1. Dessiner l'arbre de décision d'une manche;
-2. Créer les variables `ordi`, `joueur`, `scoreOrdi` et `scoreJoueur`;
-3. Transformer l'arbre en conditions `if` imbriquées, utilisant ces trois variables;
-3. Chaque condition de dernier niveau peut incrémenter `scoreOrdi`, `scoreJoueur`, ou aucun;
-4. Tester que les conditions fonctionnent bien, en affichant les scores résultants de chaque combinaison d'`ordi` et `joueur`;
-5. Mettre le code dans une boucle qui s'exécutera trois fois;
-6. En fin de partie, afficher qui est le gagnant: `'ordi'` ou `'joueur'`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
