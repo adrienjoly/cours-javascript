@@ -2,9 +2,9 @@
 
 # Cours JavaScript
 
-[Chapitre 1 - Les bases](1.md)
-[Chapitre 2 - Algorithmes et jeux](2.md)
-[Chapitre 3 - Types avancés](3.md)
+- [Chapitre 1 - Les bases](1.md)
+- [Chapitre 2 - Algorithmes et jeux](2.md)
+- [Chapitre 3 - Types avancés](3.md)
 
 ## Tests et corrigés
 
