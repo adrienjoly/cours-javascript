@@ -16,7 +16,7 @@ W46 - Q: Variables et types (solutions: mise en pratique et exercice)
 seances:
 W49 - R: [X] Jeux et algorithmes (solutions: fizzbuzz, devine et chifoumi)
 W47 - C: [X] Variables: katas Onboarding et Power of Thor sur Codingame
-+ objets et fonctions ?
+fonctions et tests
 -->
 * [Chapitre 3 - Types avancés](3.md)
 <!--
@@ -25,6 +25,7 @@ W47 - C: [X] Variables: katas Onboarding et Power of Thor sur Codingame
 seances:
 W50 - S: [X] Tableaux / Arrays (solutions: mise en pratique et pendu) + Test d'algo (et solution)
 W48 - D: [X] Arrays et sélections multiples dans formulaires (objets) + QCM
+templates ES6
 -->
 
 * Chapitre 4 - Validation de formulaires
