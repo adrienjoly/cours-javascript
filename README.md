@@ -12,5 +12,5 @@
 - QCM 2: Conditions ([solutions](qcms/js-test-2-solutions.pdf))
 - Contrôle 1: Bases et Conditions ([solutions](qcms/js-controle-1-solutions.pdf))
 - QCM 3: Boucles ([solutions](qcms/js-test-3-solutions.pdf))
-- QCM 4: Fonctions
+- QCM 4: Fonctions ([solutions](qcms/js-test-4-solutions.pdf))
 - QCM 5: Objets
