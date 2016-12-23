@@ -182,7 +182,11 @@ class: center, middle, dbl-size
 function multiplierParDix (nombre) {
   return nombre + '0';
 }
+```
 
+--
+
+```js
 // tests:
 multiplierParDix(2);
 multiplierParDix(3);
