@@ -1,11 +1,12 @@
 {
-  "name": "cours-javaScript",
+  "name": "cours-javascript",
   "version": "1.0.0",
   "scripts": {
     "preinstall": "# brew install Caskroom/cask/calibre",
     "postinstall": "./node_modules/.bin/gitbook install",
     "gen-pdf": "node_modules/.bin/gitbook pdf ./ ./_book/cours-javascript.pdf",
     "build": "node_modules/.bin/gitbook build",
+    "deploy": "git push gitbook master",
     "start": "node_modules/.bin/gitbook serve"
   },
   "author": "Adrien Joly",
