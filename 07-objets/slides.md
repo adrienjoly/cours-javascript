@@ -137,7 +137,7 @@ objet['prop2'];      // => 'b'
 ---
 class: center, middle, dbl-size
 
-# 🔧 Modification de propriétés
+# ✏️ Modification de propriétés
 
 ```js
 var objet = {
@@ -202,11 +202,198 @@ typeof [ 'a', 3, 4 ];
   - etc...
 
 ---
+class: center, middle, dbl-size
+
+# Pratique: Annuaire téléphonique simple 📇
+
+- Programme qui demande un nom d'ami, puis affiche son numéro de téléphone (utiliser `prompt` et `alert`)
+- Extensibilité => n'utiliser aucune condition `if`
+- Objet pour correspondance entre noms et numéros
+- Utiliser l'adressage par crochets
+
+---
+class: center, middle
+
+# 🌲 Hiérarchie d'objets
+
+```js
+var compteFacebook = {
+  amis: {
+    'Luke Skywalker': true,
+    'Dark Vador': false,
+  },
+  groupes: {
+    maitresJedi: {
+      titre: 'Groupe des maîtres Jedi',
+      membres: [ 'Yoda', 'Obi Wan' ],
+    },
+  },
+};
+```
+
+???
+
+- la valeur d'une propriété peut etre de n'importe quel type, y compris objet
+- stocker des objets dans des objets => hiérarchie / arbre
+- combien de propriétés contient l'objet `compteFacebook` ? => 2
+- de quel type est la valeur de la propriété `amis` de l'objet `compteFacebook` ? => objet aussi, ayant 2 propriétés de type booléen
+- de quel type est la valeur de la propriété `membres` de `maitresJedi` de `groupes` de `compteFacebook` ? tableau
+- accéder au premier élément de la sous-propriété `maitresJedi` ?
+
+---
+class: center, middle
+
+# 🌲 Hiérarchie d'objets
+
+```js
+var compteFacebook = {
+  amis: {
+    'Luke Skywalker': true,
+    'Dark Vador': false,
+  },
+  groupes: {
+    maitresJedi: {
+      titre: 'Groupe des maîtres Jedi',
+      membres: [ 'Yoda', 'Obi Wan' ],
+    },
+  },
+};
+
+compteFacebook.groupes;
+```
+
+---
+class: center, middle
+
+# 🌲 Hiérarchie d'objets
+
+```js
+var compteFacebook = {
+  amis: {
+    'Luke Skywalker': true,
+    'Dark Vador': false,
+  },
+  groupes: {
+    maitresJedi: {
+      titre: 'Groupe des maîtres Jedi',
+      membres: [ 'Yoda', 'Obi Wan' ],
+    },
+  },
+};
+
+compteFacebook.groupes.maitresJedi;
+```
+
+---
+class: center, middle
+
+# 🌲 Hiérarchie d'objets
+
+```js
+var compteFacebook = {
+  amis: {
+    'Luke Skywalker': true,
+    'Dark Vador': false,
+  },
+  groupes: {
+    maitresJedi: {
+      titre: 'Groupe des maîtres Jedi',
+      membres: [ 'Yoda', 'Obi Wan' ],
+    },
+  },
+};
+
+compteFacebook.groupes.maitresJedi.membres;
+```
+
+---
+class: center, middle
+
+# 🌲 Hiérarchie d'objets
+
+```js
+var compteFacebook = {
+  amis: {
+    'Luke Skywalker': true,
+    'Dark Vador': false,
+  },
+  groupes: {
+    maitresJedi: {
+      titre: 'Groupe des maîtres Jedi',
+      membres: [ 'Yoda', 'Obi Wan' ],
+    },
+  },
+};
+
+compteFacebook.groupes.maitresJedi.membres[0];     // => 'Yoda'
+```
+
+--
+
+```js
+compteFacebook['groupes']['maitresJedi']['membres'][0]; // idem
+```
+
+---
+class: center, middle, dbl-size
+
+# ➰ Énumérer propriétés d'un objet
+
+Boucle `for-in`:
+
+```js
+var mesAmis = {
+  'Luke Skywalker': true,
+  'Dark Vador': false,
+};
+
+for (var cle in mesAmis) {
+  console.log(cle, '->', mesAmis[cle]);
+}
+```
+
+???
+
+- qu'est-ce qui va s'afficher dans la console ?
+- Contrairement à une boucle `for` classique, itération sur clés de l'objet.
+- `cle` prend la valeur de chaque clé de propriété de l'objet `mesAmis`
+- ça fonctionne aussi sur les tableaux, avec indices au lieu de clés
+
+---
+class: center, middle, dbl-size
+
+# ✂️ Suppression d'une propriété
+
+```js
+var objet = {
+  prop1: 'a',
+  prop2: 'b',
+  prop3: 4,
+};
+
+delete objet.prop2;
+```
+
+---
+class: center, middle, dbl-size
+
+# Exercice: Répertoire téléphonique 📇
+
+Sur la base de l’exercice précédent, implémenter:
+- (`r`) Recherche d'un numéro à partir d'un nom
+- (`l`) Liste des noms + numéros --> console
+- (`a`) Ajout d'un contact
+- (`s`) Suppression d'un contact
+- (`q`) Quitter
+
+Choix de la fonctionnalité avec `prompt`.
+
+---
 class: center, middle
 
 ## 🏋
-## Calendrier Avancé à rendre en binôme
+## Répertoire téléphonique à rendre en binôme
 ## via Classroom
-## (fichier: `calendrier.js`)
+## (fichier: `repertoire.js`)
 ## avant Dimanche, minuit
 ## 👋
