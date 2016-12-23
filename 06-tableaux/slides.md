@@ -34,12 +34,12 @@ class: center, middle, dbl-size
 
 ```js
 var fourreTout = [
-    null,
-    true,
-    'bonjour',
-    1.2,
-    fruits,
-    undefined
+  null,
+  true,
+  'bonjour',
+  1.2,
+  fruits,
+  undefined
 ];
 ```
 
@@ -55,12 +55,12 @@ class: center, middle, dbl-size
 
 ```js
 var fourreTout = [
-    null,
-    true,
-    'bonjour',
-    1.2,
-    fruits,
-    undefined
+  null,
+  true,
+  'bonjour',
+  1.2,
+  fruits,
+  undefined
 ];
 fourreTout.length; // => ?
 ```
