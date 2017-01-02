@@ -7,8 +7,10 @@ for (var tentatives = 10; tentatives > 0 && lettres.length > 0; ) {
   var indice = lettres.indexOf(lettre);
   if (indice !== -1) {
     lettres.splice(indice, 1); // retire la 1ère occurrence de cette lettre trouvée dans le tableau
+    alert('Bonne pioche! Continuez!');
   } else {
     --tentatives;
+    alert('Le mot à trouver ne contient pas la lettre ' + lettre+ ', désolé...');
   }
 }
 
