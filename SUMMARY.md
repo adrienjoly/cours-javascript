@@ -36,12 +36,12 @@ W1 - B: Validation d’un champs de formulaire texte (conditions et alerts) + so
 W2 - E: Fonctions / formulaire dynamiques + slides + solutions des exercices 1 et 2
 W3 - (EVALUATION S1)
 W4 - F: Correction de TP E, et conseils pour trouver des solutions en ligne
-W8 - J: CSS et animation contrôlés par Javascript + Test individuel sur AJAX
 -->
 
-* Chapitre 5 - Rendus sur le Web
+* Chapitre 5 - Rendus avancés sur le Web
 <!--
 seances:
+W8 - J: CSS et animation contrôlés par Javascript + Test individuel sur AJAX
 W5 - P: Templates avec Underscore (solutions: 1, 2, 3a et 3b)
 W11 - O: Introduction à jQuery + QCM (réponses signalées par étoiles)
 -->
@@ -62,6 +62,11 @@ seances:
 W19 - N: Identification avec Google et Facebook Connect + Code + Commits
 W20 - U: Révisions
 W22 - (évaluation S2)
+-->
+
+<!--
+A TRAITER:
+- regex
 -->
 
 <!--
