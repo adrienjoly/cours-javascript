@@ -15,3 +15,4 @@
 - QCM 4: Fonctions ([solutions](qcms/js-test-4-solutions.pdf))
 - QCM 5: Tableaux ([solutions](qcms/js-test-5-solutions.pdf))
 - QCM 6: Objets
+- Partiel 1: [Solutions](qcms/js-partiel-1-solutions.pdf)
