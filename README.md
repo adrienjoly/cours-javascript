@@ -5,6 +5,7 @@
 - [Chapitre 1 - Les bases](1.md)
 - [Chapitre 2 - Algorithmes et jeux](2.md)
 - [Chapitre 3 - Types avancés](3.md)
+- [Chapitre 4 - Manipuler le Web avec DOM](4.md)
 
 ## Tests et corrigés
 
