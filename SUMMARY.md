@@ -38,15 +38,21 @@ W3 - (EVALUATION S1)
 W4 - F: Correction de TP E, et conseils pour trouver des solutions en ligne
 -->
 
-* Chapitre 5 - Rendus avancés sur le Web
+* [Chapitre 5 - Manipuler les classes et styles CSS](5.md)
 <!--
 seances:
 W8 - J: CSS et animation contrôlés par Javascript + Test individuel sur AJAX
-W5 - P: Templates avec Underscore (solutions: 1, 2, 3a et 3b)
 W11 - O: Introduction à jQuery + QCM (réponses signalées par étoiles)
 -->
 
-* Chapitre 6 - Persistance de données
+* (à venir) - Manipulation DOM avancée
+<!--
+seances:
+TODO: navigation dans le DOM + ajout et suppression d'elements
+W5 - P: Templates avec Underscore (solutions: 1, 2, 3a et 3b)
+-->
+
+* (à venir) - Persistance de données
 <!--
 seances:
 W12 - G: Récupération de données avec AJAX
@@ -56,7 +62,7 @@ W17 - K: One-page app avec CRUD: Utilisation d'un back-end Firebase 1/2 + Video 
 W18 - L: One-page app avec CRUD: Utilisation d'un back-end Firebase 2/2 + Video + Code
 -->
 
-* Chapitre 7 - Authentification
+* (à venir) - Authentification
 <!--
 seances:
 W19 - N: Identification avec Google et Facebook Connect + Code + Commits
@@ -66,6 +72,7 @@ W22 - (évaluation S2)
 
 <!--
 A TRAITER:
+- Geolocation API ? (et autres tips pour développer des apps web mobiles)
 - regex
 -->
 

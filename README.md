@@ -6,6 +6,7 @@
 - [Chapitre 2 - Algorithmes et jeux](2.md)
 - [Chapitre 3 - Types avancés](3.md)
 - [Chapitre 4 - Manipuler le Web avec DOM](4.md)
+- [Chapitre 5 - Manipuler les classes et styles CSS](5.md)
 
 ## Tests et corrigés
 
