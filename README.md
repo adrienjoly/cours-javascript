@@ -18,3 +18,4 @@
 - QCM 5: Tableaux ([solutions](qcms/js-test-5-solutions.pdf))
 - Partiel 1: [Solutions](qcms/js-partiel-1-solutions.pdf)
 - QCM 6: Objets ([solutions](qcms/js-test-6-solutions.pdf))
+- QCM 7: DOM
