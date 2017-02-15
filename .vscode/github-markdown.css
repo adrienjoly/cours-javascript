@@ -1,3 +1,13 @@
+// from https://github.com/Microsoft/vscode/issues/19962#issuecomment-278890197
+
+[class*="vscode-"].showEditorSelection .code-active-line:before {
+    border-left: 3px solid rgba(128, 128, 128, 1);
+}
+
+[class*="vscode-"].showEditorSelection .code-line:hover:before {
+    border-left: 3px solid rgba(192, 192, 192, 1);
+}
+
 // from https://gist.github.com/BigstickCarpet/5d31c053d0b1d52389eb2723f7550907
 
 @font-face {
