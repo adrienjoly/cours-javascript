@@ -2,7 +2,9 @@
     "language": "fr",
     "ignoreWordsList": [
         "Surbrillance",
-        "spoilers"
+        "spoilers",
+        "Généricité",
+        "closure"
     ],
     "documentTypes": [
         "markdown",
