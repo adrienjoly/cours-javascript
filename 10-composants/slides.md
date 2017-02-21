@@ -35,11 +35,7 @@ class: center, middle
 
 # À présenter en groupe
 
-- description concise: utilité, fonctionnalités, avantages
+- description concise
 - démo
-- instructions et exemple d'intégration
-- API du composant
-- BONUS: navigateurs compatibles
-- BONUS: publication sur GitHub
-
-## => et URL à fournir avant la fin du TP
+- instructions d'intégration
+- API/paramétrage du composant
