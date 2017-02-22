@@ -42,14 +42,14 @@ W4 - F: Correction de TP E, et conseils pour trouver des solutions en ligne
 <!--
 seances:
 W8 - J: CSS et animation contrôlés par Javascript + Test individuel sur AJAX
-- atelier par groupe de projet: création de composant avec page de doc
+XX - atelier par groupe de projet: création de composant avec page de doc
 -->
 
 * [Chapitre 6 - Composants et POO](6.md)
 <!--
 seances:
-- atelier par groupe de projet: terminer composant multi-instance
-- => cours à lire "à la maison"
+XX - atelier par groupe de projet: terminer composant multi-instance
+XX - => cours à lire "à la maison"
 -->
 
 * (à venir) - Manipulation DOM avancée
