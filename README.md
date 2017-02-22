@@ -7,6 +7,7 @@
 - [Chapitre 3 - Types avancés](3.md)
 - [Chapitre 4 - Manipuler le Web avec DOM](4.md)
 - [Chapitre 5 - Manipuler les classes et styles CSS](5.md)
+- [Chapitre 6 - Composants et POO](6.md)
 
 ## Tests et corrigés
 

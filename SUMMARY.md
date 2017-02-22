@@ -42,7 +42,14 @@ W4 - F: Correction de TP E, et conseils pour trouver des solutions en ligne
 <!--
 seances:
 W8 - J: CSS et animation contrôlés par Javascript + Test individuel sur AJAX
-W11 - O: Introduction à jQuery + QCM (réponses signalées par étoiles)
+- atelier par groupe de projet: création de composant avec page de doc
+-->
+
+* [Chapitre 6 - Composants et POO](6.md)
+<!--
+seances:
+- atelier par groupe de projet: terminer composant multi-instance
+- => cours à lire "à la maison"
 -->
 
 * (à venir) - Manipulation DOM avancée
@@ -50,6 +57,7 @@ W11 - O: Introduction à jQuery + QCM (réponses signalées par étoiles)
 seances:
 TODO: navigation dans le DOM + ajout et suppression d'elements
 W5 - P: Templates avec Underscore (solutions: 1, 2, 3a et 3b)
+W11 - O: Introduction à jQuery + QCM (réponses signalées par étoiles)
 -->
 
 * (à venir) - Persistance de données
