@@ -54,6 +54,7 @@ XX - => cours à lire "à la maison"
 
 * (à venir) - Manipulation DOM avancée
 <!--
+contenu: children, parentNode, removechild, createElement, appendchild, insert
 seances:
 TODO: navigation dans le DOM + ajout et suppression d'elements
 W5 - P: Templates avec Underscore (solutions: 1, 2, 3a et 3b)
