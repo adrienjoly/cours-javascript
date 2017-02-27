@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="../lib/carousel.css">
+</head>
+
+<body>
+
+  <h1>Composant "Carousel"</h1>
+
+  <h2>Description</h2>
+
+  Ce composant permet à l'utilisateur de naviguer parmi une liste d'images, une par une.
+
+  <h2>Exemple d'intégration</h2>
+
+  <div class="carousel">
+    <button class="next">next</button>
+    <img src="http://lorempixel.com/output/food-q-c-640-480-1.jpg">
+    <img src="http://lorempixel.com/output/food-q-c-640-480-2.jpg">
+    <img src="http://lorempixel.com/output/food-q-c-640-480-3.jpg">
+  </div>
+
+  <h2>Instructions d'intégration</h2>
+
+  <ol>
+
+    <li>Insérez vos images dans votre page à l'aide d'éléments <xmp style="display:inline;"><img></xmp>, ajoutez un élément <xmp style="display:inline;"><button></xmp> portant la classe <code>next</code>, et placez tous ces éléments à l'intérieur d'un élément portant la classe <code>carousel</code>, de la manière suivante:
+      <xmp>
+<div class="carousel">
+  <button class="next">Image suivante</button>
+  <img src="http://lorempixel.com/output/food-q-c-640-480-1.jpg">
+  <img src="http://lorempixel.com/output/food-q-c-640-480-2.jpg">
+  <img src="http://lorempixel.com/output/food-q-c-640-480-3.jpg">
+</div>
+      </xmp>
+    </li>
+
+    <li>Ajoutez les dépendances suivantes à votre page:
+      <xmp>
+<link rel="stylesheet" href="https://cours-javascript-eemi-2016-2017.github.io/js-composants/lib/carousel.css">
+<script src="https://cours-javascript-eemi-2016-2017.github.io/js-composants/lib/carousel.js"></script>  
+      </xmp>
+    </li>
+
+    <li>Vous pouvez intégrer plusieurs Carousels sur votre page, il suffit que chaque galerie d'images de votre page soit regroupée dans un élément portant la classe <code>carousel</code>, au moment où la dépendance <code>carousel.js</code> sera chargée.
+    </li>
+
+  </ol>
+
+  <h2>Code source du composant</h2>
+
+  <ul>
+    <li><a href="https://github.com/cours-javascript-eemi-2016-2017/js-composants/blob/master/lib/carousel.js">carousel.js</a></li>
+    <li><a href="https://github.com/cours-javascript-eemi-2016-2017/js-composants/blob/master/lib/carousel.css">carousel.css</a></li>
+  </ul>
+
+  <script src="../lib/carousel.js"></script>
+
+</body>
+</html>
