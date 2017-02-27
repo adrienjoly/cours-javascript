@@ -20,4 +20,5 @@
 - Partiel 1: [Solutions](qcms/js-partiel-1-solutions.pdf)
 - QCM 6: Objets ([solutions](qcms/js-test-6-solutions.pdf))
 - QCM 7: DOM ([solutions](qcms/js-test-7-solutions.pdf))
-- QCM 8: Styling CSS
+- QCM 8: Styling CSS ([solutions](qcms/js-test-8-solutions.pdf))
+- QCM 9: Composants
