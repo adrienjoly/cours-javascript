@@ -1,14 +1,14 @@
-header {
+.accordeon header {
   background: black;
   color: white;
 }
 
-article {
+.accordeon article {
   display: none;
   background: white;
   color: black;
 }
 
-article.visible {
+.accordeon article.visible {
   display: block;
 }
