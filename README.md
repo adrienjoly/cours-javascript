@@ -22,3 +22,13 @@
 - QCM 7: DOM ([solutions](qcms/js-test-7-solutions.pdf))
 - QCM 8: Styling CSS ([solutions](qcms/js-test-8-solutions.pdf))
 - QCM 9: Composants
+
+## Ressources alternatives
+
+- [Formation JavaScript de Grafikart](https://www.grafikart.fr/formations/debuter-javascript)
+- [(Cours/TP) Apprentissage JavaScript](https://docs.google.com/document/d/1j9KsH-YtlYuMhmcPRlqtNJ_JdrD2JUiErmwEUTWt23I), par Julien Guézennec
+- OpenClassrooms: [Apprenez à coder avec JavaScript](https://openclassrooms.com/courses/apprenez-a-coder-avec-javascript)
+- OpenClassrooms: [Créez des pages web interactives avec JavaScript](https://openclassrooms.com/courses/creez-des-pages-web-interactives-avec-javascript)
+- Khan Academy: [HTML/JS : faire des pages Web interactives](https://fr.khanacademy.org/computing/computer-programming/html-css-js)
+- [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS/), free book series on JavaScript
+- [JS Books](http://jsbooks.revolunet.com/)
