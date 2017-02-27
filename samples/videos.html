@@ -6,11 +6,29 @@
 </head>
 
 <body>
-  <button>video 0</button>
-  <button>video 1</button>
-  <button>video 2</button>
-  <div id='video'></div>
+
+  <h2>Intégration 1</h2>
+  <div id='videoGallery1'>
+  </div>
+
+  <h2>Intégration 2</h2>
+  <div id='videoGallery2'>
+  </div>
 
   <script src="../lib/videos.js"></script>
+
+  <script>
+    initialiseGalerieVideo(document.getElementById('videoGallery1'), [
+      'https://www.youtube.com/embed/0uaQMxBjd5E',
+      'https://www.youtube.com/embed/c8ZPn6p5khI',
+      'https://www.youtube.com/embed/ikkrEOD1BbQ',
+    ]);
+    initialiseGalerieVideo(document.getElementById('videoGallery2'), [
+      'https://www.youtube.com/embed/0uaQMxBjd5E',
+      'https://www.youtube.com/embed/c8ZPn6p5khI',
+      'https://www.youtube.com/embed/ikkrEOD1BbQ',
+    ]);
+  </script>
+
 </body>
 </html>
