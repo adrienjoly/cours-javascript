@@ -21,7 +21,8 @@
 - QCM 6: Objets ([solutions](qcms/js-test-6-solutions.pdf))
 - QCM 7: DOM ([solutions](qcms/js-test-7-solutions.pdf))
 - QCM 8: Styling CSS ([solutions](qcms/js-test-8-solutions.pdf))
-- QCM 9: Composants
+- QCM 9: Composants ([solutions](qcms/js-test-9-solutions.pdf))
+- QCM 10: POO / Classes
 
 ## Ressources alternatives
 
