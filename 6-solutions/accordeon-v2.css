@@ -1,0 +1,14 @@
+.accordeon header {
+  background: black;
+  color: white;
+}
+
+.accordeon article {
+  display: none;
+  background: white;
+  color: black;
+}
+
+.accordeon article.visible {
+  display: block;
+}

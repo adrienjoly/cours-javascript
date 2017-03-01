@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="videos-v2.css">
+</head>
+
+<body>
+
+  <h1>Composant "Galerie Vidéo"</h1>
+
+  <h2>Description</h2>
+
+  Ce composant permet à l'utilisateur de regarder une sélection de vidéos Youtube.
+
+  <h2>Exemple d'intégration</h2>
+
+  <div id='videoGallery1'>
+  </div>
+
+  <script src="videos-v2.js"></script>
+
+  <script>
+    initialiseGalerieVideo(document.getElementById('videoGallery1'), [
+      'https://www.youtube.com/embed/0uaQMxBjd5E',
+      'https://www.youtube.com/embed/c8ZPn6p5khI',
+      'https://www.youtube.com/embed/ikkrEOD1BbQ',
+    ]);
+  </script>
+
+  <h2>Instructions d'intégration</h2>
+
+  <ol>
+
+    <li>Ajoutez les dépendances suivantes à votre page:
+      <xmp>
+<link rel="stylesheet" href="https://cours-javascript-eemi-2016-2017.github.io/js-composants/lib/videos.css">
+<script src="https://cours-javascript-eemi-2016-2017.github.io/js-composants/lib/videos.js"></script>
+      </xmp>
+    </li>
+
+    <li>Puis, pour chaque galerie vidéo à intégrer sur votre page, il vous suffira d'intégrer un élément <xmp style="display: inline;"><div></xmp>, puis d'appeler la fonction <code>initialiseGalerieVideo()</code> en passant en paramètres une référence de cet élément, et un tableau d'URLs de vidéos Youtube sous la forme <code>https://www.youtube.com/embed/0uaQMxBjd5E</code>. (cf documentation d'API ci-dessous)
+    </li>
+
+  </ol>
+
+  <h2>API du composant</h2>
+
+  <h3>Fonction <code>initialiseGalerieVideo(conteneur, videos)</code></h3>
+
+  <p>Cette fonction permet d'intégrer une galerie vidéo à l'intérieur de l'élément <code>conteneur</code> (qui doit exister dans la page au moment de l'appel).</p>
+
+  <p>Au moment de l'appel, la fonction va ajouter un bouton par vidéo, afin de permettre à l'utilisateur de choisir la vidéo à consulter.</p>
+
+  <p>Paramètres:</p>
+  <ul>
+    <li><code>conteneur</code>: référence d'élément du DOM HTML de la page</li>
+    <li><code>videos</code>: tableau de chaînes de caractères sous la forme <code>https://www.youtube.com/embed/0uaQMxBjd5E</code></li>
+  </ul>
+
+  <h2>Code source du composant</h2>
+
+  <ul>
+    <li><a href="https://github.com/cours-javascript-eemi-2016-2017/js-composants/blob/master/lib/videos.js">videos.js</a></li>
+    <li><a href="https://github.com/cours-javascript-eemi-2016-2017/js-composants/blob/master/lib/videos.css">videos.css</a></li>
+  </ul>
+
+</body>
+</html>
