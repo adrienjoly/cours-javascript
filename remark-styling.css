@@ -46,6 +46,13 @@ li {
 
 /* my customizations */
 
+.h1-corner h1 {
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  font-size: 28px;
+}
+
 .full-bg-image {
   background-size: cover !important;
   background-position: 50% 50% !important;
