@@ -601,7 +601,7 @@ en fait, chaque instance de `Spoiler` doit être manipulable en JS un peu comme 
 ---
 class: center, middle, dbl-size, h1-corner
 
-# 👆 POO: Classe Spoiler en JS
+# 👆 POO: Classe Spoiler en JS (1/7)
 
 ## Classe: `Spoiler`
 
@@ -624,7 +624,7 @@ Q: comment définir et instancier cette classe en JS ?
 ---
 class: center, middle, h1-corner
 
-# 👆 POO: Classe Spoiler en JS
+# 👆 POO: Classe Spoiler en JS (2/7)
 
 ## Définir la classe
 
@@ -646,7 +646,7 @@ class Spoiler {
 ---
 class: center, middle, h1-corner
 
-# 👆 POO: Classe Spoiler en JS
+# 👆 POO: Classe Spoiler en JS (3/7)
 
 ## Instancier la classe
 
@@ -661,7 +661,7 @@ puis retourne l'instance construite.
 ---
 class: center, middle, h1-corner
 
-# 👆 POO: Classe Spoiler en JS
+# 👆 POO: Classe Spoiler en JS (4/7)
 
 ## Propriété `element`
 
@@ -690,7 +690,7 @@ Le mot clé `this` fait référence à l'instance créée à chaque instanciatio
 ---
 class: center, middle, h1-corner
 
-# 👆 POO: Classe Spoiler en JS
+# 👆 POO: Classe Spoiler en JS (5/7)
 
 ## Camouflage du spoiler + méthode `reveler()`
 
@@ -713,7 +713,7 @@ class Spoiler {
 ---
 class: center, middle, h1-corner
 
-# 👆 POO: Classe Spoiler en JS
+# 👆 POO: Classe Spoiler en JS (6/7)
 
 ## Révéler au clic (1/2)
 
@@ -741,7 +741,7 @@ class Spoiler {
 ---
 class: center, middle, h1-corner
 
-# 👆 POO: Classe Spoiler en JS
+# 👆 POO: Classe Spoiler en JS (7/7)
 
 ## Révéler au clic (2/2)
 
