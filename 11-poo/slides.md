@@ -771,5 +771,4 @@ sinon, `this` risque d'être `null`, vu que la fonction sera appelée directemen
 ---
 # Exercice
 
-- http://putaindecode.io/fr/articles/js/es2015/classes/
 - http://marijnhaverbeke.nl/talks/es6_falsyvalues2015/exercises/#Point
