@@ -8,6 +8,7 @@
 - [Chapitre 4 - Manipuler le Web avec DOM](4.md)
 - [Chapitre 5 - Manipuler les classes et styles CSS](5.md)
 - [Chapitre 6 - Composants et POO](6.md)
+- [Chapitre 7 - Manipulation DOM avancée](7.md)
 
 ## Tests et corrigés
 
