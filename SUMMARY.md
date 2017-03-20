@@ -61,12 +61,17 @@ W5 - P: Templates
 W11 - O: Introduction à jQuery
 -->
 
-* (à venir) - Persistance de données
+* [Chapitre 8 - Échanges de données avec AJAX](8.md)
 <!--
 seances:
 W12 - G: Récupération de données avec AJAX
 W13 - H: Envoi de données avec AJAX => clone de Twitter + solution
 W16 - I: Pages dynamiques avec AJAX: clone de Google Images en utilisant une API + solution
+-->
+
+* (à venir) - Persistance de données
+<!--
+seances:
 W17 - K: One-page app avec CRUD: Utilisation d'un back-end Firebase 1/2 + Video + Code
 W18 - L: One-page app avec CRUD: Utilisation d'un back-end Firebase 2/2 + Video + Code
 -->

@@ -9,6 +9,7 @@
 - [Chapitre 5 - Manipuler les classes et styles CSS](5.md)
 - [Chapitre 6 - Composants et POO](6.md)
 - [Chapitre 7 - Manipulation DOM avancée](7.md)
+- [Chapitre 8 - Échanges de données avec AJAX](8.md)
 
 ## Tests et corrigés
 
