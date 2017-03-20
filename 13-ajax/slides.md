@@ -13,17 +13,8 @@ class: center, middle, dbl-size
 class: center, middle, dbl-size
 # 🗒️ Plan du cours
 
-1. Démo
-2. Cours: AJAX, HTTP et formats
-3. Interroger une API avec AJAX
-
----
-class: center, middle, dbl-size
-# Démo
-
-- Demo: node-presence-server ([http://aj-mbp.local:8080/](http://aj-mbp.local:8080/) + [log](http://aj-mbp.local:8080/log.html))
-
-<!-- TODO: héberger le serveur sur heroku -->
+1. Cours: AJAX, HTTP et formats
+2. Interroger une API avec AJAX
 
 ---
 # AJAX et HTTP
