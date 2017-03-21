@@ -195,7 +195,7 @@ Afficher la réponse seulement quand elle est complète:
 var xhr = new XMLHttpRequest(); 
 xhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');
 xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
+  if (xhr.readyState === 4) {
     alert(xhr.responseText);
   }
 };
@@ -242,7 +242,7 @@ Requête AJAX avec `JSON.parse()`:
 var xhr = new XMLHttpRequest(); 
 xhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');
 xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
+  if (xhr.readyState === 4) {
     var reponse = JSON.parse(xhr.responseText);
     alert(reponse.name);
   }
