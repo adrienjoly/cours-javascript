@@ -259,8 +259,8 @@ xhr.send();
   - Utilisateur: [jsonplaceholder.typicode.com/users/1](https://jsonplaceholder.typicode.com/users/1)
 
 - Plus complexes:
-  - Photos Flickr: [tag=soccer](https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=74a9b070d21072ccac3a7b5f44f09efa&tags=soccer&format=json&nojsoncallback=1)
-  - Météo: [openweathermap.org/current](http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=44db6a862fba0b067b1930da0d769e98) ([doc](http://openweathermap.org/current))
+  - Photos: [Flickr](https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=74a9b070d21072ccac3a7b5f44f09efa&tags=soccer&format=json&nojsoncallback=1)
+  - Météo: [openweathermap](http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=44db6a862fba0b067b1930da0d769e98) ([doc](http://openweathermap.org/current))
   - Chatons: [puppygifs.tumblr.com/api/read/json](http://puppygifs.tumblr.com/api/read/json) (JSON var with CORS)
 
 - Annuaire d'APIs: [Programmable Web](http://www.programmableweb.com/)
