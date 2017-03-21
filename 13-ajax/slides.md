@@ -255,7 +255,7 @@ xhr.send();
 
 - Simples:
   - Adresse IP: [httpbin.org/ip](http://httpbin.org/ip)
-  - Heure: [time.jsontest.com](http://time.jsontest.com/)
+  - Heure: [time.jsontest.com](http://time.jsontest.com/) (*HTTP only*)
   - Utilisateur: [jsonplaceholder.typicode.com/users/1](https://jsonplaceholder.typicode.com/users/1)
 
 - Plus complexes:
