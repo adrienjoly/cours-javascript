@@ -30,7 +30,8 @@ app.use(bodyParser.urlencoded({ extended: false })); // parse urlencoded request
 app.use(bodyParser.json({ type: '*/*', strict: false })); // parse json request bodies into req.body
 app.use(function(req, res, next) {
   var cookies = new Cookies(req);
-  req.cookie = JSON.parse(decodeURIComponent(cookies.get('js-ajax-twitter')));
+  var cookieJSON = decodeURIComponent(cookies.get('js-ajax-twitter') || '');
+  req.cookie = cookieJSON ? JSON.parse(cookieJSON) : null;
   if (req.cookie && req.cookie.token) {
     GoogleAuth.checkToken(req.cookie.token, function(err, user) {
       req.googleUser = user;
