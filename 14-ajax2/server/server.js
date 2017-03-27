@@ -40,14 +40,6 @@ app.use('/tweet', function (req, response, next) {
   io.emit('chat', { message: req.body.message, ip: req.connection.remoteAddress });
 });
 
-app.use('/image', function (req, response, next) {
-  response.end('https://jstwitter2.herokuapp.com/image.jpg');
-});
-
-app.use('/images.json', function (req, response, next) {
-  response.end('{"urls": [ "https://http.cat/300", "https://http.cat/200", "https://http.cat/400" ]}');
-});
-
 app.use(function (req, response, next) {
   console.log('invalid request from:', req.connection.remoteAddress);
   response.end('invalid request...\n');
@@ -60,4 +52,3 @@ httpServer.listen(PORT);
 
 console.log('Server running on port', PORT, '...');
 //console.log('Try http://' + os.hostname() + '.local:' + PORT + '/'); // note: hostname is not reachable on EEMI LAN
-
