@@ -1,11 +1,12 @@
 {
   "name": "js-ajax-twitter",
+  "description": "A minimal client-server chat/twitter-like application using AJAX and socketio.",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "setup-host": "scutil --set LocalHostName \"aj-mbp\"; scutil --set HostName \"aj-mbp\";",
     "test": "curl localhost:8080/tweet -d '{\"message\":\"bonjour\"}'",
-    "deploy": "git push heroku",
+    "deploy": "echo \"don't forget to commit first!\" && heroku git:remote -a js-ajax-twitter && git push heroku",
     "start": "node server.js"
   },
   "author": "Adrien Joly <contact@adrienjoly.com>",
