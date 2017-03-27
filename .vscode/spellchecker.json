@@ -1,10 +1,11 @@
 {
     "language": "fr",
     "ignoreWordsList": [
+        "closure",
         "Surbrillance",
         "spoilers",
         "Généricité",
-        "closure"
+        "ajax"
     ],
     "documentTypes": [
         "markdown",
