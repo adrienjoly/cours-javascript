@@ -47,17 +47,31 @@ var httpServer = http.createServer(app)
 var io = socketio(httpServer);
 
 // /tweet is a POST API endpoint for users to connect and send messages
-app.use('/tweet', function (req, response, next) {
-  console.log(req.method, '/tweet:', req.body, 'from', req.cookie);
-  response.end(JSON.stringify({ ok: 'OK' }));
-  // display message on log.html
-  io.emit('chat', { message: req.body.message, ip: req.connection.remoteAddress });
-});
-
-app.use(function (req, response, next) {
-  console.log('invalid request to:', req.url, 'from', req.cookie);
-  response.end('invalid request...\n');
-  //return next();
+app.use(/*'/tweet',*/ function (req, response, next) {
+  console.log('-', req.method, req.url, req.body, 'from', req.googleUser || req.cookie);
+  function error(text) {
+    console.log('=> /!\\ error:', text);
+    response.end(JSON.stringify({ error: text }));
+  }
+  if (req.url !== '/tweet') {
+    error('please use the /tweet URL.');
+  } else if (req.method !== 'POST') {
+    error('please use a POST request. not a GET.');
+  } else if (!req.cookie) {
+    error('cookie not found. please log in.');
+  } else if (!req.googleUser) {
+    error('invalid cookie found. please log in with provided code.');
+  } else if (req.googleUser.domain != 'eemi.com') {
+    error('invalid cookie found. please log in with your EEMI account.');
+  } else {
+    response.end(JSON.stringify({ ok: 'OK' }));
+    // display message on log.html
+    io.emit('chat', {
+      message: req.body.message,
+      user: req.googleUser,
+      ip: req.connection.remoteAddress,
+    });
+  }
 });
 
 // Listen for HTTP/HTTPS conncections on port 3000

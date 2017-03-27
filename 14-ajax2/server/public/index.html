@@ -16,7 +16,7 @@
       var socket = io();
       var log = document.getElementById('log');
       socket.on('chat', function(msg){
-        log.innerHTML = '<li>' + sanitize(msg.ip) + ' : ' + sanitize(msg.message) + '</li>' + log.innerHTML;
+        log.innerHTML = '<li>' + sanitize(msg.user.name) + ' : ' + sanitize(msg.message) + '</li>' + log.innerHTML;
       });
     </script>
   </body>
