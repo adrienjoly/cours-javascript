@@ -6,6 +6,7 @@ var socketio = require('socket.io');
 var bodyParser = require('body-parser');
 var serveStatic = require('serve-static');
 var Cookies = require('cookies');
+var GoogleAuth = require('./google-auth.js')
 
 var PORT = process.env.PORT || 8080;
 
@@ -30,7 +31,14 @@ app.use(bodyParser.json({ type: '*/*', strict: false })); // parse json request 
 app.use(function(req, res, next) {
   var cookies = new Cookies(req);
   req.cookie = JSON.parse(decodeURIComponent(cookies.get('js-ajax-twitter')));
-  next();
+  if (req.cookie && req.cookie.token) {
+    GoogleAuth.checkToken(req.cookie.token, function(err, user) {
+      req.googleUser = user;
+      next();
+    });
+  } else {
+    next();
+  }
 });
 app.use(serveStatic('./public', {'index': ['index.html']})); // Serve public files
 
