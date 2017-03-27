@@ -254,14 +254,14 @@ xhr.send();
 # Exemples d'APIs ouvertes
 
 - Simples:
-  - Adresse IP: [httpbin.org/ip](http://httpbin.org/ip)
+  - Adresse IP: [httpbin.org/ip](https://httpbin.org/ip)
   - Heure: [time.jsontest.com](http://time.jsontest.com/) (*HTTP only*)
   - Utilisateur: [jsonplaceholder.typicode.com/users/1](https://jsonplaceholder.typicode.com/users/1)
 
 - Plus complexes:
   - Photos: [Flickr](https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=74a9b070d21072ccac3a7b5f44f09efa&tags=soccer&format=json&nojsoncallback=1)
-  - Météo: [openweathermap](http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=44db6a862fba0b067b1930da0d769e98) ([doc](http://openweathermap.org/current))
-  - Chatons: [puppygifs.tumblr.com/api/read/json](http://puppygifs.tumblr.com/api/read/json) (JSON var with CORS)
+  - Météo: [openweathermap](http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=44db6a862fba0b067b1930da0d769e98) ([doc](http://openweathermap.org/current)) (*HTTP only*)
+  - Chatons: [puppygifs.tumblr.com/api/read/json](https://puppygifs.tumblr.com/api/read/json) (JSON var with CORS)
 
 - Annuaire d'APIs: [Programmable Web](http://www.programmableweb.com/)
 
