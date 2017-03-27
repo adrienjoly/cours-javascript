@@ -34,6 +34,7 @@ app.use(bodyParser.json({ type: '*/*', strict: false })); // parse json request 
 app.use(function(req, res, next) {
   var cookies = new Cookies(req);
   var cookieJSON = decodeURIComponent(cookies.get(COOKIE_NAME) || '');
+  console.log('(i) cookie:', cookieJSON);
   req.cookie = cookieJSON ? JSON.parse(cookieJSON) : null;
   if (req.cookie && req.cookie.token) {
     GoogleAuth.checkToken(req.cookie.token, function(err, user) {
