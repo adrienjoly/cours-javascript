@@ -5,7 +5,7 @@ var connect = require('connect');
 var socketio = require('socket.io');
 var bodyParser = require('body-parser');
 var serveStatic = require('serve-static');
-var Cookies = require('cookies');
+//var Cookies = require('cookies');
 var GoogleAuth = require('./google-auth.js')
 
 var PORT = process.env.PORT || 8080;
@@ -32,19 +32,25 @@ app.use(allowCrossDomain);
 app.use(bodyParser.urlencoded({ extended: false })); // parse urlencoded request bodies into req.body
 app.use(bodyParser.json({ type: '*/*', strict: false })); // parse json request bodies into req.body
 app.use(function(req, res, next) {
+  /*
   var cookies = new Cookies(req);
   var cookieJSON = decodeURIComponent(cookies.get(COOKIE_NAME) || '');
   console.log('(i) cookie:', cookieJSON);
   req.cookie = cookieJSON ? JSON.parse(cookieJSON) : null;
-  if (req.cookie && req.cookie.token) {
-    GoogleAuth.checkToken(req.cookie.token, function(err, user) {
-      req.googleUser = user;
+  */
+  var token = (req.body || {}).token/* || (req.cookie || {}).token*/;
+  if (token) {
+    GoogleAuth.checkToken(token, function(err, user) {
+      if (err) {
+        console.error('GoogleAuth error:', err);
+      } else {
+        req.googleUser = user;
+      }
       next();
     });
   } else {
     next();
   }
-  // TODO: move that code to ./google-auth.js => make it a middleware
 });
 app.use(serveStatic('./public', {'index': ['index.html']})); // Serve public files
 
@@ -63,12 +69,18 @@ app.use(/*TWEET_ENDPOINT,*/ function (req, response, next) {
     error('please use the ' + TWEET_ENDPOINT + ' URL.');
   } else if (req.method !== 'POST') {
     error('please use a POST request. not a GET.');
+  } else if (!(req.body || {}).token) {
+    error('missing property: token.');
+  /*
   } else if (!req.cookie) {
     error('cookie not found. please log in.');
+  */
   } else if (!req.googleUser) {
-    error('invalid cookie found. please log in with provided code.');
+    error('google auth failed / invalid token. please log in with provided code.');
   } else if (req.googleUser.domain != GOOGLE_DOMAIN) {
-    error('invalid cookie found. please log in with your ' + GOOGLE_DOMAIN + ' account.');
+    error('unauthorized domain. please log in with your ' + GOOGLE_DOMAIN + ' account.');
+  } else if (!(req.body || {}).message) {
+    error('missing property: message.');
   } else {
     response.end(JSON.stringify({ ok: 'OK' }));
     // display message on log.html

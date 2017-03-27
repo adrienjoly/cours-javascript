@@ -7,19 +7,9 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <!-- Note: You can also specify your app's client ID with the client_id parameter of the gapi.auth2.init() method -->
     <script>
-      function setCookie(name, value) {
-        var days = 7, path = '/';
-        var expires = new Date(Date.now() + days * 864e5).toGMTString();
-        document.cookie = name + `=${encodeURIComponent(value)}; expires=${expires}; path=` + path;
-      }
       function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        setCookie('js-ajax-twitter', JSON.stringify({
-          token: googleUser.getAuthResponse().id_token,
-          id: profile.getId(),
-          name: profile.getName(),
-          email: profile.getEmail(),
-        }));
+        window.token = googleUser.getAuthResponse().id_token;
+        (document.getElementById('tokenInput') || {}).value = token;
       }
     </script>
   </head>
@@ -33,6 +23,7 @@
     <!-- TODO: remplacer ce formulaire par l'envoi du message en AJAX -->
 
     <form id="formulaire" method="POST" action="/tweet">
+      <input name="token" id="tokenInput" type="hidden">
       <input name="message" placeholder="Votre message" style="padding: 5px; margin: 10px 0;">
     </form>
 
