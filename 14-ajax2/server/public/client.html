@@ -29,8 +29,14 @@
       <a href="#" onclick="gapi.auth2.getAuthInstance().signOut(); return false;">Sign out</a>
     </p>
     <p>Twittez:</p>
+
+    <!-- TODO: remplacer ce formulaire par l'envoi du message en AJAX -->
+
     <form id="formulaire" method="POST" action="/tweet">
       <input name="message" placeholder="Votre message" style="padding: 5px; margin: 10px 0;">
     </form>
+
+    <!-- fin du TODO -->
+
   </body>
 </html>
