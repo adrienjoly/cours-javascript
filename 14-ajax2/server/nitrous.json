@@ -1,0 +1,8 @@
+{
+  "template": "nodejs",
+  "ports": [ 8080 ],
+  "name": "js-ajax-twitter",
+  "scripts": {
+    "Start Nodejs server": "node server.js"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "js-ajax-twitter",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "setup-host": "scutil --set LocalHostName \"aj-mbp\"; scutil --set HostName \"aj-mbp\";",
+    "test": "curl localhost:8080/tweet -d '{\"message\":\"bonjour\"}'",
+    "deploy": "git push heroku",
+    "start": "node server.js"
+  },
+  "author": "Adrien Joly <contact@adrienjoly.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "connect": "^3.4.1",
+    "serve-static": "^1.10.2",
+    "socket.io": "^1.4.4"
+  }
+}
