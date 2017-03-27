@@ -9,6 +9,9 @@ var Cookies = require('cookies');
 var GoogleAuth = require('./google-auth.js')
 
 var PORT = process.env.PORT || 8080;
+var COOKIE_NAME = 'js-ajax-twitter';
+var TWEET_ENDPOINT = '/tweet';
+var GOOGLE_DOMAIN = 'eemi.com';
 
 var allowCrossDomain = function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -30,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: false })); // parse urlencoded request
 app.use(bodyParser.json({ type: '*/*', strict: false })); // parse json request bodies into req.body
 app.use(function(req, res, next) {
   var cookies = new Cookies(req);
-  var cookieJSON = decodeURIComponent(cookies.get('js-ajax-twitter') || '');
+  var cookieJSON = decodeURIComponent(cookies.get(COOKIE_NAME) || '');
   req.cookie = cookieJSON ? JSON.parse(cookieJSON) : null;
   if (req.cookie && req.cookie.token) {
     GoogleAuth.checkToken(req.cookie.token, function(err, user) {
@@ -40,6 +43,7 @@ app.use(function(req, res, next) {
   } else {
     next();
   }
+  // TODO: move that code to ./google-auth.js => make it a middleware
 });
 app.use(serveStatic('./public', {'index': ['index.html']})); // Serve public files
 
@@ -48,22 +52,22 @@ var httpServer = http.createServer(app)
 var io = socketio(httpServer);
 
 // /tweet is a POST API endpoint for users to connect and send messages
-app.use(/*'/tweet',*/ function (req, response, next) {
+app.use(/*TWEET_ENDPOINT,*/ function (req, response, next) {
   console.log('-', req.method, req.url, req.body, 'from', req.googleUser || req.cookie);
   function error(text) {
     console.log('=> /!\\ error:', text);
     response.end(JSON.stringify({ error: text }));
   }
-  if (req.url !== '/tweet') {
-    error('please use the /tweet URL.');
+  if (req.url !== TWEET_ENDPOINT) {
+    error('please use the ' + TWEET_ENDPOINT + ' URL.');
   } else if (req.method !== 'POST') {
     error('please use a POST request. not a GET.');
   } else if (!req.cookie) {
     error('cookie not found. please log in.');
   } else if (!req.googleUser) {
     error('invalid cookie found. please log in with provided code.');
-  } else if (req.googleUser.domain != 'eemi.com') {
-    error('invalid cookie found. please log in with your EEMI account.');
+  } else if (req.googleUser.domain != GOOGLE_DOMAIN) {
+    error('invalid cookie found. please log in with your ' + GOOGLE_DOMAIN + ' account.');
   } else {
     response.end(JSON.stringify({ ok: 'OK' }));
     // display message on log.html
@@ -76,7 +80,6 @@ app.use(/*'/tweet',*/ function (req, response, next) {
 });
 
 // Listen for HTTP/HTTPS conncections on port 3000
-//app.listen(PORT);
 httpServer.listen(PORT);
 
 console.log('Server running on port', PORT, '...');
