@@ -20,7 +20,7 @@ document.getElementById('bouton').onclick = function() {
       // 4. traitement de la réponse du serveur à la requête
       console.log(xhr.responseText);
       var objet = JSON.parse(xhr.responseText);
-      meteo.innerHTML = objet.weather[0];
+      meteo.innerHTML = 'Weather: ' + objet.weather[0].main;
     }
   };
   // 3. envoi de la requête AJAX
