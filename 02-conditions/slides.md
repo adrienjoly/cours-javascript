@@ -54,13 +54,13 @@ class: center, middle, dbl-size, dbl-line
 
 ```js
 if (douleur === 'abdomen') {
-    diag = 'appendicite';
+  diag = 'appendicite';
 } else if (douleur === 'gorge') {
-    if (fievre === true) {
-        diag = 'rhume';
-    } else {
-        diag = 'mal de gorge';
-    }
+  if (fievre === true) {
+  diag = 'rhume';
+  } else {
+  diag = 'mal de gorge';
+  }
 }
 ```
 
@@ -132,15 +132,15 @@ class: center, middle, dbl-size
 
 ```js
 if (expression) {
-    //
-    // instructions executées
-    // si expression == true
-    //
+  //
+  // instructions executées
+  // si expression == true
+  //
 } else {
-    //
-    // instructions exécutées
-    // dans le cas contraire
-    //
+  //
+  // instructions exécutées
+  // dans le cas contraire
+  //
 }
 ```
 
@@ -152,9 +152,9 @@ class: center, middle, dbl-size, dbl-line
 ```js
 var monNombre = 1, resultat;
 if (monNombre === 1) {
-    resultat = 'monNombre vaut 1';
+  resultat = 'monNombre vaut 1';
 } else {
-    resultat = 'monNombre ne vaut pas 1';
+  resultat = 'monNombre ne vaut pas 1';
 }
 ```
 
@@ -167,11 +167,11 @@ class: center, middle, dbl-size, dbl-line
 
 ```js
 if (monNombre === 1) {
-    resultat = 'monNombre vaut 1';
+  resultat = 'monNombre vaut 1';
 } else if (monNombre > 1) {
-    resultat = 'monNombre est supérieur à 1';
+  resultat = 'monNombre est supérieur à 1';
 } else {
-    resultat = 'monNombre n\'est ni 1, ni >1';
+  resultat = 'monNombre n\'est ni 1, ni >1';
 }
 ```
 
