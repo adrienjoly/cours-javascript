@@ -25,6 +25,7 @@
 - QCM 8: Styling CSS ([solutions](qcms/js-test-8-solutions.pdf))
 - QCM 9: Composants ([solutions](qcms/js-test-9-solutions.pdf))
 - Contrôle 2: Objets -> POO ([solutions](qcms/js-controle-2-solutions.pdf))
+- QCM 10: AJAX ([solutions](qcms/qcm-10-solutions.pdf))
 
 ## Ressources alternatives
 
