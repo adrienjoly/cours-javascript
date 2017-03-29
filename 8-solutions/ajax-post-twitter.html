@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by adrienjoly (http://jsbin.com/yisari/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- initialize google login api, for user authentication -->
+  <meta name="google-signin-client_id" content="247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+    <p>Connexion:
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <a href="#" onclick="gapi.auth2.getAuthInstance().signOut(); return false;">Sign out</a>
+    </p>
+    <p>Twittez:</p>
+
+    <!-- Solution de l'exercice: -->
+
+    <input id="message" placeholder="Votre message">
+    <button id="bouton">Envoyer</button>
+
+    <!-- fin de la solution -->
+
+    <script id="jsbin-javascript">
+      // --- code fourni ---
+      function onSignIn(googleUser) {
+        window.token = googleUser.getAuthResponse().id_token;
+        (document.getElementById('tokenInput') || {}).value = token;
+      }
+      // --- fin du code fourni ---
+
+      // Solution de l'exercice:
+
+      var message = document.getElementById('message');
+
+      function sendMessage() {
+        // pas la peine d'envoyer le message s'il est vide
+        if (message.value.length === 0) {
+          return;
+        }
+        // initialisation de la requête AJAX POST au serveur
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://js-ajax-twitter.herokuapp.com/tweet');
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) {
+            console.log('Réponse finale du serveur:', xhr.responseText);
+            var responseObject = JSON.parse(xhr.responseText);
+            if (responseObject.error) {
+              alert('Erreur: ' + responseObject.error);
+            } else {
+              console.log('Message envoyé avec succès :-)');
+              message.value = '';
+            }
+          }
+        };
+        // envoi de la requête avec les propriétés message et token (comme spécifié dans la documentation de l'API)
+        xhr.send(JSON.stringify({
+          message: message.value,
+          token: window.token, // fourni dans le code HTML
+        }));
+      }
+
+      // l'évènement "click" est émis par le bouton quand l'utilisateur clique dessus
+      document.getElementById('bouton').onclick = function() {
+        console.log('L\'utilisateur a cliqué sur le bouton');
+        sendMessage();
+      };
+
+      // l'évènement "change" est émis par l'input quand l'utilisateur valide
+      document.getElementById('message').onchange = function() {
+        console.log('L\'utilisateur a pressé ENTRÉE');
+        sendMessage();
+      };
+    </script>
+  </body>
+</html>
