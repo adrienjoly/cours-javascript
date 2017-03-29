@@ -1,5 +1,7 @@
 // inspired from http://code.runnable.com/Umgo967vRZQMAABQ/a-simple-webserver-with-connect-for-node-js
 
+var HIDE_MESSAGES = true; // if true, content of messages will not be displayed on index
+
 var http = require('http');
 var connect = require('connect');
 var socketio = require('socket.io');
@@ -85,7 +87,7 @@ app.use(/*TWEET_ENDPOINT,*/ function (req, response, next) {
     response.end(JSON.stringify({ ok: 'OK' }));
     // display message on log.html
     io.emit('chat', {
-      message: req.body.message,
+      message: HIDE_MESSAGES ? '(message)' : req.body.message,
       user: req.googleUser,
       ip: req.connection.remoteAddress,
     });
