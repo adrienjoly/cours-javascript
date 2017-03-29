@@ -73,7 +73,7 @@ class: dbl-size
 var xhr = new XMLHttpRequest();
 xhr.open('POST', 'https://httpbin.org/post');
 xhr.onreadystatechange = function() {
-  if (xhr.readyState == 4) {
+  if (xhr.readyState === 4) {
     alert(xhr.responseText);
   }
 };

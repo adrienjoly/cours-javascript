@@ -168,7 +168,7 @@ xhr.onreadystatechange = function() {
 };
 ```
   <!--
-  if (xhr.readyState == 4) {
+  if (xhr.readyState === 4) {
     alert('code: ' + xhr.status); // 200 = OK
     alert(xhr.responseText);
   }
