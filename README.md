@@ -34,5 +34,6 @@
 - OpenClassrooms: [Apprenez à coder avec JavaScript](https://openclassrooms.com/courses/apprenez-a-coder-avec-javascript)
 - OpenClassrooms: [Créez des pages web interactives avec JavaScript](https://openclassrooms.com/courses/creez-des-pages-web-interactives-avec-javascript)
 - Khan Academy: [HTML/JS : faire des pages Web interactives](https://fr.khanacademy.org/computing/computer-programming/html-css-js)
+- [JS for cats](http://jsforcats.com/) (anglais), une explication simple et amusante des concepts de base
 - [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS/), free book series on JavaScript
 - [JS Books](http://jsbooks.revolunet.com/)
