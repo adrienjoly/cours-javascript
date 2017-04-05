@@ -9,7 +9,11 @@
 - Apprendre à diagnostiquer et résoudre une anomalie à l'aide de la console et des ressources disponibles en ligne.
 - Mettre en pratique les concepts abordés en réalisant des exercices inspirés d'applications courantes: Twitter, Google Images, etc...
 
-### Plan par semaine
+### Programme EEMI 2016-2017
+
+Lien vers la dernière version des supports sur Gitbook: [cours JavaScript EEMI 2016-2017](https://www.gitbook.com/book/adrienjoly/cours-javascript-eemi-2016-2017/details).
+
+### Programme EEMI 2015-2016 (*ancienne version*)
 
 - [A](A.md): Hacker google.com avec Chrome Dev Tools (DOM et events) + [QCM](A-QCM.md)
 - [B](B.md): Validation d’un champs de formulaire texte (conditions et alerts) + solutions des exercices [0](https://github.com/adrienjoly/correct-tp-b/tree/master/JS-B-0) et [2](https://github.com/adrienjoly/correct-tp-b/tree/master/JS-B-2)
