@@ -13,7 +13,7 @@
 
 Lien vers la dernière version des supports sur Gitbook: [cours JavaScript EEMI 2016-2017](https://www.gitbook.com/book/adrienjoly/cours-javascript-eemi-2016-2017/details).
 
-[![image](2016-2017.png)](https://www.gitbook.com/book/adrienjoly/cours-javascript-eemi-2016-2017/details)
+[![image](2016-2017-760px.png)](https://www.gitbook.com/book/adrienjoly/cours-javascript-eemi-2016-2017/details)
 
 ### Programme EEMI 2015-2016 (*ancienne version*)
 
