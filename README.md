@@ -37,7 +37,7 @@
 
 ## Ressources alternatives en langue anglaise
 
-- [JS for cats](http://jsforcats.com/) (anglais), une explication simple et amusante des concepts de base
+- [JS for cats](http://jsforcats.com/), une explication simple et amusante des concepts de base
 - [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS/), free book series on JavaScript
 - [JS Books](http://jsbooks.revolunet.com/)
 - [JavaScript basics](https://medium.freecodecamp.com/my-giant-javascript-basics-course-is-now-live-on-youtube-and-its-100-free-9020a21bbc27), videos by Beau Carnes + [challenges on freeCampCode](http://beta.freecodecamp.com/en/map)
@@ -45,4 +45,4 @@
 ## Ressources annexes au cours
 
 - [Apprendre à apprendre: deux modes d’apprentissage](http://www.internetactu.net/2015/09/08/apprendre-a-apprendre-14-deux-modes-dapprentissage/)
-- [Startup Noob Guide](bit.ly/startupnoob)
+- [Startup Noob Guide](http://bit.ly/startupnoob)
