@@ -1,0 +1,31 @@
+<h1>Recherche d'images</h1>
+<input id="tags">
+<button id="bouton">OK</button>
+<ul id="resultats"></ul>
+
+<script src="ajax-get-images.js">
+var resultats = document.getElementById('resultats');
+document.getElementById('bouton').onclick = function() {
+	var tags = document.getElementById('tags').value;
+  var url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=74a9b070d21072ccac3a7b5f44f09efa&tags=' + encodeURIComponent(tags) + '&format=json&nojsoncallback=1';
+  console.log('ajax request url:', url);
+  var xhr = new XMLHttpRequest(); 
+  xhr.open('GET', url);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      var reponse = JSON.parse(xhr.responseText);
+      var photos = reponse.photos.photo;
+      resultats.innerHTML = ''; // effacer les résultats précédents
+      for (var i = 0; i < photos.length; i++) {
+        var photo = photos[i];
+        // cf https://www.flickr.com/services/api/misc.urls.html
+        var photoUrl = 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '.jpg';
+        var img = document.createElement('img');
+        img.src = photoUrl;
+        resultats.appendChild(img);
+      }
+    }
+  };
+  xhr.send();
+};
+</script>

@@ -1,0 +1,31 @@
+<h1>Recherche d'animations</h1>
+<input id="tags">
+<button id="bouton">OK</button>
+<ul id="resultats"></ul>
+
+<script src="ajax-get-images.js">
+var resultats = document.getElementById('resultats');
+document.getElementById('bouton').onclick = function() {
+	var tags = document.getElementById('tags').value;
+  var url = 'https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=' + encodeURIComponent(tags);
+  console.log('ajax request url:', url);
+  var xhr = new XMLHttpRequest(); 
+  xhr.open('GET', url);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      var reponse = JSON.parse(xhr.responseText);
+      var photos = reponse.data;
+      console.log(photos);
+      resultats.innerHTML = ''; // effacer les résultats précédents
+      for (var i = 0; i < photos.length; i++) {
+        var gifUrl = photos[i].images.downsized.url;
+        console.log(gifUrl);
+        var img = document.createElement('img');
+        img.src = gifUrl;
+        resultats.appendChild(img);
+      }
+    }
+  };
+  xhr.send();
+};
+</script>
