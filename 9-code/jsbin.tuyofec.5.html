@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by adrienjoly (http://jsbin.com/tuyofec/5/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Add a Google Sign-in button to your HTML+JavaScript app">
+    <meta name="google-signin-client_id" content="247219641427-03rg1f2pcjosj7lts7mal355juad7vs5.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <style id="jsbin-css">
+#connecte {
+  display: none;
+}
+
+.connecte #connexion {
+  display: none;
+}
+
+.connecte #connecte {
+  display: block;
+}
+
+</style>
+</head>
+  <body>
+    
+    <div id="connexion">
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div>
+    
+    <div id="connecte">
+      <p>Bonjour, <span id="nom"></span></p>
+      <button id="deco">Se déconnecter</a>
+    </div>
+    
+  <script id="jsbin-javascript">
+// source: https://developers.google.com/identity/sign-in/web/sign-in
+
+var connecte = document.getElementById('connecte');
+var connexion = document.getElementById('connexion');
+var deco = document.getElementById('deco');
+var nom = document.getElementById('nom');
+
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  document.body.classList.add('connecte');
+  console.log(profile);
+  nom.innerHTML = profile.getName();
+}
+
+deco.onclick = function signOut() {
+  var auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut().then(function () {
+    document.body.classList.remove('connecte');
+  });
+}
+
+</script>
+</body>
+</html>

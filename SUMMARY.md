@@ -69,19 +69,19 @@ W13 - H: Envoi de données avec AJAX => clone de Twitter + solution
 W16 - I: Pages dynamiques avec AJAX: clone de Google Images en utilisant une API + solution
 -->
 
+* [Chapitre 9 - Identification avec Google et Facebook](9.md)
+<!--
+seances:
+W19 - N: Identification avec Google et Facebook Connect
+W20 - U: Révisions
+W22 - (évaluation S2)
+-->
+
 * (à venir) - Persistance de données
 <!--
 seances:
 W17 - K: One-page app avec CRUD: Utilisation d'un back-end Firebase 1/2 + Video + Code
 W18 - L: One-page app avec CRUD: Utilisation d'un back-end Firebase 2/2 + Video + Code
--->
-
-* (à venir) - Authentification
-<!--
-seances:
-W19 - N: Identification avec Google et Facebook Connect + Code + Commits
-W20 - U: Révisions
-W22 - (évaluation S2)
 -->
 
 <!--
