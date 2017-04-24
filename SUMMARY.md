@@ -77,7 +77,11 @@ W20 - U: Révisions
 W22 - (évaluation S2)
 -->
 
-* (à venir) - Persistance de données
+<!--
+TODO
+Chapitre 10 - Découverte de jQuery et React 10.md
+-->
+
 <!--
 seances:
 W17 - K: One-page app avec CRUD: Utilisation d'un back-end Firebase 1/2 + Video + Code
