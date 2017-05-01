@@ -11,6 +11,7 @@
 - [Chapitre 7 - Manipulation DOM avancée](7.md)
 - [Chapitre 8 - Échanges de données avec AJAX](8.md)
 - [Chapitre 9 - Identification avec Google et Facebook](9.md)
+- [Chapitre 10 - jQuery et frameworks front-end](10.md)
 
 ## Tests et corrigés
 

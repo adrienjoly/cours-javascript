@@ -73,28 +73,19 @@ W16 - I: Pages dynamiques avec AJAX: clone de Google Images en utilisant une API
 <!--
 seances:
 W19 - N: Identification avec Google et Facebook Connect
-W20 - U: Révisions
-W22 - (évaluation S2)
+-->
+
+* [Chapitre 10 - jQuery et frameworks front-end](10.md)
+<!--
+séances:
+- Découverte de jQuery
+- Comparaison Angular vs React
 -->
 
 <!--
-TODO
-Chapitre 10 - Découverte de jQuery et React 10.md
--->
-
-<!--
-seances:
-W17 - K: One-page app avec CRUD: Utilisation d'un back-end Firebase 1/2 + Video + Code
-W18 - L: One-page app avec CRUD: Utilisation d'un back-end Firebase 2/2 + Video + Code
--->
-
-<!--
-A TRAITER:
+AUTRES SUJETS:
 - Geolocation API ? (et autres tips pour développer des apps web mobiles)
 - regex
--->
-
-<!--
-non abordés cette année:
-W10 - M: Introduction à Git et Github Pages
+- One-page app avec CRUD: Utilisation d'un back-end Firebase (W17/K et W18/L)
+- Introduction à Git et Github Pages (W10 - M)
 -->
