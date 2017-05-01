@@ -102,8 +102,8 @@ class: center, middle, dbl-size
 
 1. Héberger le code précédent sur votre espace étudiant, observer l'erreur obtenue
 2. Se connecter à la [Console Google Developers](https://console.developers.google.com/project/_/apiui/apis/library) avec son compte EEMI
-3. Créer un projet `todolist`, et moyen de s'identifier à l'application Web avec "OAuth" depuis votre domaine
-4. Intégrer la clé `CLIENT_ID` fournie dans votre page, puis tester la connexion et déconnexion.
+3. Créer un projet, et moyen de s'identifier à votre application Web avec "OAuth", depuis le domaine où elle est hébergée
+4. Intégrer la clé `CLIENT_ID` fournie dans votre page HTML, puis tester la connexion et déconnexion.
 5. BONUS: restreindre l'accès qu'à certaines personnes.
 6. BONUS: Refaire l'exercice avec Facebook Connect au lieu de Google Signin.
 
