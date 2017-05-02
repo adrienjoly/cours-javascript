@@ -77,9 +77,9 @@ W19 - N: Identification avec Google et Facebook Connect
 
 * [Chapitre 10 - jQuery et frameworks front-end](10.md)
 <!--
-séances:
-- Découverte de jQuery
-- Comparaison Angular vs React
+seances:
+ - Decouverte de jQuery
+ - Comparaison Angular vs React
 -->
 
 <!--
