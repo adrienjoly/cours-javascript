@@ -75,7 +75,7 @@ seances:
 W19 - N: Identification avec Google et Facebook Connect
 -->
 
-* [Chapitre 10 - jQuery et frameworks front-end](10.md)
+* [Chapitre 10 - jQuery, Node.js et frameworks](10.md)
 <!--
 seances:
  - Decouverte de jQuery
