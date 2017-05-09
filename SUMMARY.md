@@ -88,4 +88,5 @@ AUTRES SUJETS:
 - regex
 - One-page app avec CRUD: Utilisation d'un back-end Firebase (W17/K et W18/L)
 - Introduction à Git et Github Pages (W10 - M)
+- parler de foreach(), map() et reduce()
 -->
