@@ -82,9 +82,14 @@ seances:
  - Comparaison Angular vs React
 -->
 
+* [Chapitre 11 - Gestion d'erreurs et Geolocation API](11.md)
+<!--
+derniere seance:
+- Geolocation API ? (et autres tips pour développer des apps web mobiles)
+-->
+
 <!--
 AUTRES SUJETS:
-- Geolocation API ? (et autres tips pour développer des apps web mobiles)
 - regex
 - One-page app avec CRUD: Utilisation d'un back-end Firebase (W17/K et W18/L)
 - Introduction à Git et Github Pages (W10 - M)

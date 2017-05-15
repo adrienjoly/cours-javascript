@@ -12,6 +12,7 @@
 - [Chapitre 8 - Échanges de données avec AJAX](8.md)
 - [Chapitre 9 - Identification avec Google et Facebook](9.md)
 - [Chapitre 10 - jQuery, Node.js et frameworks](10.md)
+- [Chapitre 11 - Gestion d'erreurs et Geolocation API](11.md)
 
 ## Tests et corrigés
 
