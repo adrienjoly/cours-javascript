@@ -83,10 +83,6 @@ seances:
 -->
 
 * [Chapitre 11 - Gestion d'erreurs et Geolocation API](11.md)
-<!--
-derniere seance:
-- Geolocation API ? (et autres tips pour développer des apps web mobiles)
--->
 
 <!--
 AUTRES SUJETS:
