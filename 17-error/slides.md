@@ -103,11 +103,11 @@ class: center, middle
 # 🌩 Intercepter une erreur Asynchrone 1/2
 
 ```js
-uneFonctionAsynchrone(function(error, resultat) {
+uneFonctionAsynchrone(function(err, res) {
   if (error) {
-    alert('une erreur est survenue: ' + error.message);
+    alert('une erreur est survenue: ' + err.message);
   } else {
-    alert('resultat de la fonction: ' + resultat);
+    alert('resultat de la fonction: ' + res);
   }
 });
 ```
@@ -119,11 +119,11 @@ class: center, middle
 Parfois, il faut fournir deux fonctions:
 
 ```js
-function traiterPosition(pos) {
+function traiterPos(pos) {
   alert('GPS: ' + pos.coords.latitude + ', ' + pos.coords.longitude);
 }
-function traiterErr(error) {
-  alert('une erreur est survenue: ' + error.message);
+function traiterErr(err) {
+  alert('une erreur est survenue: ' + err.message);
 }
 navigator.geolocation.getCurrentPosition(traiterPos, traiterErr);
 ```
