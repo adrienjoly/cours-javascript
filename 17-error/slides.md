@@ -100,16 +100,32 @@ Expliquer "synchrone".
 
 ---
 class: center, middle
-# 🌩 Intercepter une erreur Asynchrone
+# 🌩 Intercepter une erreur Asynchrone 1/2
 
 ```js
-navigator.geolocation.getCurrentPosition(function(pos, error) {
+uneFonctionAsynchrone(function(error, resultat) {
   if (error) {
     alert('une erreur est survenue: ' + error.message);
   } else {
-    alert('GPS: ' + pos.coords.latitude + ', ' + pos.coords.longitude);
+    alert('resultat de la fonction: ' + resultat);
   }
 });
+```
+
+---
+class: center, middle
+# 🌩 Intercepter une erreur Asynchrone 2/2
+
+Parfois, il faut fournir deux fonctions:
+
+```js
+function traiterPosition(pos) {
+  alert('GPS: ' + pos.coords.latitude + ', ' + pos.coords.longitude);
+}
+function traiterErr(error) {
+  alert('une erreur est survenue: ' + error.message);
+}
+navigator.geolocation.getCurrentPosition(traiterPos, traiterErr);
 ```
 
 ???
