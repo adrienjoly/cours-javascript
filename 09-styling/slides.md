@@ -243,3 +243,13 @@ avant Dimanche 19 Février, minuit.
 - filtrage par classes;
 - pouvoir passer rapidement d'une catégorie à une autre, puis afficher la liste complète (non filtrée) des produits;
 - au moins 2 produits présents dans plusieurs catégories.
+
+---
+class: center, middle, dbl-size
+
+# 5. À découvrir dans le support de cours
+
+- `getElementsByTagName()`
+- `getAttribute()` et `setAttribute()`
+- Propriété `innerHTML`
+- Scope / portée des variables
