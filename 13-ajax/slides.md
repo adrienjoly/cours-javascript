@@ -75,11 +75,10 @@ class: center, middle, dbl-size
 # Objets JSON en JavaScript
 
 ```javascript
-var inbox = {
-  email: {
-    from: "amazon",
-    subject: "votre colis a été envoyé"
-  }
+var email = {
+  from: "amazon",
+  to: ["adrien", "antoine"],
+  subject: "votre colis a été envoyé"
 };
 ```
 
@@ -93,10 +92,10 @@ var inbox = {
 --
 
 ```javascript
-console.log(inbox);
-console.log(inbox.email);
-console.log(inbox.email.from);
-console.log(inbox.email.subject);
+console.log(email);
+console.log(email.from);
+console.log(email.subject);
+console.log(email.to[0]);
 ```
 
 ---
