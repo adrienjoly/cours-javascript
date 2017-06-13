@@ -63,12 +63,12 @@ class: center, middle, dbl-size
 - JSON (**J**ava**S**cript **O**bject **N**otation)
 
 ```javascript
-inbox: {
-  email: {
+[
+  {
     from: "amazon",
     subject: "votre colis a été envoyé"
   }
-}
+]
 ```
 
 ---
