@@ -87,7 +87,7 @@ app.use(/*TWEET_ENDPOINT,*/ function (req, response, next) {
     response.end(JSON.stringify({ ok: 'OK' }));
     // display message on log.html
     io.emit('chat', {
-      message: HIDE_MESSAGES ? '(message)' : req.body.message,
+      message: HIDE_MESSAGES ? (req.body.message || '')[0] + '...' : req.body.message,
       user: req.googleUser,
       ip: req.connection.remoteAddress,
     });
