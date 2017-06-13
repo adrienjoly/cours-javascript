@@ -1,6 +1,6 @@
 // inspired from http://code.runnable.com/Umgo967vRZQMAABQ/a-simple-webserver-with-connect-for-node-js
 
-var HIDE_MESSAGES = true; // if true, content of messages will not be displayed on index
+var HIDE_MESSAGES = false; // if true, content of messages will not be displayed on index
 
 var http = require('http');
 var connect = require('connect');
