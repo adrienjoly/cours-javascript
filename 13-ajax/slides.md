@@ -72,7 +72,7 @@ class: center, middle, dbl-size
 ```
 
 ---
-# Objets JSON en JavaScript
+# JSON = Valeur JavaScript (rappels)
 
 ```javascript
 var email = {
@@ -84,7 +84,7 @@ var email = {
 
 --
 
-- Une variable peut être un objet JSON.
+- Un objet JSON peut être affecté à une variable.
 - Un objet contient des **propriétés**.
 - Les accolades servent à définir la valeur des propriétés d'un objet.
 - Une propriété, comme une variable, peut être un objet.
