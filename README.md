@@ -1,4 +1,4 @@
-# Cours Javascript
+# Cours JavaScript
 
 ### Objectifs pédagogiques
 
