@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <p>Send your tweet by sending a HTTP POST request to the <code>/tweet</code> API endpoint of this server.</p>
+    <p>Example: <a href="/client.html">form-based client</a></p>
+    <h2>Latest tweets</h2>
+    <ul id="log"></ul>
+    <script>
+      function sanitize(str){
+        return (''+str).replace(/[<>]*/g, '');
+      }
+      var socket = io();
+      var log = document.getElementById('log');
+      socket.on('chat', function(msg){
+        log.innerHTML = '<li>' + sanitize(msg.user.name) + ' : ' + sanitize(msg.message) + '</li>' + log.innerHTML;
+      });
+    </script>
+  </body>
+</html>
