@@ -2,17 +2,24 @@
 
 # Cours JavaScript
 
-- [Chapitre 1 - Les bases](1.md)
-- [Chapitre 2 - Algorithmes et jeux](2.md)
-- [Chapitre 3 - Types avancés](3.md)
-- [Chapitre 4 - Manipuler le Web avec DOM](4.md)
-- [Chapitre 5 - Manipuler les classes et styles CSS](5.md)
-- [Chapitre 6 - Composants et POO](6.md)
-- [Chapitre 7 - Manipulation DOM avancée](7.md)
-- [Chapitre 8 - Échanges de données avec AJAX](8.md)
-- [Chapitre 9 - Identification avec Google et Facebook](9.md)
-- [Chapitre 10 - jQuery, Node.js et frameworks](10.md)
-- [Chapitre 11 - Gestion d'erreurs et Geolocation API](11.md)
+* [Introduction](README.md)
+* [TP 1 - Les Bases](tp01.md)
+* [TP 2 - Conditions](tp02.md)
+* [TP 3 - Algorithmes et Jeux](tp03.md)
+* TP 4 - Pratique: Katas
+* [TP 5 - Fonctions](tp05.md)
+* [TP 6 - Tableaux](tp06.md)
+* [TP 7 - Objets](tp07.md)
+* [TP 8 - Manipuler le Web avec DOM](tp08.md)
+* [TP 9 - Manipuler les classes et styles CSS](tp09.md)
+* [TP 10 - Composants Web](tp10.md)
+* [TP 11 - Composants et POO](tp11.md)
+* [TP 12 - Manipulation DOM avancée](tp12.md)
+* [TP 13 - Récupération de données avec AJAX](tp13.md)
+* [TP 14 - Envoi de données avec AJAX](tp14.md)
+* [TP 15 - Identification avec Google et Facebook](tp15.md)
+* [TP 16 - jQuery, Node.js et frameworks](tp16.md)
+* [TP 17 - Gestion d'erreurs et Geolocation API](tp17.md)
 
 <!--
 
