@@ -14,6 +14,8 @@
 - [Chapitre 10 - jQuery, Node.js et frameworks](10.md)
 - [Chapitre 11 - Gestion d'erreurs et Geolocation API](11.md)
 
+<!--
+
 ## Tests et corrigés
 
 - QCM 1: Bases ([solutions](qcms/js-test-1-solutions.pdf))
@@ -27,8 +29,6 @@
 - QCM 7: DOM ([solutions](qcms/js-test-7-solutions.pdf))
 - QCM 8: Styling CSS ([solutions](qcms/js-test-8-solutions.pdf))
 - QCM 9: Composants ([solutions](qcms/js-test-9-solutions.pdf))
-
-<!--
 
 TODO
 
