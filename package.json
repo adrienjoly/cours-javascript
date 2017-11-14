@@ -1,6 +1,6 @@
 {
   "name": "cours-javascript",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "scripts": {
     "start-http": "python -m SimpleHTTPServer",
     "preinstall": "# brew install Caskroom/cask/calibre",
