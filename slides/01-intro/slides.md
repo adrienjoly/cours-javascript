@@ -83,40 +83,76 @@ class: center, middle
 # 3. Conseils des étudiants de l'an dernier
 
 ---
-class: center, middle, quote
+class: center, middle, dbl-size
 
-S'accrocher.
+💪
 
-Faire des **fiches / résumés** de chaque cours.
-
----
-class: center, middle, quote
-
-Être **rigoureux** dans le code.
-
-Commenter les étapes [des exercices] dans des **commentaires** à l'intérieur même du code.
+.quote[
+**S'accrocher dès le début**, car tout ce qui est fait au début est utile pour la suite.
+]
 
 ---
-class: center, middle, quote
+class: center, middle, dbl-size
 
-Se forcer à s'y intéresser et **pratiquer un minimum seul**.
+😴
 
-Faire des mises en situation réelles. (**projet**)­­
-
----
-class: center, middle, quote
-
-Ne vous contentez pas à ce que l'on voit en cours: aller approfondir vos connaissances et surtout **pratiquez** !
-
-Beaucoup de sites permettent de s'excercer en ayant la correction après.
+.quote[
+**Ne pas lâcher prise** à la moindre difficulté. Pratiquer.
+]
 
 ---
-class: center, middle, quote
+class: center, middle, dbl-size
 
-Bien **suivre dès le début** pour ne pas se perdre ensuite.
+😎
 
-Vous allez voir que c'est une **matière intéressante**!
+.quote[
+**Ne pas croire** que si l'on comprend (ou pense comprendre) le code, ça suffit. Entre le lire et le faire c'est pas la même.
+]
 
+---
+class: center, middle, dbl-size
+
+✍️
+
+.quote[
+**Relire** les chapitres du cours avant de venir. Et ne pas hésiter à refaire les exercices.
+]
+
+---
+class: center, middle, dbl-size
+
+🏋
+
+.quote[
+Lire les documentations, essayer de comprendre par soi-même, surtout **pratiquer chez soi**.
+]
+
+---
+class: center, middle, dbl-size
+
+🎻
+
+.quote[
+**Refaire** régulièrement les exercices vus en cours afin de pouvoir les implémenter dans les sites à réaliser au cours de l'année
+]
+
+---
+class: center, middle, dbl-size
+
+🐾
+
+.quote[
+Ne pas hésiter à **tester**.
+]
+
+---
+class: center, middle
+
+![](img/yoda.png)
+
+.quote[
+Que la force soit avec vous :D
+]
 
 ---
 class: center, middle
