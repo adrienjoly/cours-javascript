@@ -6,7 +6,7 @@
   "scripts": {
     "setup-host": "scutil --set LocalHostName \"aj-mbp\"; scutil --set HostName \"aj-mbp\";",
     "test": "curl localhost:8080/tweet -d '{\"message\":\"bonjour\"}'",
-    "deploy": "echo \"don't forget to commit first!\" && heroku git:remote -a js-ajax-twitter && (cd ../../ && git subtree push --prefix 14-ajax2/server heroku master)",
+    "deploy": "echo \"don't forget to commit first!\" && heroku git:remote -a js-ajax-twitter && (cd ../../../ && git subtree push --prefix exercices/14-ajax2/server heroku master)",
     "start": "node server.js"
   },
   "author": "Adrien Joly <contact@adrienjoly.com>",
