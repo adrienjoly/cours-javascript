@@ -16,16 +16,16 @@ var TWEET_ENDPOINT = '/tweet';
 var GOOGLE_DOMAIN = 'eemi.com';
 
 var allowCrossDomain = function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS'); // TODO: reduce
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
-    // intercept OPTIONS method
-    if ('OPTIONS' == req.method) {
-      res.send(200);
-    }
-    else {
-      next();
-    }
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS'); // TODO: reduce
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+  // intercept OPTIONS method
+  if ('OPTIONS' == req.method) {
+    res.send(200);
+  }
+  else {
+    next();
+  }
 };
 
 // Configure the app
@@ -88,6 +88,7 @@ app.use(/*TWEET_ENDPOINT,*/ function (req, response, next) {
     // display message on log.html
     io.emit('chat', {
       message: HIDE_MESSAGES ? (req.body.message || '')[0] + '...' : req.body.message,
+      'content-type': req.headers['content-type'],
       user: req.googleUser,
       ip: req.connection.remoteAddress,
     });

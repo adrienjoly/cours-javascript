@@ -16,7 +16,11 @@
       var socket = io();
       var log = document.getElementById('log');
       socket.on('chat', function(msg){
-        log.innerHTML = '<li>' + sanitize(msg.user.name) + ' : ' + sanitize(msg.message) + '</li>' + log.innerHTML;
+        var fromForm = msg['content-type'] === 'application/x-www-form-urlencoded';
+        log.innerHTML = '<li>' + (fromForm ? '' : '<b>')
+          + sanitize(msg.user.name) + (fromForm ? '' :  ' 😎')
+          + (fromForm ? '' : '</b>') + ' : '
+          + sanitize(msg.message) + '</li>' + log.innerHTML;
       });
     </script>
   </body>
