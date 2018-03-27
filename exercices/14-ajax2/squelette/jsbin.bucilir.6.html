@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by adrienjoly (http://jsbin.com/bucilir/6/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- initialize google login api, for user authentication -->
+  <meta name="google-signin-client_id" content="247219641427-ifeq88p7rgor9al5ksduds7ug0ba7djr.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+    <p>Connexion:
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <a href="#" onclick="gapi.auth2.getAuthInstance().signOut(); return false;">Sign out</a>
+    </p>
+    <p>Twittez:</p>
+
+    <!-- TODO: remplacer ce formulaire par l'envoi du message en AJAX -->
+
+    <form id="formulaire" method="POST" action="https://js-ajax-twitter.herokuapp.com/tweet">
+      <input type="hidden" name="token" id="tokenInput">
+      <input name="message" placeholder="Votre message" style="padding: 5px; margin: 10px 0;">
+    </form>
+
+    <!-- fin du TODO -->
+
+  <script id="jsbin-javascript">
+// === ne pas modifier ces 2 fonctions ===
+function onSignIn(googleUser) {
+  window.token = googleUser.getAuthResponse().id_token;
+  (document.getElementById('tokenInput') || {}).value = token;
+}
+
+// TODO: insérer votre code JavaScript ici
+
+</script>
+</body>
+</html>
