@@ -1,5 +1,6 @@
 {
   "markdown.styles": [
     "./.vscode/github-markdown.css"
-  ] 
+  ],
+  "cSpell.language": ",fr"
 }
