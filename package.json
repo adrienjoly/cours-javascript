@@ -3,12 +3,15 @@
   "version": "3.0.0",
   "scripts": {
     "start-http": "python -m SimpleHTTPServer",
-    "preinstall": "# brew install Caskroom/cask/calibre",
-    "postinstall": "./node_modules/.bin/gitbook install",
-    "gen-pdf": "node_modules/.bin/gitbook pdf ./ ./_book/cours-javascript.pdf",
-    "build": "node_modules/.bin/gitbook build",
-    "deploy": "git push gitbook master",
-    "start": "node_modules/.bin/gitbook serve"
+    "gitbook:preinstall": "# brew install Caskroom/cask/calibre",
+    "gitbook:postinstall": "./node_modules/.bin/gitbook install",
+    "gitbook:gen-pdf": "node_modules/.bin/gitbook pdf ./ ./_book/cours-javascript.pdf",
+    "gitbook:build": "node_modules/.bin/gitbook build",
+    "gitbook:deploy": "git push gitbook master",
+    "gitbook:start": "node_modules/.bin/gitbook serve",
+    "jekyll:install": "gem install bundler && bundle install # requires ruby-lang.org",
+    "jekyll:build": "bundle exec jekyll build",
+    "jekyll:start": "bundle exec jekyll serve --incremental"
   },
   "author": "Adrien Joly",
   "dependencies": {
