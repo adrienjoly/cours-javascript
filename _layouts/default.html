@@ -8,6 +8,17 @@
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/default.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <style>
+        .algolia-autocomplete{
+          width: 50%;
+          float: right;
+        }
+        #q{
+          width: 100%;
+          max-width: 100%;
+        }
+    </style>
   </head>
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
@@ -16,6 +27,8 @@
         <a href="{{ "/" | absolute_url }}">{{ site.title }}</a>
         {% if page.title %} - {{ page.title }}{% endif %}
       </h1>
+      <input name="q" id="q" type="text" placeholder="Chercher dans le cours ..." autofocus>
+
       {% endif %}
 
       {{ content }}
@@ -38,5 +51,14 @@
       ga('send', 'pageview');
     </script>
     {% endif %}
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript"> docsearch({
+      apiKey: '9f05fab60b0aea72e6f92f9a2cb8ffe6',
+      indexName: 'adrienjoly_cours-javascript',
+      inputSelector: '#q',
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+    </script>
   </body>
 </html>
