@@ -14,3 +14,7 @@ _book
 *.epub
 *.mobi
 /*.pdf
+
+# Jekyll / GitHub pages
+_site
+.jekyll-metadata

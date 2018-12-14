@@ -1,0 +1,232 @@
+/* partially imported from /index.css */
+
+/*
+* Web Fonts from fontspring.com
+*
+* All OpenType features and all extended glyphs have been removed.
+* Fully installable fonts can be purchased at http://www.fontspring.com
+*
+* The fonts included in this stylesheet are subject to the End User License you purchased
+* from Fontspring. The fonts are protected under domestic and international trademark and
+* copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+* distributing this font software.
+*
+* (c) 2010 Fontspring
+*
+* The fonts included are copyrighted by the vendor listed below.
+*
+* Vendor:      FontSite Inc.
+* License URL: http://www.fontspring.com/fflicense/fontsite
+*/
+
+@font-face {
+  font-family: 'AlternateGothicFSNo3';
+  src: url('/fonts/AlternateGothicNo3-webfont.eot');
+  src: url('/fonts/AlternateGothicNo3-webfont.woff') format('woff'), url('/fonts/AlternateGothicNo3-webfont.ttf') format('truetype'), url('/fonts/AlternateGothicNo3-webfont.svg#webfontUJOPMwss') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  color: #0091BE;
+}
+
+.clear {
+  clear:both;
+}
+
+iframe {
+  width: 100%;
+}
+
+/* project listings */
+
+.thumb {
+  color: #333;
+}
+
+.thumbs p {
+  margin-top: 0px !important;
+  margin-bottom: 5px;
+}
+
+.thumbs b {
+  font-weight: normal;
+  background-color: rgba(69, 185, 57, 0.20);
+  padding: 2px;
+}
+
+.thumbs li {
+  display:inline-block;
+  vertical-align:top;
+  list-style: none;
+  text-shadow: 0 1px 0 white;
+  width:270px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.thumbs li .screenshot > * {
+  border-radius: 5px;
+  border: 2px solid #5B6A79;
+  width:260px;
+  height:180px;
+  margin-bottom: 15px;
+  opacity:0.8;
+  transition: opacity 0.1s;
+  -moz-transition: opacity 0.1s; /* Firefox 4 */
+  -webkit-transition: opacity 0.1s; /* Safari and Chrome */
+  -o-transition: opacity 0.1s; /* Opera */
+  text-align: center;
+}
+
+.thumbs li .screenshot > div > div {
+  display: inline-block;
+  margin-top: 76px;
+  border: 1px solid #DFDFDF;
+  color: #DFDFDF;
+  padding: 8px;
+}
+
+.thumbs li:hover img {
+  opacity:1;
+}
+
+.thumbs h2 {
+  width: 260px;
+  margin-bottom: 15px;
+  padding-bottom: 0;
+  font-family: AlternateGothicFSNo3,"Arial Narrow";
+  text-transform: uppercase;
+  font-weight: normal;
+  border-bottom: 0 none;
+}
+
+.thumbs h2 a {
+  font-size: 24px;
+  color: #5B6A79;
+}
+
+.thumbs h2 a:hover {
+  color: #0091BE;
+}
+
+.thumbs h2 small {
+  font-size:16px;
+  float:right;
+  color: #5B6A79;
+}
+
+.thumbs li p {
+  font-size: 12px;
+  width: 260px;
+}
+
+.thumbs li:hover h2 a, .content li a:focus h2 a {
+  color: #0091BE;
+  text-decoration: none;
+}
+
+.thumbs li:hover img, .content li a:focus img {
+  border: 2px solid #0091BE;
+}
+
+.thumbs h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+/* icons */
+
+.pdf {
+  background: url('/img/page_white_acrobat.gif') left center no-repeat;
+  padding-left: 22px;
+}
+
+
+.whyd {
+  background: url('/img/icon-whyd.png') left center no-repeat;
+  padding-left: 22px;
+}
+
+.openwhyd {
+  background: url('/img/icon-openwhyd.png') left center no-repeat;
+  background-size: 16px 16px;
+  padding-left: 22px;
+}
+
+.youtube {
+  background: url('/img/icon-youtube.png') left center no-repeat;
+  padding-left: 22px;
+}
+
+.github {
+  background: url('/img/icon-github.png') left center no-repeat;
+  padding-left: 22px;
+}
+
+.medium {
+  background: url('/img/logo-medium.png') left center no-repeat;
+  background-size: 16px 16px;
+  padding-left: 22px;
+}
+
+.wunderlist {
+  background: url('/img/icon-wunderlist.png') left center no-repeat;
+  background-size: 16px 16px;
+  padding-left: 22px;
+}
+
+.ideas {
+  background: url('/img/icon-idea.png') left center no-repeat;
+  background-size: 16px 16px;
+  padding-left: 22px;
+}
+
+.news {
+  background: url('/img/icon-news.png') left center no-repeat;
+  background-size: 16px 16px;
+  padding-left: 22px;
+}
+
+.patreon {
+  background: url('/img/icon-patreon.png') left center no-repeat;
+  background-size: 16px 16px;
+  padding-left: 22px;
+}
+
+.npm {
+  background: url('/img/icon-npm.png') left center no-repeat;
+  padding-left: 22px;
+}
+
+.maddyness {
+  background: url('/img/icon-maddyness.png') left center no-repeat;
+  padding-left: 22px;
+}
+
+.liris {
+  background: url('/img/icon-liris.png') left center no-repeat;
+  padding-left: 22px;
+}
+
+.eventbrite {
+  background: url('/img/icon-eventbrite.png') left center no-repeat;
+  padding-left: 22px;
+}
+
+.instagram {
+  background: url('/img/icon-instagram.png') left center no-repeat;
+  padding-left: 22px;
+}
+
+.geeklist {
+  background: url('/img/icon-geeklist.png') left center no-repeat;
+  padding-left: 22px;
+}
+
+.lastfm {
+  background: url('/img/lastfm.png') left center no-repeat;
+  padding-left: 22px;
+}
