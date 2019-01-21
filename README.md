@@ -59,6 +59,7 @@ TODO
 - [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS/), free book series on JavaScript
 - [JS Books](http://jsbooks.revolunet.com/)
 - [JavaScript basics](https://medium.freecodecamp.com/my-giant-javascript-basics-course-is-now-live-on-youtube-and-its-100-free-9020a21bbc27), videos by Beau Carnes + [challenges on freeCampCode](http://beta.freecodecamp.com/en/map)
+- [JavaScript 30 — Build 30 things with vanilla JS in 30 days with 30 tutorials](https://javascript30.com/)
 
 ## Ressources annexes au cours
 
