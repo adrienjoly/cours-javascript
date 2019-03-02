@@ -60,6 +60,7 @@ TODO
 - [JS Books](http://jsbooks.revolunet.com/)
 - [JavaScript basics](https://medium.freecodecamp.com/my-giant-javascript-basics-course-is-now-live-on-youtube-and-its-100-free-9020a21bbc27), videos by Beau Carnes + [challenges on freeCampCode](http://beta.freecodecamp.com/en/map)
 - [JavaScript 30 — Build 30 things with vanilla JS in 30 days with 30 tutorials](https://javascript30.com/)
+- [leonardomso/33-js-concepts: 📜 33 concepts every JavaScript developer should know.](https://github.com/leonardomso/33-js-concepts)
 
 ## Ressources annexes au cours
 
