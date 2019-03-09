@@ -1,0 +1,58 @@
+title: # Name of your blog (this will show up at the top of your page and in the RSS feed)
+  Cours JavaScript
+
+author: # Your name, as you want it to appear underneath each post and in the footer
+  Adrien Joly
+
+avatar: # URL of your avatar or profile pic (you could use your GitHub profile pic)
+  /icon.png
+
+desc:
+  Supports de cours JavaScript pour étudiants EEMI de 1ère année.
+
+keywords: javascript,initiation,exercices,cours,tuto,web,développement,dom
+
+repository: adrienjoly/cours-javascript
+
+google_analytics: UA-1858235-4
+
+twitter: # used by the jekyll seo plugin
+  username: adrienjoly
+  card: summary
+
+social:
+  name: Adrien Joly
+  links:
+    - https://twitter.com/adrienjoly
+    - https://www.linkedin.com/in/adrienjoly
+    - https://github.com/adrienjoly
+    - https://medium.com/@adrienjoly
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/js-logo.png"
+      author: "@adrienjoly"
+
+# github defaults
+encoding: UTF-8
+lang: fr-FR
+kramdown:
+  input: GFM
+  hard_wrap: false
+future: true
+jailed: false
+theme: jekyll-theme-primer
+gfm_quirks: paragraph_end
+
+# additional config
+exclude:
+  - node_modules
+  - "**/node_modules"
+  - Gemfile
+  - Gemfile.lock
+  - src
+
+plugins:
+  - jekyll-seo-tag

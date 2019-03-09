@@ -9,9 +9,9 @@
     "gitbook:build": "node_modules/.bin/gitbook build",
     "gitbook:deploy": "git push gitbook master",
     "gitbook:start": "node_modules/.bin/gitbook serve",
-    "jekyll:install": "gem install bundler && bundle install # requires ruby-lang.org",
-    "jekyll:build": "bundle exec jekyll build",
-    "jekyll:start": "bundle exec jekyll serve --incremental"
+    "install": "gem install bundler && bundle install # requires ruby-lang.org",
+    "build": "bundle exec jekyll build",
+    "start": "bundle exec jekyll serve --incremental"
   },
   "author": "Adrien Joly",
   "dependencies": {
