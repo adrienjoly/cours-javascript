@@ -63,6 +63,7 @@ TODO
 - [leonardomso/33-js-concepts: 📜 33 concepts every JavaScript developer should know.](https://github.com/leonardomso/33-js-concepts)
 - [The JavaScript Bits You Skipped the First Time Around - Illustrated Notes](https://illustrated.dev/advancedjs)
 - [A Fruitful Guide to JavaScript's Comparison Operators - A Visual Explanation](https://illustrated.dev/fruit-comparison)
+- [🔥🕺🏼 JavaScript Visualized: Hoisting - DEV Community 👩‍💻👨‍💻](https://dev.to/lydiahallie/javascript-visualized-hoisting-478h)
 
 ## Ressources annexes au cours
 
